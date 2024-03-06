@@ -18,6 +18,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.alacritty
+    pkgs.neovim
+    pkgs.vimPlugins.nvchad
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -51,6 +54,22 @@
     # '';
   };
 
+  # ========== Package Configs =========== #
+
+  programs.neovim = {
+    enable = true;
+    extraConfig = ''
+      set number relatoive number
+    '';
+    viAlias = true;
+    vimAlias = true;
+    plugins = {
+      nvchad = {
+        enable = true;
+      };
+    };
+  };
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
   # Manager then you have to manually source 'hm-session-vars.sh' located at
@@ -67,7 +86,7 @@
   #  /etc/profiles/per-user/choinowski/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
