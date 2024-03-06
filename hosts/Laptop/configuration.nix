@@ -138,6 +138,7 @@
   	alacritty
 	  unzip
     rocmPackages.llvm.clang
+    home-manager
   ];
 
   # This value determines the NixOS release from which the default
