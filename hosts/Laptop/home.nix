@@ -20,7 +20,6 @@
   home.packages = [
     pkgs.alacritty
     pkgs.neovim
-    pkgs.vimPlugins.nvchad
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -55,18 +54,6 @@
   };
 
   # ========== Package Configs =========== #
-
-  programs.neovim = {
-    enable = true;
-    extraConfig = ''
-      set number relatoive number
-    '';
-    viAlias = true;
-    vimAlias = true;
-  };
-  programs.neovim.plugins = [
-    pkgs.vimPlugins.nvchad
-  ];
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
