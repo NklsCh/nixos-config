@@ -19,8 +19,8 @@
     extraSpecialArgs = { inherit inputs; };
     users = {
       choinowski = import ./home.nix;
-    }
-  }
+    };
+  };
 
   # ========== Bootloader ========== #
   boot.loader = {
