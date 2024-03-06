@@ -17,6 +17,7 @@
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
     };
     grub = {
       enable = true;
@@ -140,15 +141,6 @@
     rocmPackages.llvm.clang
     home-manager
   ];
-
-  # ========== Programm configs ========== #
-
-  programs.neovim = {
-    enable = true;
-    plugins = [
-      pkgs.vimPlugins.nvchad
-    ];
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
