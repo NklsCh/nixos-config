@@ -17,7 +17,6 @@
       pkgs-unstable = import nixpkgs-unstable { system = system; config.allowUnfree = true; };
     in
     {
-    
       nixosConfigurations = {
         Laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {
