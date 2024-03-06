@@ -119,7 +119,7 @@
 
 
 
-  # ============ Packages =============
+  # ========== Packages ==========
 
   # Enable flatpak packages
   services.flatpak.enable = true;
@@ -140,6 +140,15 @@
     rocmPackages.llvm.clang
     home-manager
   ];
+
+  # ========== Programm configs ========== #
+
+  programs.neovim = {
+    enable = true;
+    plugins = [
+      pkgs.vimPlugins.nvchad
+    ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
