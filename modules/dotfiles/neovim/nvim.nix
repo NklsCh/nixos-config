@@ -6,7 +6,7 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    plugins = with pkgs.vimPlugins; [
+    package = with pkgs.vimPlugins; [
       nvchad
     ];
   };
