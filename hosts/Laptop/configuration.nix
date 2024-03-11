@@ -141,7 +141,7 @@
     neovim
     vim
     wget
-    neofetch
+    # neofetch
     brave
     discord
     bitwarden
@@ -154,6 +154,7 @@
     oh-my-posh
     zsh
     gh
+    nodejs_21
   ];
   
   programs.neovim = {
