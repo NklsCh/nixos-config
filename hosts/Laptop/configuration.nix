@@ -138,7 +138,7 @@
   
   # Global Packages for all users
   environment.systemPackages = with pkgs; [
-  	git
+	git
     brave
     discord
     bitwarden
@@ -148,6 +148,8 @@
     oh-my-posh
     zsh
   ];
+
+  environment.veriables.EDITOR = "nvim";
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
