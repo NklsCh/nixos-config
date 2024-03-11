@@ -139,23 +139,14 @@
   # Global Packages for all users
   environment.systemPackages = with pkgs; [
   	git
-    neovim
-    vim
-    wget
-    # neofetch
     brave
     discord
     bitwarden
-    vscode
-  	alacritty
     unzip
-    rocmPackages.llvm.clang
     home-manager
     anytype
     oh-my-posh
     zsh
-    gh
-    nodejs_21
   ];
   
   programs.neovim = {
