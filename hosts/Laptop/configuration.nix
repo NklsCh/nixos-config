@@ -150,6 +150,7 @@
 	  unzip
     rocmPackages.llvm.clang
     home-manager
+    anytype
   ];
 
   # This value determines the NixOS release from which the default
