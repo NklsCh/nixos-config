@@ -138,7 +138,7 @@
   
   # Global Packages for all users
   environment.systemPackages = with pkgs; [
-	git
+    git
     brave
     discord
     bitwarden

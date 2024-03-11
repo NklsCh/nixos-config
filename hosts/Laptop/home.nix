@@ -17,8 +17,6 @@
   # ========== Packages to install =========== # 
   home.packages = [
     pkgs.alacritty
-    pkgs.neovim
-    pkgs.vimPlugins.nvchad
     pkgs.git-credential-manager
   ];
 
