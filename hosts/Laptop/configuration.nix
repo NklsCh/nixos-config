@@ -153,6 +153,7 @@
     anytype
     oh-my-posh
     zsh
+    gh
   ];
   
   programs.neovim = {
