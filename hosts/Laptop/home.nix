@@ -18,6 +18,7 @@
   home.file = {
     ".config/alacritty".source = ../../modules/dotfiles/alacritty;
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
+    ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
   };
 
   # ========== Session Variables =========== #
