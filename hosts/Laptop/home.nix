@@ -17,6 +17,7 @@
   # ========== Package Configs =========== #
   home.file = {
     ".config/alacritty".source = ../../modules/dotfiles/alacritty;
+    ".bashrc".source = ../../modules/dotfiles/.bashrc;
   };
 
   # ========== Session Variables =========== #
