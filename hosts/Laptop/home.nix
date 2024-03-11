@@ -25,7 +25,6 @@
   home.file = {
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
-    ".config/nvim".source = https://github.com/NvChad/starter;
   };
 
   # ========== Session Variables =========== #
