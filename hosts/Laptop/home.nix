@@ -40,7 +40,7 @@
 
   # =========== Programm Configs =========== #
 
-  home.programs.alacritty = {
+  home.packages.alacritty = {
     enable = true;
     config = ../../modules/dotfiles/alacritty.yml;
   };
