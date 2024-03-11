@@ -18,6 +18,7 @@
   home.packages = [
     pkgs.alacritty
     pkgs.git-credential-manager
+    pkgs.vimPlugins.nvchad
   ];
 
   # ========== Package Configs =========== #
