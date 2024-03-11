@@ -4,6 +4,7 @@
     neofetch
     wget
     vim
+    neovim
     vscode
     alacritty
     rocmPackages.llvm.clang
