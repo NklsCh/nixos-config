@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  import = [
-    ../../modules/dotfiles/git/git.nix;
+  imports = [
+    ../../modules/dotfiles/git/git.nix
   ];
 
   # ========== User config =========== #
