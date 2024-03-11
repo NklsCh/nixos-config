@@ -151,6 +151,7 @@
     rocmPackages.llvm.clang
     home-manager
     anytype
+    oh-my-posh
   ];
   
   programs.neovim = {
