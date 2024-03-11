@@ -7,6 +7,6 @@
 
     plugins = with pkgs; [
       vimPlugins.nvchad
-    ]
+    ];
   };
 }
