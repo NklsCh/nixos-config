@@ -40,12 +40,10 @@
 
   # =========== Programm Configs =========== #
 
-  home.programs = [
-    alacritty = {
-      enable = true;
-      config = ../../modules/dotfiles/alacritty.yml;
-    };
-  ];
+  home.programs.alacritty = {
+    enable = true;
+    config = ../../modules/dotfiles/alacritty.yml;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
