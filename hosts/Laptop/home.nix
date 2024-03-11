@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  import = [
+    ../../modules/dotfiles/git/git.nix;
+  ];
+
   # ========== User config =========== #
   home.username = "choinowski";
   home.homeDirectory = "/home/choinowski";
