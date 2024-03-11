@@ -156,6 +156,10 @@
     gh
     nodejs_21
   ];
+
+  imports = [
+    ../../modules/dotfiles/packages/devenv/dev.nix
+  ];
   
   programs.neovim = {
     enable = true;
