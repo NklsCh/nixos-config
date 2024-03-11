@@ -5,6 +5,7 @@
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
     ../../modules/dotfiles/neovim/neovim.nix
+    ../../modules/dotfiles/alacritty.nix
   ];
 
   # ========== User config =========== #
@@ -17,12 +18,12 @@
   # ========== Packages to install =========== # 
   home.packages = [
     pkgs.alacritty
+    pkgs.neovim
     pkgs.git-credential-manager
   ];
 
   # ========== Package Configs =========== #
   home.file = {
-    ".config/alacritty".source = ../../modules/dotfiles/alacritty;
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
   };
