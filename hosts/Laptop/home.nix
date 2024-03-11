@@ -4,7 +4,6 @@
   imports = [
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
-    ../../modules/dotfiles/neovim/neovim.nix
     ../../modules/dotfiles/alacritty/alacritty.nix
   ];
 
