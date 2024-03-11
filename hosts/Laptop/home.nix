@@ -16,6 +16,7 @@
   home.packages = [
     pkgs.alacritty
     pkgs.neovim
+    pkgs.gitCredentialsManager
   ];
 
   # ========== Package Configs =========== #
