@@ -5,7 +5,6 @@
     wget
     vim
     neovim
-    vimPlugins.nvchad
     vscode
     alacritty
     rocmPackages.llvm.clang
