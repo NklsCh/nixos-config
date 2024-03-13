@@ -51,7 +51,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.networkmanager.plugin.vpnc.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
