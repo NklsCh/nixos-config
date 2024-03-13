@@ -147,6 +147,7 @@
     anytype
     oh-my-posh
     zsh
+    libreoffice
   ];
 
   environment.variables.EDITOR = "nvim";
