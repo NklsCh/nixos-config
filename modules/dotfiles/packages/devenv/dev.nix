@@ -10,6 +10,5 @@
     rocmPackages.llvm.clang
     nodejs_21
     termius
-    ciscoPacketTracer7
   ];
 }
