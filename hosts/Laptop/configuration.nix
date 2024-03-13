@@ -149,6 +149,7 @@
     zsh
     libreoffice
     twingate
+    teams-for-linux
   ];
 
   environment.variables.EDITOR = "nvim";
