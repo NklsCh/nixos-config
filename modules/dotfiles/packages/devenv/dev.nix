@@ -10,6 +10,6 @@
     rocmPackages.llvm.clang
     nodejs_21
     termius
-    openvpn
+    ciscoPacketTracer8
   ];
 }
