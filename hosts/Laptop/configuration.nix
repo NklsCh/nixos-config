@@ -148,6 +148,7 @@
     oh-my-posh
     zsh
     libreoffice
+    twingate
   ];
 
   environment.variables.EDITOR = "nvim";
