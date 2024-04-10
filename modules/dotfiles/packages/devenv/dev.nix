@@ -12,5 +12,6 @@
     termius
     gparted
     rclone
+    gh
   ];
 }
