@@ -146,6 +146,10 @@
     teams-for-linux
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   environment.variables.EDITOR = "nvim";
   
   # This value determines the NixOS release from which the default
