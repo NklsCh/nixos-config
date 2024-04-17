@@ -14,5 +14,6 @@
     rclone
     gh
     inetutils
+    putty
   ];
 }
