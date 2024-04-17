@@ -146,18 +146,6 @@
     teams-for-linux
   ];
 
-  neofetch
-    wget
-    vim
-    neovim
-    vscode
-    alacritty
-    rocmPackages.llvm.clang
-    nodejs_21
-    termius
-    gparted
-    rclone
-
   environment.variables.EDITOR = "nvim";
   
   # This value determines the NixOS release from which the default
