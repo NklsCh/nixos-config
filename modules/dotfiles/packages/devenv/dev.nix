@@ -13,5 +13,6 @@
     gparted
     rclone
     gh
+    inetutils
   ];
 }
