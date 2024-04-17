@@ -14,6 +14,7 @@
       inputs.home-manager.nixosModules.home-manager
       ../../modules/dotfiles/packages/devenv/dev.nix
       ../../modules/dotfiles/packages/text/text.nix
+      ../../modules/dotfiles/rclone/rclone.nix
     ];
 
   # ========== Home-Manager =========== #
@@ -145,9 +146,17 @@
     teams-for-linux
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
+  neofetch
+    wget
+    vim
+    neovim
+    vscode
+    alacritty
+    rocmPackages.llvm.clang
+    nodejs_21
+    termius
+    gparted
+    rclone
 
   environment.variables.EDITOR = "nvim";
   
