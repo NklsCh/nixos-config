@@ -14,6 +14,5 @@
     rclone
     gh
     inetutils
-    warp-terminal
   ];
 }
