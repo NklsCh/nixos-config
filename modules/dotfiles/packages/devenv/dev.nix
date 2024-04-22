@@ -14,6 +14,6 @@
     rclone
     gh
     inetutils
-    putty
+    warp-terminal
   ];
 }
