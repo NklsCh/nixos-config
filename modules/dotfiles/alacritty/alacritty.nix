@@ -3,6 +3,9 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      window = {
+        opacity = 0.5;
+      };
       font = {
         size = 9;
           normal.family = "JetBrainsMono Nerd Font";
