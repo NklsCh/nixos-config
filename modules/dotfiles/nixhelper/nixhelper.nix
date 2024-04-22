@@ -3,6 +3,6 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-    flake = "/etc/nixos#Laptop";
+    flake = "/etc/nixos";
   };
 }
