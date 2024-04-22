@@ -127,22 +127,25 @@
   services.flatpak.enable = true;
   
   # Global Packages for all users
-  environment.systemPackages = with pkgs; [
-    git
-    brave
-    discord
-    bitwarden
-    unzip
-    home-manager
-    anytype
-    oh-my-posh
-    twingate
-    teams-for-linux
-  ];
+  environment.systemPackages = 
+  (with pkgs; [
+      git
+      brave
+      discord
+      bitwarden
+      unzip
+      home-manager
+      anytype
+      oh-my-posh
+      twingate
+      teams-for-linux
+    ])
 
-  environment.systemPackages = with pkgs-unstable; [
-    nh
-  ];
+  ++
+
+    (with pkgs-unstable; [
+      nh
+  ]);
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
