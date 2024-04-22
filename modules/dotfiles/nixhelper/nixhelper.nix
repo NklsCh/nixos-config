@@ -1,9 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
   programs.nh = {
     enable = true;
     clean.enable = true;
-    hostname = "Laptop";
     flake = "/etc/nixos";
   };
 }

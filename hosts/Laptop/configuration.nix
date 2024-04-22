@@ -15,6 +15,7 @@
       ../../modules/dotfiles/packages/devenv/dev.nix
       ../../modules/dotfiles/packages/text/text.nix
       ../../modules/dotfiles/rclone/rclone.nix
+      ../../modules/dotfiles/nixhelper/nixhelper.nix
     ];
 
   # ========== Home-Manager =========== #
@@ -144,7 +145,7 @@
   ++
 
     (with pkgs-unstable; [
-      nh
+      
   ]);
 
   nixpkgs.config.permittedInsecurePackages = [
