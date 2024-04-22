@@ -1,6 +1,6 @@
 { config, pkgs, pkgs-unstable, ... }:
 {
-  programs.nh = {
+  pkgs-unstable.nh = {
     enable = true;
     clean.enable = true;
     flake = "/etc/nixos";
