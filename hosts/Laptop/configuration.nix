@@ -145,6 +145,7 @@
 
     (with pkgs-unstable; [
       nh
+      nix-output-monitor
   ]);
 
   nixpkgs.config.permittedInsecurePackages = [
