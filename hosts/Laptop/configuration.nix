@@ -153,6 +153,10 @@
       warp-terminal
   ]);
 
+  environment.sessionVariables = {
+    FLAKE = "/etc/nixos";
+  };
+
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];
