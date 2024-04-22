@@ -15,7 +15,6 @@
       ../../modules/dotfiles/packages/devenv/dev.nix
       ../../modules/dotfiles/packages/text/text.nix
       ../../modules/dotfiles/rclone/rclone.nix
-      ../../modules/dotfiles/nixhelper/nixhelper.nix
     ];
 
   # ========== Home-Manager =========== #
@@ -36,7 +35,7 @@
     };
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "Laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Nix Experimental Features
@@ -145,7 +144,7 @@
   ++
 
     (with pkgs-unstable; [
-      
+      nh
   ]);
 
   nixpkgs.config.permittedInsecurePackages = [
