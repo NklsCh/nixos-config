@@ -142,6 +142,7 @@
       oh-my-posh
       twingate
       teams-for-linux
+      libsForQt5.kwallet-pam
     ])
 
   ++
