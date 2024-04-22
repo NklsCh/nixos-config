@@ -138,8 +138,11 @@
     oh-my-posh
     twingate
     teams-for-linux
-    nh
   ];
+
+  environment.systemPackages = with pkgs-unstable; [
+    nh
+  ]
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
