@@ -28,6 +28,14 @@
     ".config/hypr".source = ../../modules/dotfiles/hypr;
   };
 
+  # ========== Hyprland =========== #
+  wayland.windowManager.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;
+    xwayland.enable = true;
+    systemd.enable = true;
+  };
+
   # ========== Session Variables =========== #
   home.sessionVariables = {
     EDITOR = "nvim";
