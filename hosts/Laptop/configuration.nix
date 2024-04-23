@@ -93,7 +93,7 @@
   # };
 
   # Configure console keymap
-  console.keyMap = "de";
+  # console.keyMap = "de";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
