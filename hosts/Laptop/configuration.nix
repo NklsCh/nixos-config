@@ -12,6 +12,7 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
+      ../../modules/dotfiles/packages/hyprland/hyprland.nix
       ../../modules/dotfiles/packages/devenv/dev.nix
       ../../modules/dotfiles/packages/text/text.nix
       ../../modules/dotfiles/rclone/rclone.nix
@@ -65,6 +66,14 @@
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -152,6 +161,8 @@
 
   environment.sessionVariables = {
     FLAKE = "/etc/nixos";
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
   };
 
   nixpkgs.config.permittedInsecurePackages = [
