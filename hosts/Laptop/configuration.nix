@@ -87,10 +87,10 @@
 
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "de";
-    xkbVariant = "";
-  };
+  # services.xserver = {
+  #   layout = "de";
+  #   xkbVariant = "";
+  # };
 
   # Configure console keymap
   console.keyMap = "de";
@@ -161,7 +161,6 @@
 
   environment.sessionVariables = {
     FLAKE = "/etc/nixos";
-    # WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
 
