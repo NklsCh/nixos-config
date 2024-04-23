@@ -73,6 +73,12 @@
     xwayland.enable = true;
   };
 
+  services.hyprland = {
+    true;
+  };
+
+  services.lightdm.enable = true;
+
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
@@ -94,7 +100,7 @@
   # };
 
   # Configure console keymap
-  # console.keyMap = "de";
+  console.keyMap = "de";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
