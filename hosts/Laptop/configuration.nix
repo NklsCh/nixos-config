@@ -73,7 +73,7 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-  services.wayland.enable = true;
+  services.xwayland.enable = true;
 
   # Enable the KDE Desktop Environment.
   # services.xserver.displayManager.sddm = {
