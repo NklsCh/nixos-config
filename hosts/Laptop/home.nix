@@ -25,7 +25,7 @@
   home.file = {
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
-    "~/.config/hypr/hyprland.conf".source = ../../modules/dotfiles/hypr/hyprland.conf;
+    "~/.config/hypr".source = ../../modules/dotfiles/hypr;
   };
 
   # ========== Hyprland =========== #
