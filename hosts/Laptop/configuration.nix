@@ -67,13 +67,17 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
-
-  services.hyprland.enable = true;
 
   # Enable the KDE Desktop Environment.
   # services.xserver.displayManager.sddm = {
