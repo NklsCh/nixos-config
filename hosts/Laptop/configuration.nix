@@ -80,7 +80,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm = {
+  services.xserver.displayManager.lightdm = {
     enable = true;
     autoNumlock = true;
   };
