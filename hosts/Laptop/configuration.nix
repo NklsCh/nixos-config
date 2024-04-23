@@ -76,14 +76,14 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm = {
-    enable = true;
-    autoNumlock = true;
-  };
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.displayManager.sddm = {
+  #   enable = true;
+  #   autoNumlock = true;
+  # };
+  # services.xserver.desktopManager.plasma5.enable = true;
 
 
   # Configure keymap in X11
@@ -125,8 +125,8 @@
   ];
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "choinowski";
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "choinowski";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -161,7 +161,7 @@
 
   environment.sessionVariables = {
     FLAKE = "/etc/nixos";
-    WLR_NO_HARDWARE_CURSORS = "1";
+    # WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
 
