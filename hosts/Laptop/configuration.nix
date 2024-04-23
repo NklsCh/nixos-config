@@ -80,7 +80,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.lightdm = {
+  services.xserver.displayManager.ly = {
     enable = true;
   };
   # services.xserver.desktopManager.plasma5.enable = true;
