@@ -82,7 +82,6 @@
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.lightdm = {
     enable = true;
-    autoNumlock = true;
   };
   # services.xserver.desktopManager.plasma5.enable = true;
 
