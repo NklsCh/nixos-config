@@ -25,6 +25,7 @@
   home.file = {
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
+    ".config/hypr".source = ../../modules/dotfiles/hypr;
   };
 
   # ========== Session Variables =========== #
