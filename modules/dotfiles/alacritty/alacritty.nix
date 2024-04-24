@@ -7,7 +7,7 @@
         opacity = 0.75;
       };
       font = {
-        size = 9;
+        size = 14;
           normal.family = "JetBrainsMono Nerd Font";
       };
       colors = {
