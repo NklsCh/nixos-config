@@ -13,7 +13,6 @@
     settings = [{
       height = 30;
       layer = "top";
-      position = "bottom";
       tray = { spacing = 10; };
       modules-right = [
         "pulseaudio"
