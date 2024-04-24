@@ -4,7 +4,7 @@ gnome-keyring-deamon --start --components=secrets &
 
 swww init &
 
-sleep 1 &&
+sleep 0.1 &&
 
 swww img ~/Wallpapers/moon.jpg &
 
