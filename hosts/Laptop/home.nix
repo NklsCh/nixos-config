@@ -26,6 +26,7 @@
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
     ".config/hypr".source = ../../modules/dotfiles/hypr;
+    "Wallpapers".source = ../../modules/wallpapers;
   };
 
   # ========== Hyprland =========== #
