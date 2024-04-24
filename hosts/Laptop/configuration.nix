@@ -50,13 +50,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # ========== Wireshark ========== #
-  services.udev = {
-    extraRules = ''
-      SUBSYSTEM=="wlp2s0", GROUP="wireshark", MODE="0640"
-    '';
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -94,7 +87,12 @@
     enable = true;
     layout = "de";
     xkbVariant = "";
-    displayManager.sddm.enable = true;
+    displayManager = {
+      sddm = { 
+        enable = true;
+        theme = "breeze-dark";
+      };
+    };
   };
 
   # Enable gnome keyring
