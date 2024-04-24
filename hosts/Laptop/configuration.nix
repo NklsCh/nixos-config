@@ -89,6 +89,10 @@
     displayManager.sddm.enable = true;
   };
 
+  # Enable gnome keyring
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
+
   # Configure console keymap
   console.keyMap = "de";
 
