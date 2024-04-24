@@ -90,7 +90,7 @@
     displayManager = {
       sddm = { 
         enable = true;
-        theme = "breeze-dark";
+        theme = "adwaita-dark";
       };
     };
   };
