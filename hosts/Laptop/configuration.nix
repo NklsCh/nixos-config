@@ -88,8 +88,8 @@
     xkbVariant = "";
     displayManager = {
       sddm.enable = true;
-    }
-  }
+    };
+  };
 
   # Configure console keymap
   console.keyMap = "de";
