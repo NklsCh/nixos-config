@@ -68,29 +68,28 @@
   };
 
 
+  # ========= Display Manager ========= #
+
+  # Enable Hyprland
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   }; 
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm = {
+  xdg.portal = {
     enable = true;
-  };
-  # services.xserver.desktopManager.plasma5.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  }
 
-
-  # Configure keymap in X11
+  # Enable X11 and sddm as greeter 
   services.xserver = {
+    enable = true;
     layout = "de";
     xkbVariant = "";
-  };
+    displayManager = {
+      sddm.enable = true;
+    }
+  }
 
   # Configure console keymap
   console.keyMap = "de";
