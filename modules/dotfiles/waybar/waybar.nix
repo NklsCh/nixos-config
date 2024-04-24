@@ -12,7 +12,7 @@
 
     # Config
     
-    settings = [{
+    settings = {
       layer = "top";
       height = 16;
       margin-left = 0;
@@ -29,6 +29,6 @@
         "tray"
         "clock"
       ];
-    }];
+    };
   };
 }
