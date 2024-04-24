@@ -1,7 +1,17 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
+    style = ''
+      window#waybar {
+        background: transparent;
+        border-bottom: none;
+      }
+    '';
+
+    # Config
+    
     settings = [{
       layer = "top";
       height = 16;
