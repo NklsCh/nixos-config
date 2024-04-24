@@ -79,16 +79,14 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  }
+  };
 
   # Enable X11 and sddm as greeter 
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
-  };
-  services.xserver = {
     layout = "de";
     xkbVariant = "";
+    displayManager.sddm.enable = true;
   };
 
   # Configure console keymap
