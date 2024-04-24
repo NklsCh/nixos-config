@@ -87,10 +87,10 @@
 
 
   # Configure keymap in X11
-  # services.xserver = {
-  #   layout = "de";
-  #   xkbVariant = "";
-  # };
+  services.xserver = {
+    layout = "de";
+    xkbVariant = "";
+  };
 
   # Configure console keymap
   console.keyMap = "de";
