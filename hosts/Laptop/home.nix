@@ -37,6 +37,11 @@
     systemd.enable = true;
   };
 
+  # ========== Themeing ========== #
+  qt.enable = true;
+  qt.platformTheme = "gtk";
+  qt.style.name = "adwaita-dark";
+
   # ========== Session Variables =========== #
   home.sessionVariables = {
     EDITOR = "nvim";
