@@ -7,5 +7,6 @@
     libnotify
     swww
     networkmanagerapplet
+    dolphin
   ];
 }
