@@ -38,12 +38,11 @@
   };
 
   # ========== Themeing ========== #
-  qt = {
+  gtk = {
     enable = true;
-    platformTheme = "gtk";
-    style = {
-      package = pkgs.adwaita-qt;
-      name = "adwaita-dark";
+    theme = {
+      package = pkgs.adw-gtk3;
+      name = "adw-gtk3";
     };
   };
 
