@@ -84,9 +84,7 @@
   # Enable X11 and sddm as greeter 
   services.xserver = {
     enable = true;
-    displayManager = {
-      sddm.enable = true;
-    };
+    displayManager.sddm.enable = true;
   };
   services.xserver = {
     layout = "de";
