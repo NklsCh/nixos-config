@@ -8,5 +8,8 @@
     swww
     networkmanagerapplet
     dolphin
+    grim
+    slurp
+    wl-clipboard
   ];
 }
