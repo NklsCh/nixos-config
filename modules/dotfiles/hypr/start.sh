@@ -4,6 +4,8 @@ gnome-keyring-deamon --start --components=secrets &
 
 swww init &
 
+sleep 5 &
+
 swww img ~/Wallpapers/moon.jpg &
 
 nm-applet --indicator &
