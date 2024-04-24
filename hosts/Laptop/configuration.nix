@@ -16,6 +16,7 @@
       ../../modules/dotfiles/packages/devenv/dev.nix
       ../../modules/dotfiles/packages/text/text.nix
       ../../modules/dotfiles/rclone/rclone.nix
+      ../../modules/dotfiles/packages/school/school.nix
     ];
 
   # ========== Home-Manager =========== #
