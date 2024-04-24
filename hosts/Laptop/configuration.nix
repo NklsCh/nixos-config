@@ -84,11 +84,13 @@
   # Enable X11 and sddm as greeter 
   services.xserver = {
     enable = true;
-    layout = "de";
-    xkbVariant = "";
     displayManager = {
       sddm.enable = true;
     };
+  };
+  services.xserver = {
+    layout = "de";
+    xkbVariant = "";
   };
 
   # Configure console keymap
