@@ -38,9 +38,14 @@
   };
 
   # ========== Themeing ========== #
-  qt.enable = true;
-  qt.platformTheme = "gtk";
-  qt.style.name = "adwaita-dark";
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style = {
+      package = pkgs.adwaita-qt;
+      name = "adwaita-dark";
+    };
+  };
 
   # ========== Session Variables =========== #
   home.sessionVariables = {
