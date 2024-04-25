@@ -162,6 +162,7 @@
       home-manager
       oh-my-posh
       teams-for-linux
+      sddm-chili-theme
     ])
 
   ++
