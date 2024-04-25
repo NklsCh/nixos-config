@@ -5,6 +5,8 @@
     enableCompletion = true;
     shellAliases = {
       neofetch = "disfetch";
+      vi = "nvim";
+      vim = "nvim";
     };
     initExtra = ''
       eval "$(oh-my-posh init bash --config ~/.poshThemes/theme.omp.json)"
