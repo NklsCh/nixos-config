@@ -4,7 +4,6 @@
   font-size: 13px;
   color: #000000;
   border-radius: 20px;
-  background-color: rgba(255,255,247,0.85);
 }
 
 window {
@@ -45,6 +44,18 @@ window#waybar {
   border-radius: 15px;
   min-width: 40px;
   transition: all 0.3s ease-in-out;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: rgba(255,255,247,0.85);
+  opacity: 0.8;
+  padding: 20px;
+  margin: 0px;
+}
+
+tooltip label {
+  color: #000000;
 }
 
 #clock,
