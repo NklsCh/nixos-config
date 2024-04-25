@@ -104,6 +104,10 @@
         wayland.enable = true;
         theme = "${import ../../modules/dotfiles/sddm/sddm.nix { inherit pkgs; }}";
       };
+      autoLogin = {
+        enable = true;
+        user = "choinowski";
+      };
     };
   };
 
