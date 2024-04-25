@@ -2,6 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     git
+    wget
+    neovim
+    alacritty
+    rclone
     brave
     discord
     bitwarden
@@ -11,5 +15,6 @@
     teams-for-linux
     zoxide
     sddm-chili-theme
+    disfetch
   ];
 }
