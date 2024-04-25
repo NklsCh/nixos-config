@@ -5,6 +5,7 @@
     wget
     neovim
     alacritty
+    zsh
     rclone
     brave
     discord

@@ -28,7 +28,7 @@
       ../../modules/dotfiles/rclone/rclone.nix
     ];
 
-  # ========== Home-Manager =========== #
+  # ========== Home-Manager ========== #
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -38,6 +38,7 @@
   };
 
   # ========== Bootloader ========== #
+
   boot.loader = {
     grub = {
       enable = true;
@@ -61,12 +62,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # ========== Locales and Timezone ========== #
   time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "de_DE.UTF-8";
     LC_IDENTIFICATION = "de_DE.UTF-8";
@@ -136,10 +135,13 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.choinowski = {
-    isNormalUser = true;
-    description = "Choinowski";
-    extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.choinowski = {
+      isNormalUser = true;
+      description = "Choinowski";
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
   };
 
   # List of Fonts
