@@ -25,7 +25,7 @@
   # ========== Package Configs =========== #
   home.file = {
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
-    ".config/hypr".source = ../../modules/dotfiles/hypr;
+    ".config/hypr".source = ../../modules/dotfiles/hyprland;
     ".config/waybar".source = ../../modules/dotfiles/waybar;
     "Wallpapers".source = ../../modules/wallpapers;
   };
