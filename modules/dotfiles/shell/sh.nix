@@ -11,9 +11,9 @@ in
 {
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    enableCompletion = true;
     shellAliases = myAliases;
     initExtra = ''
       eval "$(oh-my-posh init zsh --config ~/.poshThemes/theme.omp.json)"
