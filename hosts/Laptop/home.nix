@@ -5,7 +5,7 @@
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
     ../../modules/dotfiles/alacritty/alacritty.nix
-    ../../modules/dotfiles/bash/bash.nix
+    ../../modules/dotfiles/shell/sh.nix
   ];
 
   # ========== User config =========== #
