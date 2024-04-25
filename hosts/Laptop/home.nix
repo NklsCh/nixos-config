@@ -23,7 +23,7 @@
 
   # ========== Package Configs =========== #
   home.file = {
-    ".bashrc".source = ../../modules/dotfiles/.bashrc;
+    ".bashrc".source = ../../modules/dotfiles/bash/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
     ".config/hypr".source = ../../modules/dotfiles/hypr;
     ".config/waybar".source = ../../modules/dotfiles/waybar;

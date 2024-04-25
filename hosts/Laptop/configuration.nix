@@ -13,6 +13,10 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
 
+      # ========= Core Packages ========= #
+      ../../modules/packages/core/core.nix
+      ../../modules/packages/core-unstable/core-unstable.nix
+
       # ========= Packages ========= #
       ../../modules/packages/hyprland/hyprland.nix
       ../../modules/packages/devenv/dev.nix
@@ -148,32 +152,11 @@
 
 
 
-  # ========== Packages ==========
+  # ========== Packages ========== #
 
   # Enable flatpak packages
   services.flatpak.enable = true;
   
-  # Global Packages for all users
-  environment.systemPackages = 
-  (with pkgs; [
-      git
-      brave
-      discord
-      bitwarden
-      unzip
-      home-manager
-      oh-my-posh
-      teams-for-linux
-      sddm-chili-theme
-    ])
-
-  ++
-
-    (with pkgs-unstable; [
-      nh
-      nix-output-monitor
-      warp-terminal
-  ]);
 
   environment.sessionVariables = {
     FLAKE = "/etc/nixos";
