@@ -5,10 +5,10 @@
     "clock", 
     "idle_inhibitor" 
   ],
-  "modules-center": [
+  /* "modules-center": [
     "clock", 
     "idle_inhibitor"
-  ],
+  ], */
   "modules-right": [
     "tray", 
     "custom/scratchpad-indicator", 
