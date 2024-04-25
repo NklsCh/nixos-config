@@ -27,7 +27,7 @@ window#waybar {
 }
 /*-----modules indv----*/
 #workspaces button {
-  padding: 5px;
+  padding: 3px 5px;
   background-color: transparent;
 }
 #workspaces button:hover {
