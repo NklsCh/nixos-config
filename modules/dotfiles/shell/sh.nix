@@ -22,6 +22,7 @@ in
       ];
     };
     initExtra = ''
+      bindkey '^I' autosuggest-accept
       eval "$(oh-my-posh init zsh --config ~/.poshThemes/theme.omp.json)"
       eval "$(zoxide init --cmd cd zsh)"
     '';
