@@ -5,7 +5,7 @@ let
   imgLink = "https://raw.githubusercontent.com/nklsch/nixos-config/main/modules/wallpaper/moon.jpg";
   image = pkgs.fetchurl {
     url = imgLink;
-    sha256 = "13e62f4d2c43cb35a2c3160b16628ea2ef310747f25c36a5d8bb4f950afa75c3"
+    sha256 = "13e62f4d2c43cb35a2c3160b16628ea2ef310747f25c36a5d8bb4f950afa75c3";
   };
 
 in
