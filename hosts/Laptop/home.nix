@@ -27,6 +27,9 @@
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
     ".config/hypr".source = ../../modules/dotfiles/hyprland;
     ".config/waybar".source = ../../modules/dotfiles/waybar;
+    ".config/swaylock".source = ../../modules/dotfiles/swaylock;
+    ".config/wlogout".source = ../../modules/dotfiles/wlogout;
+    ".config/rofi".source = ../../modules/dotfiles/rofi;
     "Wallpapers".source = ../../modules/wallpapers;
   };
 
