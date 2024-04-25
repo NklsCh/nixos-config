@@ -11,7 +11,8 @@
   "modules-right": [
     "tray", 
     "custom/scratchpad-indicator", 
-    "pulseaudio", 
+    "pulseaudio",
+    "battery",
     "custom/power"
   ],
 
