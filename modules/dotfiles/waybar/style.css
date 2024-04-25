@@ -6,6 +6,10 @@
   border-radius: 20px;
 }
 
+#format-alt {
+  color: rgba(255,255,247,0.85);
+}
+
 window {
 	/*font-weight: bold;*/
 }
