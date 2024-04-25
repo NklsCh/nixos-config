@@ -39,6 +39,11 @@ window#waybar {
   background-color: rgba(0,43,51,0.85);
 }
 
+#workspaces button.active {
+  box-shadow: inherit;
+  background-color: rgba(0,153,153,1);
+}
+
 #clock,
 #battery,
 #cpu,
