@@ -5,6 +5,7 @@
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
     ../../modules/dotfiles/alacritty/alacritty.nix
+    ../../modules/dotfiles/bash/bash.nix
   ];
 
   # ========== User config =========== #
@@ -23,7 +24,6 @@
 
   # ========== Package Configs =========== #
   home.file = {
-    ".bashrc".source = ../../modules/dotfiles/bash/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
     ".config/hypr".source = ../../modules/dotfiles/hypr;
     ".config/waybar".source = ../../modules/dotfiles/waybar;
