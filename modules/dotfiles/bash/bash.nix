@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, ... }: 
 {
-  program.bash = {
+  programs.bash = {
     enable = true;
     shellAliases = {
       cd = "z";
