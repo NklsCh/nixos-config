@@ -39,6 +39,7 @@
       enable = true;
       device = "/dev/sda";
       useOSProber = true;
+      gfxmodeEfi = "1920x1080";
     };
   };
 
