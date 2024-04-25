@@ -27,21 +27,22 @@ window#waybar {
 }
 /*-----modules indv----*/
 #workspaces button {
-  padding: 3px 5px;
-  background-color: transparent;
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
 }
 #workspaces button:hover {
-  box-shadow: inherit;
-  background-color: rgba(175,175,167,1);
-}
-
-#workspaces button.focused {
-  background-color: rgba(175,175,167,0.85);
+  background: rgba(175,175,167,0.5);
+  border-radius: 15px;
 }
 
 #workspaces button.active {
-  box-shadow: inherit;
-  background-color: rgba(175,175,167,1);
+  background: rgba(175,175,167,1);
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 #clock,
