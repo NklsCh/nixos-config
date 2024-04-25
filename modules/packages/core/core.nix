@@ -6,6 +6,7 @@
     neovim
     alacritty
     zsh
+    zplug
     rclone
     brave
     discord
