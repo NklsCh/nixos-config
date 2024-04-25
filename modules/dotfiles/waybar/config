@@ -5,17 +5,30 @@
     "clock", 
     "idle_inhibitor" 
   ],
-  /* "modules-center": [
-    "clock", 
-    "idle_inhibitor"
+  "modules-center": [
+    "hyprland/workspaces"
   ], 
-  */
   "modules-right": [
     "tray", 
     "custom/scratchpad-indicator", 
     "pulseaudio", 
     "custom/power"
   ],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
 
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
