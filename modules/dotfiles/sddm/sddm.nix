@@ -2,7 +2,7 @@
 
 let
 
-  image = ~/Wallpapers/moon.jpg
+  image = /home/choinowski/Wallpapers/moon.jpg;
 
 in
   pkgs.stdenv.mkDerivation {
