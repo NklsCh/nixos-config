@@ -6,7 +6,6 @@
     neovim
     alacritty
     zsh
-    zsh-autosuggestions
     rclone
     brave
     discord
