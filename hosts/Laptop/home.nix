@@ -27,7 +27,7 @@
     ".bashrc".source = ../../modules/dotfiles/.bashrc;
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
     ".config/hypr".source = ../../modules/dotfiles/hypr;
-    ".config/waybar".source = ../../modules/dotfiles/waybar/waybar.conf.d;
+    ".config/waybar".source = ../../modules/dotfiles/waybar;
     "Wallpapers".source = ../../modules/wallpapers;
   };
 
