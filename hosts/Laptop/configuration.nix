@@ -95,7 +95,8 @@
     displayManager = {
       sddm = { 
         enable = true;
-        theme = "adwaita-dark";
+        wayland.enable = true;
+        theme = "${import ../../modules/dotfiles/sddm/sddm.nix { inherit pkgs; }}";
       };
     };
   };
