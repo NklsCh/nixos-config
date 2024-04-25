@@ -12,11 +12,16 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
-      ../../modules/dotfiles/packages/hyprland/hyprland.nix
-      ../../modules/dotfiles/packages/devenv/dev.nix
-      ../../modules/dotfiles/packages/text/text.nix
-      ../../modules/dotfiles/rclone/rclone.nix
-      ../../modules/dotfiles/packages/school/school.nix
+
+      # ========= Packages ========= #
+      ../../modules/packages/hyprland/hyprland.nix
+      ../../modules/packages/devenv/dev.nix
+      ../../modules/packages/text/text.nix
+      ../../modules/packages/school/school.nix
+      ../../modules/packages/waybar/waybar.nix
+
+      # ========= Configs ========= #
+      ../../modules/dotfiles/packages/rclone/rclone.nix
     ];
 
   # ========== Home-Manager =========== #
