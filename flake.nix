@@ -20,11 +20,9 @@
       nixosConfigurations = {
         Laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {
-            username = "choinowski";
 	          inherit inputs pkgs-unstable;
 	        };
           modules = [
-            ./.
             ./hosts/Laptop/configuration.nix
           ];
         };

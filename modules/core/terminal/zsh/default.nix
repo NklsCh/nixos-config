@@ -7,6 +7,7 @@ let
     vim = "nvim";
   };
 in 
+
 {
   programs.zsh = {
     enable = true;
