@@ -1,12 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    git
-    wget
-    neovim
-    alacritty
-    zsh
-    zplug
     rclone
     brave
     discord
