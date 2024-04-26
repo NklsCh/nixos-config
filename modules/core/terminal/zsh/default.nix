@@ -12,7 +12,6 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # autosuggestion.enable = true; //Doesent work idk why
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
     zplug = {

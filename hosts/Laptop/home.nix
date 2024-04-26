@@ -9,35 +9,38 @@
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
     ../../modules/dotfiles/alacritty/alacritty.nix
-    # ../../modules/dotfiles/shell/sh.nix
   ];
 
-  # ========== User config =========== #
+  # ---- User config ---- #
   home.username = "choinowski";
   home.homeDirectory = "/home/choinowski";
 
-  # ========== Home-manager version =========== #
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  # ---- Home-manager version ---- #
+  home.stateVersion = "23.11";
 
-  # ========== Packages to install =========== # 
+  # ---- Packages to install ---- # 
   home.packages = [
     pkgs.alacritty
     pkgs.neovim
     pkgs.git-credential-manager
   ];
 
-  # ========== Package Configs =========== #
+  # ---- Package Configs ---- #
   home.file = {
     ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
-    ".config/hypr".source = ../../modules/dotfiles/hyprland;
-    ".config/waybar".source = ../../modules/dotfiles/waybar;
-    ".config/swaylock".source = ../../modules/dotfiles/swaylock;
-    ".config/wlogout".source = ../../modules/dotfiles/wlogout;
-    ".config/rofi".source = ../../modules/dotfiles/rofi;
+
+    # ---- Hyprland Configs ---- #
+    ".config/hypr".source = ../../modules/hyprland/config;
+    ".config/waybar".source = ../../modules/hyprland/waybar;
+    ".config/swaylock".source = ../../modules/hyprland/swaylock;
+    ".config/wlogout".source = ../../modules/hyprland/wlogout;
+    ".config/rofi".source = ../../modules/hyprland/rofi;
+
+    # ---- Wallpapers ---- #
     "Wallpapers".source = ../../assets/wallpapers;
   };
 
-  # ========== Hyprland =========== #
+  # ---- Hyprland ---- #
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -45,7 +48,7 @@
     systemd.enable = true;
   };
 
-  # ========== Themeing ========== #
+  # ---- Theming ---- #
   gtk = {
     enable = true;
     theme = {
@@ -54,11 +57,11 @@
     };
   };
 
-  # ========== Session Variables =========== #
+  # ---- Session Variables ---- #
   home.sessionVariables = {
     EDITOR = "nvim";
   };
 
-  # Let Home Manager install and manage itself.
+  # ---- Home-manager ---- #
   programs.home-manager.enable = true;
 }
