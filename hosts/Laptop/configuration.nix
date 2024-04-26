@@ -14,18 +14,18 @@
       inputs.home-manager.nixosModules.home-manager
 
       # ========= Core Packages ========= #
-      ../../modules2/packages/core/core.nix
-      ../../modules2/packages/core-unstable/core-unstable.nix
+      ../../modules/packages/core/core.nix
+      ../../modules/packages/core-unstable/core-unstable.nix
 
       # ========= Packages ========= #
-      ../../modules2/packages/hyprland/hyprland.nix
-      ../../modules2/packages/devenv/dev.nix
-      ../../modules2/packages/text/text.nix
-      ../../modules2/packages/school/school.nix
-      ../../modules2/packages/waybar/waybar.nix
+      ../../modules/packages/hyprland/hyprland.nix
+      ../../modules/packages/devenv/dev.nix
+      ../../modules/packages/text/text.nix
+      ../../modules/packages/school/school.nix
+      ../../modules/packages/waybar/waybar.nix
 
       # ========= Configs ========= #
-      ../../modules2/dotfiles/rclone/rclone.nix
+      ../../modules/dotfiles/rclone/rclone.nix
     ];
 
   # ========== Home-Manager ========== #

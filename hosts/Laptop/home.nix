@@ -3,12 +3,12 @@
 {
   imports = [
 
-  # ---- Core / Terminal ---- #
-    ../../modules/core/terminal/default.nix
+    # ---- Core / Terminal ---- #
+    ../../modules/core/terminal
 
-    ../../modules2/dotfiles/git/git.nix
-    ../../modules2/dotfiles/oh-my-posh/ohmyposh.nix
-    ../../modules2/dotfiles/alacritty/alacritty.nix
+    ../../modules/dotfiles/git/git.nix
+    ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
+    ../../modules/dotfiles/alacritty/alacritty.nix
     # ../../modules/dotfiles/shell/sh.nix
   ];
 
@@ -28,12 +28,12 @@
 
   # ========== Package Configs =========== #
   home.file = {
-    ".poshThemes".source = ../../modules2/dotfiles/.poshThemes;
-    ".config/hypr".source = ../../modules2/dotfiles/hyprland;
-    ".config/waybar".source = ../../modules2/dotfiles/waybar;
-    ".config/swaylock".source = ../../modules2/dotfiles/swaylock;
-    ".config/wlogout".source = ../../modules2/dotfiles/wlogout;
-    ".config/rofi".source = ../../modules2/dotfiles/rofi;
+    ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
+    ".config/hypr".source = ../../modules/dotfiles/hyprland;
+    ".config/waybar".source = ../../modules/dotfiles/waybar;
+    ".config/swaylock".source = ../../modules/dotfiles/swaylock;
+    ".config/wlogout".source = ../../modules/dotfiles/wlogout;
+    ".config/rofi".source = ../../modules/dotfiles/rofi;
     "Wallpapers".source = ../../assets/wallpapers;
   };
 
