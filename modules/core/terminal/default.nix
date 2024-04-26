@@ -19,5 +19,5 @@
     alacritty
     zsh
     zplug
-  ]
+  ];
 }
