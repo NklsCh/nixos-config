@@ -25,6 +25,7 @@
 	        };
           modules = [ 
             ./hosts/Laptop/configuration.nix
+            ./modules/virt
           ];
         };
       };
