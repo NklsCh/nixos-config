@@ -101,7 +101,7 @@
       sddm = { 
         enable = true;
         wayland.enable = true;
-        theme = "${import ../../modules/dotfiles/sddm/sddm.nix { inherit pkgs; }}";
+        theme = "${import ../../modules/hyprland/sddm/sddm.nix { inherit pkgs; }}";
       };
       autoLogin = {
         enable = true;
