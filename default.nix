@@ -3,5 +3,5 @@
   imports = [
     home-manager.nixosModules.home-manager
     ./modules
-  ]
+  ];
 }
