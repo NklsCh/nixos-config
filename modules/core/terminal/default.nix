@@ -2,5 +2,5 @@
   imports = [
     ./zsh
     ./bash
-  ]
+  ];
 }
