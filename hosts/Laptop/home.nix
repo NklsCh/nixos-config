@@ -2,6 +2,10 @@
 
 {
   imports = [
+
+  # ---- Core / Terminal ---- #
+    ../../modules/core/terminal/default.nix
+
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
     ../../modules/dotfiles/alacritty/alacritty.nix
@@ -30,7 +34,7 @@
     ".config/swaylock".source = ../../modules/dotfiles/swaylock;
     ".config/wlogout".source = ../../modules/dotfiles/wlogout;
     ".config/rofi".source = ../../modules/dotfiles/rofi;
-    "Wallpapers".source = ../../modules/wallpapers;
+    "Wallpapers".source = ../../assets/wallpapers;
   };
 
   # ========== Hyprland =========== #
