@@ -23,9 +23,9 @@
             username = "choinowski";
 	          inherit inputs pkgs-unstable;
 	        };
-          modules = [ 
+          modules = [
+            ./.
             ./hosts/Laptop/configuration.nix
-            ./modules/virt
           ];
         };
       };
