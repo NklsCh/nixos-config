@@ -25,7 +25,7 @@
       ../../modules/packages/waybar/waybar.nix
 
       # ========= Configs ========= #
-      ../../modules/dotfiles/rclone/rclone.nix
+      # ../../modules/core/programms/rclone/default.nix
     ];
 
   # ========== Home-Manager ========== #
