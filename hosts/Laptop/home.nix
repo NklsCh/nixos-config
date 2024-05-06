@@ -5,6 +5,8 @@
 
     # ---- Core / Terminal ---- #
     ../../modules/core/terminal
+    # ---- Core / Programs ---- #
+    ../../modules/core/programms
 
     ../../modules/dotfiles/git/git.nix
     ../../modules/dotfiles/oh-my-posh/ohmyposh.nix
