@@ -19,7 +19,6 @@
   # ---- Packages to install ---- # 
   home.packages = [
     pkgs.alacritty
-    pkgs.neovim
     pkgs.git-credential-manager
   ];
 
