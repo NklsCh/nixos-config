@@ -12,5 +12,6 @@
     slurp
     wl-clipboard
     xwaylandvideobridge
+    brightnessctl
   ];
 }
