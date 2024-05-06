@@ -25,7 +25,7 @@
 
   # ---- Package Configs ---- #
   home.file = {
-    ".poshThemes".source = ../../modules/dotfiles/.poshThemes;
+    ".poshThemes".source = ../../modules/.poshThemes;
 
     # ---- Hyprland Configs ---- #
     ".config/hypr".source = ../../modules/hyprland/config;
