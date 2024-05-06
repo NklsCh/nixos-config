@@ -12,6 +12,7 @@
     "tray", 
     "custom/scratchpad-indicator", 
     "pulseaudio",
+    "backlight",
     "battery",
     "custom/power"
   ],
@@ -76,6 +77,11 @@
     },
     "on-click": "pavucontrol"
   },
+  "backlight": {
+    "format": "{percent}% {icon}",
+		"format-icons": ["", ""]
+
+  };
   "battery": {
     "states": {
       // "good": 95,
