@@ -79,9 +79,8 @@
   },
   "backlight": {
     "format": "{percent}% {icon}",
-		"format-icons": ["", ""]
-
-  };
+    "format-icons": ["", ""]
+  },
   "battery": {
     "states": {
       // "good": 95,
