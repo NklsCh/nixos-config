@@ -2,6 +2,5 @@
   imports = [
     ./zsh
     ./bash
-    ./alacritty
   ];
 }
