@@ -52,24 +52,24 @@
         },
 
         "pulseaudio": {
-            // "scroll-step": 1, // %, can be a float
-            "reverse-scrolling": 1,
-            "format": "{volume}% {icon} {format_source}",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": "󰝟     {format_source}",
-            "format-source": "",
-            "format-source-muted": "",
-            "format-icons": {
-                "headphone": "",
-                "hands-free": "",
-                "headset": "",
-                "phone": "",
-                "portable": "",
-                "car": "",
-                "default": [" "]
-            },
-            "on-click": "pavucontrol",
+          // "scroll-step": 1, // %, can be a float
+          "reverse-scrolling": 1,
+          "format": "{volume}% {icon} {format_source}",
+          "format-bluetooth": "{volume}% {icon} {format_source}",
+          "format-bluetooth-muted": " {icon} {format_source}",
+          "format-muted": "󰝟     {format_source}",
+          "format-source": "",
+          "format-source-muted": "",
+          "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" "]
+          },
+          "on-click": "pavucontrol",
           "min-length": 7,
         },
 
@@ -120,199 +120,198 @@
     }
     '';
     ".config/waybar/style.css".text = ''
-        * {
-            border: none;
-            border-radius: 0;
-            /* `otf-font-awesome` is required to be installed for icons */
-            font-family: Liberation Mono;
-            font-size: 13px;
-            min-height: 0;
-        }
+      * {
+        border: none;
+        border-radius: 0;
+        /* `otf-font-awesome` is required to be installed for icons */
+        font-family: Liberation Mono;
+        font-size: 13px;
+        min-height: 0;
+      }
 
-        window#waybar {
-            background: transparent;
-        }
+      window#waybar {
+        background: transparent;
+      }
 
-        window#waybar.hidden {
-            opacity: 0.2;
-        }
+      window#waybar.hidden {
+        opacity: 0.2;
+      }
 
-        #workspaces {
-            margin-right: 8px;
-            margin-left: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            background: #434C5E;
-        }
+      #workspaces {
+        margin-right: 8px;
+        margin-left: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        background: #434C5E;
+      }
 
-        #workspaces button {
-            transition: none;
-            color: #ffffff;
-            background: transparent;
-            padding: 5px;
-            font-size: 16px;
-        }
+      #workspaces button {
+        transition: none;
+        color: #ffffff;
+        background: transparent;
+        padding: 5px;
+        font-size: 16px;
+      }
 
-        #workspaces button.urgent {
-            color: #c54626; 
-        }
+      #workspaces button.urgent {
+        color: #c54626; 
+      }
 
-        /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-        #workspaces button:hover {
-            transition: none;
-            box-shadow: inherit;
-            text-shadow: inherit;
-            border-radius: inherit;
-            color: #383c4a;
-            background: #7c818c;
-        }
+      /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+      #workspaces button:hover {
+        transition: none;
+        box-shadow: inherit;
+        text-shadow: inherit;
+        border-radius: inherit;
+        color: #383c4a;
+        background: #7c818c;
+      }
 
-        #workspaces button.active {
-            color: #8FBCBB;
-        }
+      #workspaces button.active {
+        color: #8FBCBB;
+      }
 
-        #language {
-            padding-left: 16px;
-            padding-right: 8px;
-            border-radius: 10px 0px 0px 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-        }
+      #language {
+        padding-left: 16px;
+        padding-right: 8px;
+        border-radius: 10px 0px 0px 10px;
+        transition: none;
+        color: #ffffff;
+        background: #383c4a;
+      }
 
-        #keyboard-state {
-            margin-right: 8px;
-            padding-right: 16px;
-            border-radius: 0px 10px 10px 0px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-        }
+      #keyboard-state {
+        margin-right: 8px;
+        padding-right: 16px;
+        border-radius: 0px 10px 10px 0px;
+        transition: none;
+        color: #ffffff;
+        background: #383c4a;
+      }
 
+      #mode {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #b4a5a5;
+        background: #383c4a;
+      }
 
-        #mode {
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #b4a5a5;
-            background: #383c4a;
-        }
+      #clock {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #000000;
+        background: #5E81AC;
+      }
 
-        #clock {
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #000000;
-            background: #5E81AC;
-        }
+      #pulseaudio {
+        margin-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #000000;
+        background: #81A1C1;
+      }
 
-        #pulseaudio {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #000000;
-            background: #81A1C1;
-        }
+      #pulseaudio.muted {
+        background-color: #eb4d4b;
+        color: #000000;
+      }
 
-        #pulseaudio.muted {
-            background-color: #eb4d4b;
-            color: #000000;
-        }
+      #temperature {
+        margin-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #ebe5e5;
+        background: #383c4a;
+      }
 
-        #temperature {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #ebe5e5;
-            background: #383c4a;
-        }
+      #temperature.critical {
+        background-color: #eb4d4b;
+      }
 
-        #temperature.critical {
-            background-color: #eb4d4b;
-        }
+      #backlight {
+        margin-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #000000;
+        background: #D08770;
+      }
 
-        #backlight {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #000000;
-            background: #D08770;
-        }
+      #battery {
+        margin-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #000000;
+        background: #8FBCBB;
+      }
 
-        #battery {
-            margin-right: 8px;
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #000000;
-            background: #8FBCBB;
-        }
+      #battery.charging {
+        color: #000000;
+        background-color: #8FBCBB;
+      }
 
-        #battery.charging {
-            color: #000000;
-            background-color: #8FBCBB;
-        }
+      #battery.warning:not(.charging) {
+        background-color: #ffbe61;
+        color: black;
+      }
 
-        #battery.warning:not(.charging) {
-            background-color: #ffbe61;
-            color: black;
-        }
+      #battery.critical:not(.charging) {
+        background-color: #BF616A;
+        color: #000000;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
 
-        #battery.critical:not(.charging) {
-            background-color: #BF616A;
-            color: #000000;
-            animation-name: blink;
-            animation-duration: 0.5s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
+      #tray {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #ffffff;
+        background: #383c4a;
+      }
 
-        #tray {
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #ffffff;
-            background: #383c4a;
-        }
+      #network {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+        transition: none;
+        color: #000000;
+        background: #B48EAD;
+      }
 
-        #network {
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-            transition: none;
-            color: #000000;
-            background: #B48EAD;
-        }
+      #network.format-disconncted {
+        background-color: #ffbe61;
+      }
 
-        #network.format-disconncted {
-            background-color: #ffbe61;
-        }
+      #album-art {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 10px;
+      }
 
-        #album-art {
-            padding-left: 16px;
-            padding-right: 16px;
-            border-radius: 10px;
-        }
-
-        @keyframes blink {
-            to {
-                background-color: #ffffff;
-                color: #000000;
-            }
-        }
+      @keyframes blink {
+        to {
+          background-color: #ffffff;
+          color: #000000;
+      }
+      }
     '';
   };
 }
