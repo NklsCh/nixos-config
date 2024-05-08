@@ -106,7 +106,7 @@
 
         "tray": {
           "icon-size": 16,
-          "spacing": 0
+          "spacing": 1
         },
 
         "network": {
@@ -279,6 +279,7 @@
       }
 
       #tray {
+        margin-right: 8px;
         padding-left: 16px;
         padding-right: 16px;
         border-radius: 10px;
