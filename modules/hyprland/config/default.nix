@@ -1,4 +1,4 @@
-{ home-manager, ... }:
+{ home-manager, pkgs, ... }:
 {
   home.file = {
     ".config/hypr/hyprland.conf".text = ''
