@@ -2,7 +2,7 @@
 {
   home-manager.users.${username} = _: {
     home.file = {
-      ".config/waybar/config.jsonc".text = ''
+      ".config/waybar/config".text = ''
         {
   "modules-left": [
     "sway/workspaces", 
@@ -223,7 +223,7 @@ tooltip label {
  *rgba(0,153,153,1),#009999 --> Persian Green 
  *
  */
-      ''
+      '';
     };
   };
 }
