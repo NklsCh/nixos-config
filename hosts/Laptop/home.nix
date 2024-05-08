@@ -62,7 +62,10 @@
   qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "Adwaita-dark";
+    style = {
+      package = pkgs.gnome.gnome-theme-extra;
+      name = "Adwaita-dark";
+    };
   };
 
   # ---- Session Variables ---- #
