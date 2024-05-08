@@ -62,6 +62,7 @@
   qt = {
     enable = true;
     platformTheme = "gnome";
+    style = "Adwaita-dark";
   };
 
   # ---- Session Variables ---- #
