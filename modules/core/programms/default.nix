@@ -4,5 +4,6 @@
     ./git
     ./neovim
     ./oh-my-posh
+    ./nemo
   ];
 }
