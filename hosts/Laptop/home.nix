@@ -26,11 +26,10 @@
 
   # ---- Package Configs ---- #
   home.file = {
-    ".poshThemes".source = ../../modules/.poshThemes;
+    #".poshThemes".source = ../../modules/.poshThemes;
 
     # ---- Hyprland Configs ---- #
     ".config/hypr".source = ../../modules/hyprland/config;
-    # ".config/swaylock".source = ../../modules/hyprland/swaylock;
     ".config/wlogoutimages".source = ../../assets/wlogout;
     ".config/rofi".source = ../../modules/hyprland/rofi;
 
