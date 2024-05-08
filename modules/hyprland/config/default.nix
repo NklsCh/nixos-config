@@ -223,5 +223,20 @@ windowrulev2 = noblur, class:^(xwaylandvideobridge)$
 
 exec-once=bash ~/.config/hypr/start.sh
     '';
+    ".config/hypr/start.sh".text = ''
+      #!/usr/bin/env bash
+
+gnome-keyring-deamon --start --components=secrets &
+
+swww init &
+
+sleep 0.5 &&
+
+swww img ~/Wallpapers/moon.jpg &
+
+nm-applet --indicator &
+waybar &
+dunst
+    '';
   };
 } 
