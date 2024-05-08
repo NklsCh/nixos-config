@@ -14,7 +14,7 @@
         // Choose the order of the modules
         "modules-left": ["clock", "hyprland/workspaces", "image#album-art"],
         "modules-center": [],
-        "modules-right": ["pulseaudio", "backlight", "battery", "network"],
+        "modules-right": ["pulseaudio", "backlight", "tray", "battery", "network"],
 
 
         //***************************
