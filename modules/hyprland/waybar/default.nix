@@ -222,7 +222,6 @@ tooltip label {
  *rgba(0,153,153,1),#009999 --> Persian Green 
  *
  */
-      '';
-    };
+    '';
   };
 }
