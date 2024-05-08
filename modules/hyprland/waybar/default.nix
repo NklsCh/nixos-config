@@ -48,7 +48,7 @@
         "clock": {
           // "timezone": "Europe/Berlin",
           "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-          "format": "{:%d/%m | %H:%M}"
+          "format": "{:%d.%m | %H:%M}"
         },
 
         "pulseaudio": {
@@ -98,8 +98,8 @@
             "critical": 15
           },
           "format": "{capacity}% {icon}",
-          "format-charging": "{capacity}% ",
-          "format-plugged": "{capacity}% ",
+          "format-charging": "{capacity}% 󰂄",
+          "format-plugged": "{capacity}%  ",
           "format-alt": "{time} {icon}",
           "format-icons": [" "," "," "," "," "],
         },
