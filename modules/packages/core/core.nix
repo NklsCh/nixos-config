@@ -12,6 +12,6 @@
     teams-for-linux
     zoxide
     sddm-chili-theme
-    disfetch
+    neofetch
   ];
 }

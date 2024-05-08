@@ -3,7 +3,6 @@
   imports = [
     ./waybar
     ./swaylock
-    ./wlogout
     ./rofi
   ];
 }

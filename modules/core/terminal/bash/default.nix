@@ -2,7 +2,6 @@
 
 let
   myAliases = {
-    neofetch = "disfetch";
     vi = "nvim";
     vim = "nvim";
   };
