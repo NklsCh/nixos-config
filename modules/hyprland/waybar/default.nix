@@ -57,7 +57,7 @@
             "format": "{volume}% {icon} {format_source}",
             "format-bluetooth": "{volume}% {icon} {format_source}",
             "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": "󰝟 {format_source}",
+            "format-muted": "󰝟     {format_source}",
             "format-source": "",
             "format-source-muted": "",
             "format-icons": {
@@ -70,7 +70,7 @@
                 "default": [" "]
             },
             "on-click": "pavucontrol",
-          "min-length": 13,
+          "min-length": 7,
         },
 
 
