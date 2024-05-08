@@ -7,6 +7,8 @@
     ../../modules/core/terminal
     # ---- Core / Programs ---- #
     ../../modules/core/programms
+    # ---- Hyrland ---- #
+    ../../modules/hyprland
   ];
 
   # ---- User config ---- #
