@@ -31,7 +31,7 @@
     # ---- Hyprland Configs ---- #
     ".config/hypr".source = ../../modules/hyprland/config;
     ".config/swaylock".source = ../../modules/hyprland/swaylock;
-    ".config/wlogout".source = ../../assets/wlogout;
+    ".config/wlogoutimages".source = ../../assets/wlogout;
     ".config/rofi".source = ../../modules/hyprland/rofi;
 
     # ---- Wallpapers ---- #

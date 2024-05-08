@@ -68,27 +68,27 @@
       }
 
       #lock {
-        background-image: image(url("./lock.png"), url("./lock.png"));
+        background-image: image(url("../wlogoutimages/lock.png"), url("../wlogoutimages/lock.png"));
       }
 
       #logout {
-        background-image: image(url("./logout.png"), url("./logout.png"));
+        background-image: image(url("../wlogoutimages/logout.png"), url("../wlogoutimages/logout.png"));
       }
 
       #suspend {
-        background-image: image(url("./suspend.png"), url("./suspend.png"));
+        background-image: image(url("../wlogoutimages/suspend.png"), url("../wlogoutimages/suspend.png"));
       }
 
       #hibernate {
-        background-image: image(url("./hibernate.png"), url("./hibernate.png"));
+        background-image: image(url("../wlogoutimages/hibernate.png"), url("../wlogoutimages/hibernate.png"));
       }
 
       #shutdown {
-        background-image: image(url("./shutdown.png"), url("./shutdown.png"));
+        background-image: image(url("../wlogoutimages/shutdown.png"), url("../wlogoutimages/shutdown.png"));
       }
 
       #reboot {
-        background-image: image(url("./reboot.png"), url("./reboot.png"));
+        background-image: image(url("../wlogoutimages/reboot.png"), url("../wlogoutimages/reboot.png"));
       }
     '';
   };
