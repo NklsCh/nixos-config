@@ -29,7 +29,7 @@
     ".poshThemes".source = ../../modules/.poshThemes;
 
     # ---- Hyprland Configs ---- #
-    ".config/hypr".source = ../../modules/hyprland/config;
+    ".config/hypr/start.sh".source = ../../modules/hyprland/config/start.sh;
     ".config/swaylock".source = ../../modules/hyprland/swaylock;
     ".config/wlogoutimages".source = ../../assets/wlogout;
     ".config/rofi".source = ../../modules/hyprland/rofi;
@@ -47,10 +47,15 @@
   };
 
   # ---- Theming ---- #
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+    };
+  };
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.adw-gtk3;
+      package = Adwaita-dark;
       name = "adw-gtk3";
     };
   };
