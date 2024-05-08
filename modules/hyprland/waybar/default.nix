@@ -22,34 +22,33 @@
         //***************************
 
         "hyprland/workspaces": {
-            "disable-scroll": true
+          "disable-scroll": true
         },
 
         "hyprland/language": {
-            "format": "{} ",
-        "min-length": 5,
-        "tooltip": false
+          "format": "{} ",
+          "min-length": 5,
+          "tooltip": false
         },
 
         "keyboard-state": {
-            //"numlock": true,
-            "capslock": true,
-            "format": "{name} {icon} ",
-            "format-icons": {
-                "locked": " ",
-                "unlocked": ""
-            },
+          //"numlock": true,
+          "capslock": true,
+          "format": "{name} {icon} ",
+          "format-icons": {
+            "locked": " ",
+            "unlocked": ""
+          },
         },
 
-
         "hyprland/mode": {
-            "format": "<span style=\"italic\">{}</span>"
+          "format": "<span style=\"italic\">{}</span>"
         },
 
         "clock": {
-            // "timezone": "America/New_York",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format": "{:%d/%m | %H:%M}"
+          // "timezone": "Europe/Berlin",
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format": "{:%d/%m | %H:%M}"
         },
 
         "pulseaudio": {
@@ -58,7 +57,7 @@
             "format": "{volume}% {icon} {format_source}",
             "format-bluetooth": "{volume}% {icon} {format_source}",
             "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": "婢 {format_source}",
+            "format-muted": "󰝟 {format_source}",
             "format-source": "{volume}% ",
             "format-source-muted": "",
             "format-icons": {
@@ -68,7 +67,7 @@
                 "phone": "",
                 "portable": "",
                 "car": "",
-                "default": ["奄", "奔", "墳"]
+                "default": [" "]
             },
             "on-click": "pavucontrol",
           "min-length": 13,
@@ -88,43 +87,36 @@
         "backlight": {
           "device": "intel_backlight",
           "format": "{percent}% {icon}",
-          "format-icons": ["","","","", "", "", ""],
+          "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
           "min-length": 7,
         },
 
         "battery": {
-            "interval": 3,
-            "states": {
-                "warning": 30,
-                "critical": 15
-            },
-            "format": "{capacity}% {icon}",
-            "format-charging": "{capacity}% ",
-            "format-plugged": "{capacity}% ",
-            "format-alt": "{time} {icon}",
-            "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+          "interval": 3,
+          "states": {
+            "warning": 30,
+            "critical": 15
+          },
+          "format": "{capacity}% {icon}",
+          "format-charging": "{capacity}% ",
+          "format-plugged": "{capacity}% ",
+          "format-alt": "{time} {icon}",
+          "format-icons": [" "," "," "," "," "],
         },
 
         "tray": {
-            "icon-size": 16,
-            "spacing": 0
+          "icon-size": 16,
+          "spacing": 0
         },
 
         "network": {
-            "interval": 30,
-            "format-wifi": " {ipaddr}", // Icon: wifi
-            "format-ethernet": "", // Icon: ethernet
-            "format-disconnected": "⚠  Disconnected",
-            "tooltip-format": "{ifname}: {essid}",
-            "on-click": "nmtui"
+          "interval": 30,
+          "format-wifi": " {ipaddr}", // Icon: wifi
+          "format-ethernet": "󰈀 ", // Icon: ethernet
+          "format-disconnected": "⚠  Disconnected",
+          "tooltip-format": "{ifname}: {essid}",
+          "on-click": "nmtui"
         },
-
-        "image#album-art": {
-            "path": "/home/michael/Pictures/nix-logo.png",
-            "size": 32,
-            "interval": 5,
-            "on-click": "code /home/michael/nixos-build"
-        }
     }
     '';
     ".config/waybar/style.css".text = ''
