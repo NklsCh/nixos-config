@@ -1,6 +1,6 @@
 { home-manager, ... }:
 {
-  home-manager.users.choinowski = _: {
+  home-manager _: {
     home.file = {
       ".config/waybar/config".text = ''
         {
