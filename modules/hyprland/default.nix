@@ -2,7 +2,6 @@
 {
   imports = [
     ./waybar
-    ./config
     ./wlogout
   ];
 }
