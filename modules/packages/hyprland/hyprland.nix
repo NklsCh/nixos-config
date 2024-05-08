@@ -7,8 +7,6 @@
     libnotify
     swww
     networkmanagerapplet
-    libsForQt5.dolphin
-    libsForQt5.qt5.qtgraphicaleffects
     grim
     slurp
     wl-clipboard
