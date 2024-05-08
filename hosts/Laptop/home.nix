@@ -29,7 +29,7 @@
     ".poshThemes".source = ../../modules/.poshThemes;
 
     # ---- Hyprland Configs ---- #
-    # ".config/hypr/start.sh".source = ../../modules/hyprland/config/start.sh;
+    ".config/hypr".source = ../../modules/hyprland/config;
     ".config/swaylock".source = ../../modules/hyprland/swaylock;
     ".config/wlogoutimages".source = ../../assets/wlogout;
     ".config/rofi".source = ../../modules/hyprland/rofi;
