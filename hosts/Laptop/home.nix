@@ -55,9 +55,14 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.adw-gtk3;
-      name = "adw-gtk3";
+      package = pkgs.gnome.gnome-theme-extra;
+      name = "Adwaita-dark";
     };
+  };
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark"
   };
 
   # ---- Session Variables ---- #
