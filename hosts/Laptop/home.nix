@@ -28,7 +28,7 @@
 
     # ---- Hyprland Configs ---- #
     ".config/hypr".source = ../../modules/hyprland/config;
-    ".config/waybar".source = ../../modules/hyprland/waybar;
+    # ".config/waybar".source = ../../modules/hyprland/waybar;
     ".config/swaylock".source = ../../modules/hyprland/swaylock;
     ".config/wlogout".source = ../../modules/hyprland/wlogout;
     ".config/rofi".source = ../../modules/hyprland/rofi;
