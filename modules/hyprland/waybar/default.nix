@@ -75,10 +75,7 @@
 
 
         "temperature": {
-          // "thermal-zone": 2,
-          // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
           "critical-threshold": 80,
-          // "format-critical": "{temperatureC}°C {icon}",
           "format": "{temperatureC}°C {icon}",
           "format-icons": ["", "", "", "", ""],
           "tooltip": false,
@@ -106,7 +103,7 @@
 
         "tray": {
           "icon-size": 16,
-          "spacing": 1
+          "spacing": 2
         },
 
         "network": {
@@ -123,7 +120,6 @@
       * {
         border: none;
         border-radius: 0;
-        /* `otf-font-awesome` is required to be installed for icons */
         font-family: Liberation Mono;
         font-size: 13px;
         min-height: 0;
