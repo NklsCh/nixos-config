@@ -112,7 +112,7 @@
           "format-ethernet": "󰈀 ", // Icon: ethernet
           "format-disconnected": "⚠  Disconnected",
           "tooltip-format": "{ifname}: {essid}",
-          "on-click": "nmtui"
+          "on-click": ""
         },
     }
     '';
