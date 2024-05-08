@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     rclone
+    cinnamon.nemo
     brave
     discord
     bitwarden
