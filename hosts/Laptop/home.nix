@@ -55,7 +55,7 @@
   gtk = {
     enable = true;
     theme = {
-      package = Adwaita-dark;
+      package = pkgs.adw-gtk3;
       name = "adw-gtk3";
     };
   };
