@@ -1,118 +1,117 @@
 { home-manager, ... }:
 {
-  home-manager = {
-    home.file = {
-      ".config/waybar/config".text = ''
-        {
-  "modules-left": [
-    "sway/workspaces", 
-    "sway/mode", 
-    "clock", 
-    "idle_inhibitor" 
-  ],
-  "modules-center": [
-    "hyprland/workspaces"
-  ], 
-  "modules-right": [
-    "tray", 
-    "custom/scratchpad-indicator", 
-    "pulseaudio",
-    "backlight",
-    "battery",
-    "custom/power"
-  ],
+  home.file = {
+    ".config/waybar/config".text = ''
+      {
+        "modules-left": [
+          "sway/workspaces", 
+          "sway/mode", 
+          "clock", 
+          "idle_inhibitor" 
+        ],
+        "modules-center": [
+          "hyprland/workspaces"
+        ], 
+        "modules-right": [
+          "tray", 
+          "custom/scratchpad-indicator", 
+          "pulseaudio",
+          "backlight",
+          "battery",
+          "custom/power"
+        ],
 
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": true,
-    "format": "{}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "*": 5
-    }
-  },
+        "hyprland/workspaces": {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
+        "format-icons": {
+          "urgent": "",
+          "active": "",
+          "default": ""
+        },
+        "persistent-workspaces": {
+          "*": 5
+        }
+        },
 
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "network": {
-    "format-wifi": "{essid} ({signalStrength}%)  ",
-    "format-ethernet": "{ifname}  ",
-    "format-disconnected": " ", 
-    "max-length": 50,
-    "on-click": "alacritty -e 'nmtui'"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": " ",
-      "deactivated": " "
-    },
-	  "on-click": "bash /home/dg/.local/bin/toggleRemote"
-  },
-  "tray": {
-    "icon-size": 15,
-    "spacing": 10
-  },
-  "clock": {
-    // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    // "format-alt": "{:%Y-%m-%d}"
-		"on-click": "gnome-calendar"
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon} ",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " ",
-    "format-source": "{volume}% ",
-    "format-source-muted": " ",
-    "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": "",
-      "portable": "",
-      "car": " ",
-      "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
-  },
-  "backlight": {
-    "format": "{percent}% {icon} ",
-    "format-icons": [" ", " "]
-  },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    "format-icons": [" ", " ", " ", " ", " "]
-  },
-	"custom/power": {
-		"format": " ",
-    "on-click": "wlogout"
-	},
-  "custom/scratchpad-indicator": {
-    "format-text": "{}hi",
-    "return-type": "json",
-    "interval": 3,
-    "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
-    "exec-if": "exit 0",
-    "on-click": "swaymsg 'scratchpad show'",
-    "on-click-right": "swaymsg 'move scratchpad'"
-  }
-}
-      '';
-      ".config/waybar/style.css".text = ''
+        "sway/mode": {
+          "format": "<span style=\"italic\">{}</span>"
+        },
+        "network": {
+          "format-wifi": "{essid} ({signalStrength}%)  ",
+          "format-ethernet": "{ifname}  ",
+          "format-disconnected": " ", 
+          "max-length": 50,
+          "on-click": "alacritty -e 'nmtui'"
+        },
+        "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+          "activated": " ",
+          "deactivated": " "
+        },
+	      "on-click": "bash /home/dg/.local/bin/toggleRemote"
+        },
+        "tray": {
+          "icon-size": 15,
+          "spacing": 10
+        },
+        "clock": {
+          // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          // "format-alt": "{:%Y-%m-%d}"
+		    "on-click": "gnome-calendar"
+        },
+        "pulseaudio": {
+          "format": "{volume}% {icon} ",
+          "format-bluetooth": "{volume}% {icon} {format_source}",
+          "format-bluetooth-muted": " {icon} {format_source}",
+          "format-muted": " ",
+          "format-source": "{volume}% ",
+          "format-source-muted": " ",
+          "format-icons": {
+          "headphone": " ",
+          "hands-free": " ",
+          "headset": " ",
+          "phone": "",
+          "portable": "",
+          "car": " ",
+          "default": ["", "", ""]
+        },
+          "on-click": "pavucontrol"
+        },
+        "backlight": {
+          "format": "{percent}% {icon} ",
+          "format-icons": [" ", " "]
+        },
+        "battery": {
+          "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+          },
+          "format": "{icon}   {capacity}%",
+          "format-charging": "  {capacity}%",
+          "format-alt": "{icon}  {time}",
+          "format-icons": [" ", " ", " ", " ", " "]
+        },
+	      "custom/power": {
+		      "format": " ",
+          "on-click": "wlogout"
+	      },
+        "custom/scratchpad-indicator": {
+          "format-text": "{}hi",
+          "return-type": "json",
+          "interval": 3,
+          "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
+          "exec-if": "exit 0",
+          "on-click": "swaymsg 'scratchpad show'",
+          "on-click-right": "swaymsg 'move scratchpad'"
+        }
+      }
+    '';
+    ".config/waybar/style.css".text = ''
         * {
   border: none;
   font-family: Font Awesome, Roboto, Arial, sans-serif;
