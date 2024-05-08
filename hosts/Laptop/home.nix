@@ -55,7 +55,7 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.gnome.gnome-theme-extra;
+      package = pkgs.gnome.gnome-themes-extra;
       name = "Adwaita-dark";
     };
   };
@@ -63,7 +63,7 @@
     enable = true;
     platformTheme = "gnome";
     style = {
-      package = pkgs.gnome.gnome-theme-extra;
+      package = pkgs.gnome.gnome-themes-extra;
       name = "Adwaita-dark";
     };
   };
