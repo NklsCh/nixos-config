@@ -30,7 +30,6 @@
     # ---- Hyprland Configs ---- #
     ".config/hypr".source = ../../modules/hyprland/config;
     ".config/wlogoutimages".source = ../../assets/wlogout;
-    #".config/rofi".source = ../../modules/hyprland/rofi;
 
     # ---- Wallpapers ---- #
     "Wallpapers".source = ../../assets/wallpapers;
