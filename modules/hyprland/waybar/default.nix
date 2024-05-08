@@ -1,6 +1,6 @@
 { home-manager, ... }:
 {
-  home-manager _: {
+  home-manager = {
     home.file = {
       ".config/waybar/config".text = ''
         {
