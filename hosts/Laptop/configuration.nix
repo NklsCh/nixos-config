@@ -59,7 +59,7 @@
         };
       };
     };
-    kernelParams = [ "psmouse.synpatics_intertouch=0" ];
+    kernelParams = [ "psmouse.synaptics_intertouch=0" ];
   };
 
   networking.hostName = "Laptop"; # Define your hostname.
