@@ -127,10 +127,11 @@
       enable = true;
       restart = false;
       settings = {
-        default_session = {
+        initial_session = {
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --cmd Hyprland";
           user = "choinowski";
         };
+        default_session = initial_session;
       };
     };
   };
