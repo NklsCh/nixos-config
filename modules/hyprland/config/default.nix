@@ -6,7 +6,7 @@
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
-      extraConfig = ''
+    extraConfig = ''
       # ---- Monitors ---- #
       monitor=,1920x1080,0x0,1
 
