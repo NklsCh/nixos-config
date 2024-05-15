@@ -1,6 +1,7 @@
-{ home-manager, ... }:
+{ pkgs, home-manager, ... }:
 {
-  programs.brave = {
+  programs.chromium = {
     enable = true;
+    package = pkgs.brave;
   };
 }
