@@ -111,22 +111,11 @@
       enable = true;
       layout = "de";
       xkbVariant = "";
-      # displayManager = {
-      #  sddm = { 
-      #    enable = true;
-      #    wayland.enable = true;
-      #    theme = "${import ../../modules/hyprland/sddm/sddm.nix { inherit pkgs; }}";
-      #  };
-      #  autoLogin = {
-      #    enable = true;
-      #    user = "choinowski";
-      #  };
-      # };
     };
     greetd = {
       enable = true;
       restart = false;
-      settings = {
+      settings = rec {
         initial_session = {
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --cmd Hyprland";
           user = "choinowski";
