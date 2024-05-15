@@ -1,9 +1,9 @@
 { home-manager, ... }:
 {
   imports = [
-    ./waybar
-    ./swaylock
-    ./rofi
     ./config
+    ./rofi
+    ./swaylock
+    ./waybar
   ];
 }
