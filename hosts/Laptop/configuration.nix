@@ -38,25 +38,28 @@
 
   # ========== Bootloader ========== #
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-      useOSProber = true;
-      gfxmodeBios = "1920x1080";
-      gfxmodeEfi = "1920x1080";
-      theme = pkgs.stdenv.mkDerivation {
-        pname = "distro-grub-themes";
-        version = "3.1";
-        src = pkgs.fetchFromGitHub {
-          owner = "AdisonCavani";
-          repo = "distro-grub-themes";
-          rev = "v3.1";
-          hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";
+  boot = {
+    loader = {
+      grub = {
+        enable = true;
+        device = "/dev/sda";
+        useOSProber = true;
+        gfxmodeBios = "1920x1080";
+        gfxmodeEfi = "1920x1080";
+        theme = pkgs.stdenv.mkDerivation {
+          pname = "distro-grub-themes";
+          version = "3.1";
+          src = pkgs.fetchFromGitHub {
+            owner = "AdisonCavani";
+            repo = "distro-grub-themes";
+            rev = "v3.1";
+            hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";
+          };
+          installPhase = "cp -r customize/nixos $out";
         };
-        installPhase = "cp -r customize/nixos $out";
       };
     };
+    kernelParams = [ "psmouse.synpatics_intertouch=0" ];
   };
 
   networking.hostName = "Laptop"; # Define your hostname.
@@ -142,7 +145,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
