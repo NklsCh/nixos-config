@@ -35,14 +35,6 @@
     "Wallpapers".source = ../../assets/wallpapers;
   };
 
-  # ---- Hyprland ---- #
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = pkgs.hyprland;
-    xwayland.enable = true;
-    systemd.enable = true;
-  };
-
   # ---- Theming ---- #
   dconf.settings = {
     "org/gnome/desktop/interface" = {
