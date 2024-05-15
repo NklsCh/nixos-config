@@ -3,12 +3,8 @@
 {
   imports = [
 
-    # ---- Core / Terminal ---- #
-    ../../modules/core/terminal
-    # ---- Core / Programs ---- #
-    ../../modules/core/programms
-    # ---- Hyprland ---- #
-    ../../modules/hyprland
+    # ---- Modules ---- #
+    ../../modules
   ];
 
   # ---- User config ---- #
