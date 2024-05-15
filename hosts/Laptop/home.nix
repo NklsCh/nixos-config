@@ -28,7 +28,7 @@
   home.file = { 
 
     # ---- Hyprland Configs ---- #
-    ".config/hypr/start.sh".source = ../../modules/sh/start.sh;
+    ".config/sh/start.sh".source = ../../modules/sh/start.sh;
     ".config/wlogoutimages".source = ../../assets/wlogout;
 
     # ---- Wallpapers ---- #
