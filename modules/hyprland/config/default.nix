@@ -1,7 +1,12 @@
-{ home-manager, ... }:
+{ home-manager, pkgs, ... }:
 {
-  home.file = {
-    ".config/hypr/hyprland.conf".text = ''
+  # ---- Hyprland ---- #
+  wayland.windowManager.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;
+    xwayland.enable = true;
+    systemd.enable = true;
+      extraConfig = ''
       # ---- Monitors ---- #
       monitor=,1920x1080,0x0,1
 
