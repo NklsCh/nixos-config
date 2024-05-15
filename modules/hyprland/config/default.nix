@@ -86,7 +86,8 @@
         force_default_wallpaper = 0 # Set to 0 to disable the anime mascot wallpapers
       }
 
-      device:epic-mouse-v1 {
+      device {
+        name = epic-mouse-v1
         sensitivity = -0.5
       }
 
