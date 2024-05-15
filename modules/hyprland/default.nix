@@ -4,5 +4,6 @@
     ./waybar
     ./swaylock
     ./rofi
+    ./config
   ];
 }
