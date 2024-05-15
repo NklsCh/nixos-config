@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     rclone
     cinnamon.nemo
-    brave
+    # brave
     discord
     bitwarden
     unzip
