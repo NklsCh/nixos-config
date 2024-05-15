@@ -3,11 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { inputs, config, pkgs, pkgs-unstable, ... }:
-  let
-    tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-    session = "${pkgs.hyprland}/bin/hyprland";
-    username = "choinowski";
-  in
+
 {
 
   # ========== Import =========== #
@@ -121,13 +117,10 @@
       restart = false;
       settings = rec {
         initial_session = {
-          command = "${session}";
-          user = "${username}";
+          command = "${pkgs.greetd.tuigreet} --time --asterisks --remember --remember-user-session --cmd Hyprland"
+          user = "choinowski";
         };
-        default_session = {
-          command = "${tuigreet} --asterisks --remember --remember-user-session --time -cmd ${session}";
-          user = "greeter";
-        };
+        default_session = initial_session;
       };
     };
   };
