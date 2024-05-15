@@ -7,7 +7,7 @@
     ../../modules/core/terminal
     # ---- Core / Programs ---- #
     ../../modules/core/programms
-    # ---- Hyrland ---- #
+    # ---- Hyprland ---- #
     ../../modules/hyprland
   ];
 
