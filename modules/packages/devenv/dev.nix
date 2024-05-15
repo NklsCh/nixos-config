@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     vscode
     rocmPackages.llvm.clang
-    nodejs_21
+    nodejs_22
     termius
     gparted
     gh
