@@ -117,7 +117,7 @@
       restart = false;
       settings = rec {
         initial_session = {
-          command = "${pkgs.greetd.tuigreet} --time --asterisks --remember --remember-user-session --cmd Hyprland";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --remember --remember-user-session --cmd Hyprland";
           user = "choinowski";
         };
         default_session = initial_session;
