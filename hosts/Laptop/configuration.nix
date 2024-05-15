@@ -15,7 +15,6 @@
 
       # ========= Core Packages ========= #
       ../../modules/packages/core/core.nix
-      ../../modules/packages/core-unstable/core-unstable.nix
 
       # ========= Packages ========= #
       ../../modules/packages/hyprland/hyprland.nix
