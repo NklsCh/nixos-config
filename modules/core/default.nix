@@ -1,6 +1,5 @@
 {
   imports = [
-    ./nix
     ./programms
     ./terminal
   ];

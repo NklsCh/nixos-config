@@ -13,6 +13,7 @@
     zoxide
     sddm-chili-theme
     neofetch
+    # nh
     nix-output-monitor
     warp-terminal
   ];
