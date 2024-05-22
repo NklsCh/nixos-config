@@ -11,6 +11,7 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    dotDir = ".config/zsh";
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
     zplug = {
@@ -21,7 +22,7 @@ in
       ];
     };
     initExtraFirst = ''
-      source = .p10k.zsh
+      source ~/.config/zsh/.p10k.zsh
     '';
     initExtra = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
