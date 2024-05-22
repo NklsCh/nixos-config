@@ -2,103 +2,139 @@
 {
   home.file = {
     ".config/rofi/config.rasi".text = ''
-      * {
-        bg0:    #212121F2;
-        bg1:    #2A2A2A;
-        bg2:    #3D3D3D80;
-        bg3:    #1A73E8F2;
-        fg0:    #E6E6E6;
-        fg1:    #FFFFFF;
-        fg2:    #969696;
-        fg3:    #3D3D3D;
+      /*Dracula theme based on the Purple official rofi theme*/
+  
+    configuration {
+      show-icons:      true;
+      display-drun:    "";
+      disable-history: false;
+    }
 
-        font:   "Roboto 12";
+    * {
+      font: "Jetbrains Mono 12";
+      foreground: #f8f8f2;
+      background-color: #282a36;
+      active-background: #6272a4;
+      urgent-background: #ff5555;
+      urgent-foreground: #282a36;
+      selected-background: @active-background;
+      selected-urgent-background: @urgent-background;
+      selected-active-background: @active-background;
+      separatorcolor: @active-background;
+      bordercolor: @active-background;
+    }
 
-        background-color:   transparent;
-        text-color:         @fg0;
-
-        margin:     0px;
-        padding:    0px;
-        spacing:    0px;
-      }
-
-      window {
-        location:       center;
-        width:          480;
-        border-radius:  24px;
-    
-        background-color:   @bg0;
-      }
-
-      mainbox {
-        padding:    12px;
-      }
-
-      inputbar {
-        background-color:   @bg1;
-        border-color:       @bg3;
-
-        border:         2px;
-        border-radius:  16px;
-
-        padding:    8px 16px;
-        spacing:    8px;
-        children:   [ prompt, entry ];
-      }
-
-      prompt {
-        text-color: @fg2;
-      }
-
-      entry {
-        placeholder:        "Search";
-        placeholder-color:  @fg3;
-		    text-color: @fg2;
-      }
-
-      message {
-        margin:             12px 0 0;
-        border-radius:      16px;
-        border-color:       @bg2;
-        background-color:   @bg2;
-      }
-
-      textbox {
-        padding:    8px 24px;
-      }
-
-      listview {
-        background-color:   transparent;
-
-        margin:     12px 0 0;
-        lines:      8;
-        columns:    1;
-
-        fixed-height: false;
-      }
-
-      element {
-        padding:        8px 16px;
-        spacing:        8px;
-        border-radius:  16px;
-      }
-
-      element normal active {
-        text-color: @bg3;
-      }
-
-      element selected normal, element selected active {
-        background-color:   @bg3;
-      }
-
-      element-icon {
-        size:           1em;
-        vertical-align: 0.5;
-      }
-
-      element-text {
-        text-color: inherit;
-      }
+    #window {
+      background-color: @background-color;
+      border:           3;
+      border-radius:    6;
+      border-color:     @bordercolor;
+      padding:          15;
+    }
+    #mainbox {
+      border:  0;
+      padding: 0;
+    }
+    #message {
+      border:       0px;
+      border-color: @separatorcolor;
+      padding:      1px;
+    }
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    fixed-height: 0;
+    border:       0px;
+    border-color: @bordercolor;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
+#element {
+    border:  0;
+    padding: 3px ;
+}
+#element.normal.normal {
+    background-color: @background-color;
+    text-color:       @foreground;
+}
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @foreground;
+}
+#element.alternate.normal {
+    background-color: @background-color;
+    text-color:       @foreground;
+}
+#element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color:       @foreground;
+}
+#element.alternate.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}
+#scrollbar {
+    width:        2px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ">";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
     '';
   };
 }
