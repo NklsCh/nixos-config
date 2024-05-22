@@ -40,16 +40,16 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.gnome.gnome-themes-extra;
-      name = "Adwaita-dark";
+      package = pkgs.dracula-theme;
+      name = "Dracula";
     };
   };
   qt = {
     enable = true;
     platformTheme = "gnome";
     style = {
-      package = pkgs.gnome.gnome-themes-extra;
-      name = "Adwaita-dark";
+      package = pkgs.dracula-theme;
+      name = "Dracula";
     };
   };
 

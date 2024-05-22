@@ -3,15 +3,9 @@
   home.file = {
     ".config/waybar/config".text = ''
       {
-        // "layer": "top", // Waybar at top layer
-        // "position": "bottom", // Waybar position (top|bottom|left|right)
-        // "height": 30, // Waybar height (to be removed for auto height)
         "margin": "5 10 0 10", // top, left, botton, right
         "layer": "top",
         "position": "top",
-        // "height": 24,
-        // "width": 1280, // Waybar width
-        // Choose the order of the modules
         "modules-left": ["clock", "hyprland/workspaces", "image#album-art"],
         "modules-center": [],
         "modules-right": ["pulseaudio", "backlight", "tray", "battery", "network"],
@@ -20,30 +14,6 @@
         //***************************
         //*  Modules configuration  *
         //***************************
-
-        "hyprland/workspaces": {
-          "disable-scroll": true
-        },
-
-        "hyprland/language": {
-          "format": "{} ",
-          "min-length": 5,
-          "tooltip": false
-        },
-
-        "keyboard-state": {
-          //"numlock": true,
-          "capslock": true,
-          "format": "{name} {icon} ",
-          "format-icons": {
-            "locked": " ",
-            "unlocked": ""
-          },
-        },
-
-        "hyprland/mode": {
-          "format": "<span style=\"italic\">{}</span>"
-        },
 
         "clock": {
           // "timezone": "Europe/Berlin",
@@ -73,14 +43,6 @@
           "min-length": 7,
         },
 
-
-        "temperature": {
-          "critical-threshold": 80,
-          "format": "{temperatureC}°C {icon}",
-          "format-icons": ["", "", "", "", ""],
-          "tooltip": false,
-        },
-
         "backlight": {
           "device": "intel_backlight",
           "format": "{percent}% {icon}",
@@ -95,7 +57,7 @@
             "critical": 15
           },
           "format": "{capacity}% {icon}",
-          "format-charging": "{capacity}% 󰂄",
+          "format-charging": "{capacity}%  ",
           "format-plugged": "{capacity}%  ",
           "format-alt": "{time} {icon}",
           "format-icons": [" "," "," "," "," "],
@@ -140,7 +102,7 @@
         padding-right: 16px;
         border-radius: 10px;
         transition: none;
-        background: #434C5E;
+        background: #7CAFC2;
       }
 
       #workspaces button {
@@ -161,39 +123,12 @@
         box-shadow: inherit;
         text-shadow: inherit;
         border-radius: inherit;
-        color: #383c4a;
-        background: #7c818c;
+        color: #000000;
+        background: #7CAFC2;
       }
 
       #workspaces button.active {
-        color: #8FBCBB;
-      }
-
-      #language {
-        padding-left: 16px;
-        padding-right: 8px;
-        border-radius: 10px 0px 0px 10px;
-        transition: none;
-        color: #ffffff;
-        background: #383c4a;
-      }
-
-      #keyboard-state {
-        margin-right: 8px;
-        padding-right: 16px;
-        border-radius: 0px 10px 10px 0px;
-        transition: none;
-        color: #ffffff;
-        background: #383c4a;
-      }
-
-      #mode {
-        padding-left: 16px;
-        padding-right: 16px;
-        border-radius: 10px;
-        transition: none;
-        color: #b4a5a5;
-        background: #383c4a;
+        color: #000000;
       }
 
       #clock {
@@ -202,7 +137,7 @@
         border-radius: 10px;
         transition: none;
         color: #000000;
-        background: #5E81AC;
+        background: #BA8BAF;
       }
 
       #pulseaudio {
@@ -212,26 +147,12 @@
         border-radius: 10px;
         transition: none;
         color: #000000;
-        background: #81A1C1;
+        background: #F7B56C;
       }
 
       #pulseaudio.muted {
-        background-color: #eb4d4b;
+        background-color: #AB4642;
         color: #000000;
-      }
-
-      #temperature {
-        margin-right: 8px;
-        padding-left: 16px;
-        padding-right: 16px;
-        border-radius: 10px;
-        transition: none;
-        color: #ebe5e5;
-        background: #383c4a;
-      }
-
-      #temperature.critical {
-        background-color: #eb4d4b;
       }
 
       #backlight {
@@ -241,7 +162,7 @@
         border-radius: 10px;
         transition: none;
         color: #000000;
-        background: #D08770;
+        background: #A1B56C;
       }
 
       #battery {
@@ -260,7 +181,7 @@
       }
 
       #battery.warning:not(.charging) {
-        background-color: #ffbe61;
+        background-color: #F7CA88;
         color: black;
       }
 
@@ -280,8 +201,8 @@
         padding-right: 16px;
         border-radius: 10px;
         transition: none;
-        color: #ffffff;
-        background: #383c4a;
+        color: #F8F8F8;
+        background: #000000;
       }
 
       #network {
@@ -290,11 +211,11 @@
         border-radius: 10px;
         transition: none;
         color: #000000;
-        background: #B48EAD;
+        background: #BA8BAF;
       }
 
       #network.format-disconncted {
-        background-color: #ffbe61;
+        background-color: #F7CA88;
       }
 
       #album-art {
