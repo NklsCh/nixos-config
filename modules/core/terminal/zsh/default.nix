@@ -10,7 +10,6 @@ in
 {
   programs.zsh = {
     enable = true;
-    dotDir = ".config/zsh";
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
@@ -22,7 +21,7 @@ in
       ];
     };
     initExtraFirst = ''
-      source = ~/.config/zsh/.p10k.zsh
+      source = .p10k.zsh
     '';
     initExtra = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
