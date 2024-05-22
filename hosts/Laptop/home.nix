@@ -43,6 +43,10 @@
       package = pkgs.dracula-theme;
       name = "Dracula";
     };
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
   };
   qt = {
     enable = true;
