@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   programs.oh-my-posh = {
-    enable = true;
+    enable = false;
   };
   home.file = {
     ".poshThemes/theme.omp.json".text = ''

@@ -10,6 +10,7 @@ in
 {
   programs.zsh = {
     enable = true;
+    dotDir = ".config/zsh";
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
@@ -17,11 +18,15 @@ in
       enable = true;
       plugins = [
         { name = "zsh-users/zsh-autosuggestions"; }
+        { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
       ];
     };
+    initExtraFirst = ''
+      source = ~/.config/zsh/.p10k.zsh
+    '';
     initExtra = ''
+      POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
       bindkey '^I' autosuggest-accept
-      eval "$(oh-my-posh init zsh --config ~/.poshThemes/theme.omp.json)"
       eval "$(zoxide init --cmd cd zsh)"
     '';
   };
