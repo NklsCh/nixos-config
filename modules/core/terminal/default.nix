@@ -11,7 +11,6 @@
 
   home-manager.users.${username} = {
     programs.git.enable = true;
-    # programs.alacritty.enable = true;
   };
   environment.systemPackages = with pkgs; [
     zoxide
