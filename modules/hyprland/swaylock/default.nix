@@ -1,5 +1,6 @@
-{ home-manager, ... }:
+{ username, ... }:
 {
+  home-manager.users.${username} = _: {
   home.file = {
     ".config/swaylock/config".text = ''
       color=303446
@@ -32,5 +33,6 @@
       text-ver-color=8caaee
       text-wrong-color=ea999c
     '';
+  };
   };
 }

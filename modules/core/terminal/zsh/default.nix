@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, username, ... }:
 
 let
   myAliases = {
@@ -8,6 +8,7 @@ let
 in 
 
 {
+  home-manager.users.${username} = {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -29,5 +30,6 @@ in
       bindkey '^I' autosuggest-accept
       eval "$(zoxide init --cmd cd zsh)"
     '';
+  };
   };
 }

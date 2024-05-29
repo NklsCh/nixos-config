@@ -1,7 +1,9 @@
-{ pkgs, home-manager, ... }:
+{ pkgs, home-manager, username, ... }:
 {
-  programs.chromium = {
-    enable = true;
-    package = pkgs.brave;
+  home-manager.users.${username} = {
+    programs.chromium = {
+      enable = true;
+      package = pkgs.brave;
+    };
   };
 }

@@ -1,3 +1,4 @@
+{ pkgs, username, ... }:
 {
   imports = [
     ./alacritty
@@ -6,4 +7,9 @@
     ./p10k
     ./zsh
   ];
+
+  home-manager.users.${username} = {
+    programs.git.enable = true;
+    # programs.alacritty.enable = true;
+  };
 }

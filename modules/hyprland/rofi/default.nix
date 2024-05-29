@@ -1,5 +1,6 @@
-{ home-manager, ... }:
+{ username, ... }:
 {
+  home-manager.users.${username} = _: {
   home.file = {
     ".config/rofi/config.rasi".text = ''
       /*Dracula theme based on the Purple official rofi theme*/
@@ -136,5 +137,6 @@ element-text, element-icon {
     text-color: inherit;
 }
     '';
+  };
   };
 }
