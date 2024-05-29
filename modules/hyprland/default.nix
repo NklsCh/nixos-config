@@ -10,8 +10,27 @@
 
   home-manager.users.${username} = _: {
     gtk.enable = true;
-    gtk.theme.name = "Dracula";
-    gtk.theme.package = pkgs.dracula-theme;
+    gtk.theme = {
+      name = "Dracula";
+      package = pkgs.dracula-theme;
+    };
+    gtk.iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+    qt = {
+      enable = true;
+      platformTheme = "gnome";
+      style = {
+        package = pkgs.dracula-theme;
+        name = "Dracula";
+      };
+    };
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
   };
 
   environment = {
