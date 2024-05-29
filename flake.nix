@@ -8,23 +8,32 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+      url = "github:hyprwm/hyprland";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@attrs:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { system = system; config.allowUnfree = true; };
+      supportedSystem = [ "x86_64-linux" ];
+      forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
+      nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
     in
     {
       nixosConfigurations = {
-        Laptop = nixpkgs.lib.nixosSystem {
+        laptop = 
+        let
+          system = "x86_64-linux";
+        in 
+        nixpkgs.lib.nixosSystem {
           specialArgs = {
             username = "choinowski";
             hostName = "Laptop";
-	          inherit inputs;
-	        };
+            hyprlandConfig = "laptop";
+	          inherit system;
+	        } // attrs;
           modules = [
-            ./hosts/Laptop/configuration.nix
+            ./.
           ];
         };
       };
