@@ -2,7 +2,7 @@
 {
   users.users.${username} = {
     openssh.authorizedKeys.keys = [
-      "SHA256:+NpukwfH7YBATEVebnQodXkPAM4oFLsOVeFMyM6uWfA ${username}"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHHM/ccSwF9OHcYZjhw4M5L/j5c4P+OkTpwuzmSXfdvt ${username}"
     ];
   };
 
