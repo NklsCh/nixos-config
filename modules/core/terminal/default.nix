@@ -3,6 +3,7 @@
   imports = [
     ./alacritty
     ./bash
+    ./fonts
     ./nvim
     ./p10k
     ./zsh
@@ -12,4 +13,7 @@
     programs.git.enable = true;
     # programs.alacritty.enable = true;
   };
+  environment.systemPackages = with pkgs; [
+    zoxide
+  ];
 }

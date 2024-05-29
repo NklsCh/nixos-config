@@ -7,6 +7,13 @@
     stateVersion = "23.11";
   };
 
+  nix = {
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
   home-manager.users.${username} = {
     home.stateVersion = "23.11";
     nixpkgs.config.allowUnfree = true;

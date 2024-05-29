@@ -2,5 +2,6 @@
   imports = [
     ./browsing
     ./libreoffice
+    ./vscode
   ];
 }
