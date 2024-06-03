@@ -1,22 +1,22 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, username, ... }:
 
 {
   systemd.services.rclone-gdrive = {
-    description = "rclone: Mount Google Drive to /home/choinowski/gdrive";
+    description = "rclone: Mount Google Drive to ~/gdrive";
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
 
     serviceConfig = {
       Type = "simple";
-      User = "choinowski";
+      User = "${username}";
       Group = "users";
       # Ensure the directory exists before trying to mount
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/choinowski/gdrive";
+      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/${username}/gdrive";
       # Use the full path for fusermount3
       Environment = "PATH=/run/wrappers/bin:/bin:/usr/bin:${pkgs.coreutils}/bin:${pkgs.fuse}/bin";
-      ExecStart = "${pkgs.rclone}/bin/rclone mount gdrive: /home/choinowski/gdrive --config /home/choinowski/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log --umask 022 --allow-other";
+      ExecStart = "${pkgs.rclone}/bin/rclone mount gdrive: /home/${username}/gdrive --config /home/${username}/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log --umask 022 --allow-other";
       # Use the full path for fusermount3
-      ExecStop = "/run/wrappers/bin/fusermount3 -u /home/choinowski/gdrive";
+      ExecStop = "/run/wrappers/bin/fusermount3 -u /home/${username}/gdrive";
     };
 
     wantedBy = [ "multi-user.target" ];
