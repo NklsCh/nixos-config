@@ -8,6 +8,7 @@
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --greeting 'Welcome to Wonderland' --asterisks --cmd Hyprland";
         user = username;
       };
+      initial_session = default_session;
     };
   };
 }
