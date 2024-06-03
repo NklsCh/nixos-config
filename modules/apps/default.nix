@@ -3,6 +3,7 @@
   imports = [
     ./browsing
     ./libreoffice
+    ./obsidian
     ./vscode
   ];
 
