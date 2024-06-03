@@ -1,5 +1,7 @@
 { pkgs, username, ... }:
 {
+  imports = [ ./nh ];
+
   system = {
     extraSystemBuilderCmds = ''
       ln -sv ${pkgs.path} $out/nixpkgs
