@@ -2,6 +2,7 @@
 {
   imports = [
     ./audio
+    ./bluetooth
     ./network
   ];
 }

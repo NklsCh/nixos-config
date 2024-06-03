@@ -46,7 +46,6 @@
       rofi-wayland
       # dunst
       libnotify
-      blueman
       swaynotificationcenter
       swww
       networkmanagerapplet
