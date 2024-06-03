@@ -6,5 +6,5 @@ let
 in 
 {
   imports = dotfiles.${hyprlandConfig} or [ ];
-  environment.systemPackages = with pkgs; [ waybar ];
+  environment.systemPackages = with pkgs; [ waybar wttrbar ];
 }

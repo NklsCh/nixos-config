@@ -44,8 +44,10 @@
       waybar
       cinnamon.nemo
       rofi-wayland
-      dunst
+      # dunst
       libnotify
+      blueman
+      swaynotificationcenter
       swww
       networkmanagerapplet
       grim

@@ -21,6 +21,10 @@
         };
       };
     };
-    kernelParams = [ "psmouse.synaptics_intertouch=0" ];
+    plymouth = {
+      enable = true;
+      theme = "breeze";
+    };
+    kernelParams = [ "psmouse.synaptics_intertouch=0" "quiet" ];
   };
 }
