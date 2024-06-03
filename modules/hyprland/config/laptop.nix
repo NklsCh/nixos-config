@@ -3,6 +3,12 @@
   # ---- Hyprland ---- #
   home-manager.users.${username} = _: {
     home.file = {
+
+      ".config/hypr/start.sh" = {
+        source = ../../sh/start.sh;
+        executable = true;
+      };
+
       ".config/hypr/hyprland.conf".text = ''
       # ---- Monitors ---- #
       monitor=,1920x1080,0x0,1
@@ -175,7 +181,7 @@
       windowrulev2 = maxsize 1 1, class:^(xwaylandvideobridge)$
       windowrulev2 = noblur, class:^(xwaylandvideobridge)$
 
-      exec-once=bash ~/.config/sh/start.sh
+      exec-once=bash ~/.config/hypr/start.sh
     '';
   };
   };
