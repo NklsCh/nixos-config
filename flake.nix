@@ -26,7 +26,7 @@
     in
     {
       nixosConfigurations = {
-        laptop = 
+        Laptop = 
         let
           system = "x86_64-linux";
         in 
