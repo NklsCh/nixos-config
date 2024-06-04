@@ -41,6 +41,22 @@
             ./.
           ];
         };
+        Desktop = 
+        let
+          system = "x86_64-linux";
+        in 
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            username = "choinowski";
+            hostName = "Desktop";
+            hyprlandConfig = "desktop";
+	          inherit system;
+	        } // attrs;
+          modules = [
+            ./.
+            #./modules/hardware/nvidia
+          ];
+        };
       };
     };
 }

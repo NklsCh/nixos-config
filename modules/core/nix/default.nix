@@ -10,6 +10,8 @@
   };
 
   nix = {
+    package = pkgs.nixVersions.nix_2_21;
+    nixPath = [ "nixpkgs=/run/current-system/nixpkgs/" ];
     settings.experimental-features = [
       "nix-command"
       "flakes"
