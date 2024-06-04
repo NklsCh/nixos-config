@@ -45,6 +45,7 @@
       cinnamon.nemo
       rofi-wayland
       # dunst
+      pavucontrol
       libnotify
       swaynotificationcenter
       swww
