@@ -11,6 +11,7 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
+  boot.supportedFilesystems = [ "ntfs" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = { 
@@ -21,6 +22,11 @@
   fileSystems."/boot" = { 
     device = "/dev/disk/by-uuid/4D94-54A3";
     fsType = "vfat";
+  };
+
+  fileSystems."/mnt/STORAGE_1" = {
+    device = "/dev/disk/by-uuid/05a668d3-4ac4-4f12-97ef-3e5b6256b042";
+    fsType = "ext4";
   };
 
   swapDevices = [ ];
