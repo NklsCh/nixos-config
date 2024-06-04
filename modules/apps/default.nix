@@ -15,5 +15,6 @@
     (writeShellScriptBin "vesktop" ''
       exec ${vesktop}/bin/vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland
     '')
+    anytype
   ];
 }
