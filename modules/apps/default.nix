@@ -2,6 +2,7 @@
 {
   imports = [
     ./browsing
+    #./ide/zed
     ./libreoffice
     ./obsidian
     ./vscode
