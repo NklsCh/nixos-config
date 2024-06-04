@@ -26,6 +26,14 @@
       env = QT_QPA_PLATFORM,wayland
       env = QT_QPA_PLATFORMTHEME,qt5ct
 
+      env = XDG_CURRENT_DESKTOP,Hyprland
+      env = XDG_SESSION_DESKTOP,Hyprland
+      env = XDG_SESSION_TYPE,wayland
+
+      env = GDK_BACKEND,wayland,x11
+      env = MOZ_ENABLE_WAYLAND,1
+      env = MOZ_DISABLE_RDD_SANDBOX,1
+
       input {
         kb_layout = de
         kb_variant =

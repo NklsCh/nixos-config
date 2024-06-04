@@ -46,7 +46,7 @@
         "network": {
           // "format-wifi": "  {essid} ({signalStrength}%)",
           "format-wifi": "  {signalStrength}%",
-          "format-ethernet": "  {ipaddr}/{cidr}",
+          "format-ethernet": "󰈀  {ipaddr}/{cidr}",
           "format-disconnected": "  Disconnected",
           "on-click": "alacritty -e sh -c nmtui" 
         },
