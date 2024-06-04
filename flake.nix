@@ -54,7 +54,8 @@
 	        } // attrs;
           modules = [
             ./.
-            #./modules/hardware/nvidia
+            ./modules/hardware/nvidia
+            ./modules/steam
           ];
         };
       };
