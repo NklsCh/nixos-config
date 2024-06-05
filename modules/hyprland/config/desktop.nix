@@ -121,7 +121,7 @@
       bind = $mainMod, M, exit, 
       bind = $mainMod, E, exec, nemo
       bind = $mainMod, V, togglefloating, 
-      bind = $mainMod, R, exec, wofi --show drun
+      bind = $mainMod, R, exec, wofi --show run
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, Q, togglesplit, # dwindle
       bind = $mainMod ALT_L, L, exec, swaylock --clock --indicator
