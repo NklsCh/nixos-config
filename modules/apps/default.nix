@@ -7,6 +7,7 @@
     ./ide/zed
     ./libreoffice
     ./obsidian
+    ./spotify
     ./vscode
   ];
 }
