@@ -39,6 +39,7 @@
 	        } // attrs;
           modules = [
             ./.
+            ./modules/steam
           ];
         };
         Desktop = 
