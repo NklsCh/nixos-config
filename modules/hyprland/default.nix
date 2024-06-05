@@ -2,6 +2,7 @@
 {
   imports = [
     ./config
+    ./electron
     ./greetd
     ./rofi
     ./swaylock
