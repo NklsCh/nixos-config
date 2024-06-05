@@ -4,6 +4,7 @@
     ./browsing
     ./ide/zed
     ./libreoffice
+    ./nodejs
     ./obsidian
     #./vscode
   ];
