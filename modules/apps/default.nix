@@ -6,7 +6,6 @@
     ./discord
     ./ide/zed
     ./libreoffice
-    ./nodejs
     ./obsidian
     ./vscode
   ];
