@@ -7,4 +7,5 @@
     initialPassword = "temp123";
     extraGroups = [ "wheel" ];
   };
+  users.defaultUserShell = pkgs.zsh;
 }
