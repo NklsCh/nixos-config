@@ -2,10 +2,10 @@
 {
   imports = [
     ./browsing
-    #./ide/zed
+    ./ide/zed
     ./libreoffice
     ./obsidian
-    ./vscode
+    #./vscode
   ];
 
   environment.systemPackages = with pkgs; [
