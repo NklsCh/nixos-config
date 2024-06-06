@@ -125,7 +125,7 @@
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, Q, togglesplit, # dwindle
       bind = $mainMod ALT_L, L, exec, swaylock --clock --indicator
-      bind = $mainMod, S, exec, rofi -show run -showicons
+      bind = $mainMod, S, exec, rofi -show drun -showicons
 
       # Move focus with mainMod + vim binds
       bind = $mainMod, h, movefocus, l
