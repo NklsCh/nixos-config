@@ -121,11 +121,11 @@
       bind = $mainMod, M, exit, 
       bind = $mainMod, E, exec, nemo
       bind = $mainMod, V, togglefloating, 
-      bind = $mainMod, R, exec, wofi --show run
+      bind = $mainMod, R, exec, wofi --show drun
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, Q, togglesplit, # dwindle
       bind = $mainMod ALT_L, L, exec, swaylock --clock --indicator
-      bind = $mainMod, S, exec, rofi -show drun -showicons
+      bind = $mainMod, S, exec, rofi -show run -showicons
 
       # Move focus with mainMod + vim binds
       bind = $mainMod, h, movefocus, l
