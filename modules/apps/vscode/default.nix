@@ -1,4 +1,4 @@
-{ username, ... }:
+{ pkgs, username, ... }:
 {
   home-manager.users.${username} = {
     programs.vscode = {
@@ -7,4 +7,8 @@
       enableExtensionUpdateCheck = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    gitkraken
+  ];
 }
