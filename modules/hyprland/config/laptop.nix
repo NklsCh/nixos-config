@@ -77,9 +77,9 @@
         # no_gaps_when_only = 1
       }
 
-      master {
-        new_is_master = true
-      }
+      # master {
+      #   new_is_master = true
+      # }
 
       gestures {
         workspace_swipe = off
