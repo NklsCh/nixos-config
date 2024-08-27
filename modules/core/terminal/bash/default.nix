@@ -7,7 +7,7 @@ in
 
 {
   programs.bash = {
-    enableCompletion = true;
+    completion.enable = true;
     shellAliases = myAliases;
     interactiveShellInit = ''
       eval "$(oh-my-posh init bash --config ~/.poshThemes/theme.omp.json)"

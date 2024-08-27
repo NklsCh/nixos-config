@@ -25,7 +25,7 @@
     };
     qt = {
       enable = true;
-      platformTheme = "gnome";
+      platformTheme.name = "adwaita";
       style = {
         package = pkgs.dracula-theme;
         name = "Dracula";
@@ -43,7 +43,7 @@
     sessionVariables.NIXOS_OZONE_WL = "1";
     systemPackages = with pkgs; [
       waybar
-      cinnamon.nemo
+      nemo
       rofi-wayland
       # dunst
       pavucontrol
