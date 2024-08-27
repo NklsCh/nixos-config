@@ -1,5 +1,6 @@
 {
   imports = [
+    ./jetbrains
     ./vscode
     ./zed
   ];
