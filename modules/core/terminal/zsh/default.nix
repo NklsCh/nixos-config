@@ -9,11 +9,12 @@ in
 
 {
   environment.shells = with pkgs; [ zsh ];
+  environment.systemPackages = with pkgs; [ zsh-autocomplete ];
 
   home-manager.users.${username} = {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
     dotDir = ".config/zsh";
     syntaxHighlighting.enable = true;
     shellAliases = myAliases;
@@ -32,7 +33,6 @@ in
     zplug = {
       enable = true;
       plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; }
         { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
       ];
     };
@@ -41,7 +41,6 @@ in
     '';
     initExtra = ''
       POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
-      bindkey '^I' autosuggest-accept
       eval "$(zoxide init --cmd cd zsh)"
     '';
   };
