@@ -1,12 +1,9 @@
-{ pkgs, ... }:
 {
   imports = [
-    ./anytype
     ./browsing
     ./discord
     ./libreoffice
-    ./obsidian
-    ./proton
+    ./productivity
     ./spotify
   ];
 }

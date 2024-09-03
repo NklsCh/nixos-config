@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./anytype
+    ./morgen 
+    ./obsidian
+  ];
+}
