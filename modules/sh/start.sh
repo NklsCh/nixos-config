@@ -6,7 +6,7 @@ swww init &
 
 sleep 0.5 &&
 
-swww img ~/.config/backgrounds/moon.jpg &
+swww img ~/.config/backgrounds/wallpaper_reddit.png &
 
 nm-applet --indicator &
 waybar &
