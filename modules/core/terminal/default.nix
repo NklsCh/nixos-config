@@ -4,6 +4,7 @@
     ./alacritty
     ./bash
     ./fonts
+    ./kitty
     ./nvim
     ./p10k
     ./zsh
