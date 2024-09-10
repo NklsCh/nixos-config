@@ -47,6 +47,7 @@
       # dunst
       pavucontrol
       libnotify
+      playerctl
       # swaynotificationcenter
       swww
       networkmanagerapplet
@@ -57,6 +58,9 @@
       brightnessctl
       sway
       swaylock-effects
+
+      # Hyprpanel
+      hyprpanel
     ];
   };
 
