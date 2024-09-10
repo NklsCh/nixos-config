@@ -20,13 +20,18 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@attrs:
+  outputs = { self, nixpkgs, ... }@inputs:
     let
       supportedSystem = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
-      nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+      nixpkgsFor = forAllSystems (system: import nixpkgs {
+        inherit system;
+      });
     in
     {
       nixosConfigurations = {
@@ -40,8 +45,9 @@
             hostName = "Laptop";
             hyprlandConfig = "laptop";
 	          inherit system;
-	        } // attrs;
+	        } // inputs;
           modules = [
+            {nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
             ./modules/steam
           ];
@@ -56,7 +62,7 @@
             hostName = "Desktop";
             hyprlandConfig = "desktop";
 	          inherit system;
-	        } // attrs;
+	        } // inputs;
           modules = [
             ./.
             ./modules/hardware/nvidia

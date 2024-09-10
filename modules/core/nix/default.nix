@@ -27,6 +27,8 @@
     nixpkgs.config.allowUnfree = true;
   };
 
+  home-manager.backupFileExtension = "backup";
+
   nixpkgs.config.allowUnfree = true;
 
   programs.direnv = {

@@ -100,7 +100,7 @@
 
 
       # Applications
-      bind = $mainMod, T, exec, alacritty 
+      bind = $mainMod, T, exec, kitty 
       bind = $mainMod, C, killactive, 
       bind = $mainMod, M, exit, 
       bind = $mainMod, E, exec, nemo

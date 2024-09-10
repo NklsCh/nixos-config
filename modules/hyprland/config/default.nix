@@ -1,4 +1,4 @@
-{ pkgs, hyprlandConfig, home-manager, username, ... }:
+{ hyprlandConfig, home-manager, username, ... }:
 let
   dotfiles = {
     "laptop" = [ (import ./laptop.nix { inherit home-manager username; }) ];

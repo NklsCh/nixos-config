@@ -5,8 +5,6 @@
     ./electron
     ./greetd
     ./rofi
-    ./swaylock
-    ./waybar
   ];
 
   home-manager.users.${username} = _: {
@@ -48,7 +46,8 @@
       # dunst
       pavucontrol
       libnotify
-      swaynotificationcenter
+      playerctl
+      # swaynotificationcenter
       swww
       networkmanagerapplet
       grim
@@ -58,6 +57,10 @@
       brightnessctl
       sway
       swaylock-effects
+      pywal
+
+      # Hyprpanel
+      hyprpanel
     ];
   };
 
