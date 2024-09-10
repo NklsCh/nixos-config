@@ -20,6 +20,9 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -28,6 +31,7 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
       nixpkgsFor = forAllSystems (system: import nixpkgs {
         inherit system;
+        overlays = [ inputs.hyprpanel.overlay.${supportedSystem} ];
       });
     in
     {
