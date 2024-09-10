@@ -31,7 +31,6 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
       nixpkgsFor = forAllSystems (system: import nixpkgs {
         inherit system;
-        overlays = [ inputs.hyprpanel.overlay.${supportedSystem} ];
       });
     in
     {
@@ -48,6 +47,7 @@
 	          inherit system;
 	        } // inputs;
           modules = [
+            {nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
             ./modules/steam
           ];
