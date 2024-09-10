@@ -2,11 +2,11 @@
 
 gnome-keyring-deamon --start --components=secrets &
 
-swww init &
+swww-deamon &
 
 sleep 0.5 &&
 
-swww img ~/.config/backgrounds/wallpaper_reddit.png &
+swww img ~/.config/backgrounds/wallpaper_camp.jpg &
 
 nm-applet --indicator &
 # waybar &
