@@ -5,7 +5,6 @@
     ./electron
     ./greetd
     ./rofi
-    ./swaylock
     ./waybar
   ];
 
@@ -48,7 +47,7 @@
       # dunst
       pavucontrol
       libnotify
-      swaynotificationcenter
+      # swaynotificationcenter
       swww
       networkmanagerapplet
       grim

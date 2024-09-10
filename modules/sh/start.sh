@@ -10,4 +10,5 @@ swww img ~/.config/backgrounds/wallpaper_reddit.png &
 
 nm-applet --indicator &
 waybar &
+ags &
 dunst
