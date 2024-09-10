@@ -5,7 +5,6 @@
     ./electron
     ./greetd
     ./rofi
-    ./waybar
   ];
 
   home-manager.users.${username} = _: {
@@ -58,6 +57,7 @@
       brightnessctl
       sway
       swaylock-effects
+      pywal
 
       # Hyprpanel
       hyprpanel
