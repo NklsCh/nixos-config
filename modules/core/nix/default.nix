@@ -22,6 +22,10 @@
     '';
   };
 
+  services.gvfs.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
   home-manager.users.${username} = {
     home.stateVersion = "23.11";
     nixpkgs.config.allowUnfree = true;
