@@ -21,7 +21,7 @@
     #   base0E = "cc7832"; # orange
     #   base0F = "808080"; # gray
     # };
-    image = ../../assets/wallpapers/wallpaper_reddit.png;
+    image = ~/.config/backgrounds/wallpaper_reddit.png;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
