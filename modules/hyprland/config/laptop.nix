@@ -11,7 +11,7 @@
 
       ".config/hypr/hyprland.conf".text = ''
       # ---- Monitors ---- #
-      monitor=,1920x1080,0x0,1
+      monitor=,1920x1080,0x0,0.83
 
       # ---- Some env's ---- #
       env = XCURSOR_SIZE,24
@@ -100,7 +100,7 @@
 
 
       # Applications
-      bind = $mainMod, T, exec, kitty 
+      bind = $mainMod, T, exec, alacritty 
       bind = $mainMod, C, killactive, 
       bind = $mainMod, M, exit, 
       bind = $mainMod, E, exec, nemo
