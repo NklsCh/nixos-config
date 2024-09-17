@@ -6,7 +6,7 @@ swww-deamon &
 
 sleep 0.5 &&
 
-swww img ~/.config/backgrounds/wallpaper_camp.jpg &
+swww img ~/.config/backgrounds/wallpaper_reddit.png &
 
 nm-applet --indicator &
 # waybar &
