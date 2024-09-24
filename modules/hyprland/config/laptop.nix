@@ -11,7 +11,8 @@
 
       ".config/hypr/hyprland.conf".text = ''
       # ---- Monitors ---- #
-      monitor=,1920x1080,0x0,0.83
+      monitor=eDP-1, 1920x1080, 0x0, 1
+      monitor= , preferred, auto, 1
 
       # ---- Some env's ---- #
       env = XCURSOR_SIZE,24
