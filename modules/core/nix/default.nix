@@ -25,6 +25,7 @@
   services.gvfs.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  services.flatpak.enable = true;
 
   home-manager.users.${username} = {
     home.stateVersion = "23.11";
