@@ -1,5 +1,5 @@
 {
-  console.keyMap = "de";
+  console.keyMap = "us";
 
   time.timeZone = "Europe/Berlin";
 
@@ -17,7 +17,7 @@
   };
 
   services.xserver = {
-    xkb.layout = "de";
+    xkb.layout = "us";
     xkb.variant = "";
   };
 }

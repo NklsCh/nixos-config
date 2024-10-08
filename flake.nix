@@ -64,6 +64,7 @@
 	          inherit system;
 	        } // inputs;
           modules = [
+	  	{nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
             ./modules/hardware/nvidia
             ./modules/steam
