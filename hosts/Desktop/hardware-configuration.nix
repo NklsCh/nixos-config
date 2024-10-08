@@ -27,7 +27,7 @@
   fileSystems."/mnt/STORAGE_1" = {
     device = "/dev/disk/by-uuid/f6ceba8d-1e33-4cf3-985a-eb05074f721c";
     fsType = "ext4";
-    options = [ "defaults" "users" "nofail" ];
+    options = [ "exec" ];
   };
 
   swapDevices = [ ];
