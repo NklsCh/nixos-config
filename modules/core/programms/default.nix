@@ -2,6 +2,6 @@
   imports = [
     ./neofetch
     ./pass
-    #./rclone
+    ./rclone
   ];
 }
