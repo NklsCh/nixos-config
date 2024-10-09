@@ -7,6 +7,5 @@
     ./hardware
     ./hyprland
     ./ssh
-    ./stylix
   ];
 }

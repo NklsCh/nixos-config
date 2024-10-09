@@ -1,7 +1,6 @@
 {
   imports = [
-    ./anytype
-    ./morgen 
+    ./anytype 
     ./obsidian
   ];
 }
