@@ -1,6 +1,6 @@
 { pkgs, username, ... }:
 {
-  environment.systemPackages = with pkgs; [ alacritty ];
+  environment.systemPackages = with pkgs; [ alacritty clang ];
 
   home-manager.users.${username} = {
     home.file = {
