@@ -5,6 +5,7 @@
     gnupg
     pinentry-curses
     passExtensions.pass-otp
+    qtpass
   ];
   home-manager.users.${username} = _: {
     home.file = {
