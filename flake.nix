@@ -49,7 +49,7 @@
           modules = [
             {nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
-            ./modules/steam
+            ./modules/games
           ];
         };
         Desktop = 
@@ -67,7 +67,7 @@
 	  	{nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
             ./modules/hardware/nvidia
-            ./modules/steam
+            ./modules/games
             ./modules/desktop
           ];
         };
