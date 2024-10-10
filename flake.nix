@@ -68,6 +68,7 @@
             ./.
             ./modules/hardware/nvidia
             ./modules/steam
+            ./modules/desktop
           ];
         };
       };
