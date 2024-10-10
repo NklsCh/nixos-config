@@ -3,5 +3,6 @@
     ./neofetch
     ./pass
     ./rclone
+    ./vlc
   ];
 }
