@@ -1,4 +1,4 @@
-{ hyprland, pkgs, username, home-manager, system, ... }:
+{ hyprland, hyprlock, pkgs, username, home-manager, system, ... }:
 {
   imports = [
     ./config
@@ -67,6 +67,10 @@
     xwayland.enable = true;
   };
 
+  programs.hyprlock = {
+    enable = true;
+  };
+
   programs.dconf.enable = true;
 
   services.gnome = {
@@ -79,6 +83,8 @@
       auth include login
     '';
   };
+
+  security.pam.services.hyprlock = {};
 
   xdg = {
     mime = {
