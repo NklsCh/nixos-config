@@ -40,7 +40,6 @@
     sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
     sessionVariables.NIXOS_OZONE_WL = "1";
     systemPackages = with pkgs; [
-      waybar
       nemo
       rofi-wayland
       pavucontrol
@@ -53,8 +52,6 @@
       wl-clipboard
       xwaylandvideobridge
       brightnessctl
-      sway
-      swaylock-effects
       pywal
 
       # Hyprpanel
@@ -78,12 +75,6 @@
   };
 
   security.pam.services.login.enableGnomeKeyring = true;
-  security.pam.services.swaylock = {
-    text = ''
-      auth include login
-    '';
-  };
-
   security.pam.services.hyprlock = {};
 
   xdg = {
