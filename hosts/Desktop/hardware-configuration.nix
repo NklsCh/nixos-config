@@ -30,6 +30,12 @@
     options = [ "exec" ];
   };
 
+  fileSystems."/mnt/STORAGE_SSD" = {
+    device = "/dev/disk/by-uuid/ae015b22-1795-4bda-8f60-8a06cbf39d5a";
+    fsType = "ext4";
+    options = [ "exec" ];
+  };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
