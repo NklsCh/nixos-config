@@ -1,5 +1,6 @@
 {
   imports = [
+    ./btop
     ./neofetch
     ./pass
     ./rclone
