@@ -5,8 +5,8 @@
     home.file = {
       ".config/hypr/hyprland.conf".text = ''
         # ---- Monitors ---- #
-        monitor = DP-1, 1920x1080@180, 0x0, 1
-        monitor = HDMI-A-2, 1920x1080, 1920x0, 1, transform, 1
+        monitor = DP-1, 1920x1080@180, 0x0, 0.8
+        monitor = HDMI-A-2, 1920x1080, 2400x0, 0.8, transform, 1
 
         workspace = 1, monitor:DP-1, default:true
         workspace = 2, monitor:DP-1
