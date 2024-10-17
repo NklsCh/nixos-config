@@ -166,7 +166,7 @@
         bindm = $mainMod, mouse:273, resizewindow
 
         # Make a screenshot
-        bind = , Print, exec, grim -g "$(slurp -d)" - | wl-copy
+        bind = $mainMod SHIFT, s, exec, grim -g "$(slurp -d)" - | wl-copy
 
         # Audio Controlls
         bind = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+
