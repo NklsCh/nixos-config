@@ -176,7 +176,7 @@
         windowrulev2 = maxsize 1 1, class:^(xwaylandvideobridge)$
         windowrulev2 = noblur, class:^(xwaylandvideobridge)$
 
-        exec-once=bash ~/.config/hypr/start.sh
+        exec-once=bash ~/.scripts/autostart.sh
       '';
     };
   };
