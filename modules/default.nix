@@ -6,6 +6,7 @@
     ./dev
     ./hardware
     ./hyprland
+    ./scripts
     ./ssh
   ];
 }

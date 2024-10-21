@@ -10,11 +10,6 @@ in
 
   home-manager.users.${username} = _: {
     home.file = {
-      ".config/hypr/start.sh" = {
-        source = ../../sh/start.sh;
-        executable = true;
-      };
-
       ".config/hypr/hyprlock.conf".text = ''
         background {
           monitor = 
