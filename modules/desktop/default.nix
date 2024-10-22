@@ -1,6 +1,5 @@
 {
   imports = [
     ./obs
-    ./star-citizen
   ];
 }
