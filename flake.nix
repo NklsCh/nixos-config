@@ -26,14 +26,9 @@
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
     };
-
-    # --- Gaming --- #
-    nix-citizen = {
-      url = "github:LovingMelody/nix-citizen";
-    };
   };
 
-  outputs = { self, nixpkgs, nix-citizen, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     let
       supportedSystem = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
