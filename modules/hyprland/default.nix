@@ -40,7 +40,7 @@
     sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
     sessionVariables.NIXOS_OZONE_WL = "1";
     systemPackages = with pkgs; [
-      nemo
+      nemo-with-extensions
       rofi-wayland
       pavucontrol
       libnotify
