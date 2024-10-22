@@ -26,9 +26,14 @@
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
     };
+
+    # --- Gaming --- #
+    nix-citizen = {
+      url = "github:LovingMelody/nix-citizen";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nix-citizen, ... }@inputs:
     let
       supportedSystem = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
@@ -67,7 +72,7 @@
 	          inherit system;
 	        } // inputs;
           modules = [
-	  	{nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
+	  	      {nixpkgs.overlays = [ inputs.hyprpanel.overlay ];}
             ./.
             ./modules/hardware/nvidia
             ./modules/games
