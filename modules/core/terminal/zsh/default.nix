@@ -4,6 +4,7 @@ let
   myAliases = {
     vi = "nvim";
     vim = "nvim";
+    ff = "fastfetch";
   };
 in 
 
@@ -12,37 +13,37 @@ in
   environment.systemPackages = with pkgs; [ zsh-autocomplete ];
 
   home-manager.users.${username} = {
-  programs.zsh = {
-    enable = true;
-    enableCompletion = false;
-    dotDir = ".config/zsh";
-    syntaxHighlighting.enable = true;
-    shellAliases = myAliases;
-    plugins = [
-      {
-        name = "zsh-nix-shell";
-        file = "nix-shell.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "chisui";
-          repo = "zsh-nix-shell";
-          rev = "v0.8.0";
-          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
-        };
-      }
-    ];
-    zplug = {
+    programs.zsh = {
       enable = true;
+      enableCompletion = false;
+      dotDir = ".config/zsh";
+      syntaxHighlighting.enable = true;
+      shellAliases = myAliases;
       plugins = [
-        { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+        {
+          name = "zsh-nix-shell";
+          file = "nix-shell.plugin.zsh";
+          src = pkgs.fetchFromGitHub {
+            owner = "chisui";
+            repo = "zsh-nix-shell";
+            rev = "v0.8.0";
+            sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+          };
+        }
       ];
+      zplug = {
+        enable = true;
+        plugins = [
+          { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+        ];
+      };
+      initExtraFirst = ''
+        source ~/.config/zsh/.p10k.zsh
+      '';
+      initExtra = ''
+        POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
+        eval "$(zoxide init --cmd cd zsh)"
+      '';
     };
-    initExtraFirst = ''
-      source ~/.config/zsh/.p10k.zsh
-    '';
-    initExtra = ''
-      POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
-      eval "$(zoxide init --cmd cd zsh)"
-    '';
-  };
   };
 }

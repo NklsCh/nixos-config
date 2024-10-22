@@ -1,7 +1,7 @@
 {
   imports = [
     ./btop
-    ./neofetch
+    ./fastfetch
     ./pass
     ./rclone
     ./vlc
