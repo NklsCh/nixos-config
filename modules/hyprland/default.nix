@@ -53,6 +53,7 @@
       xwaylandvideobridge
       brightnessctl
       pywal
+      gthumb
 
       # Hyprpanel
       hyprpanel
@@ -86,6 +87,9 @@
     mime = {
       defaultApplications = {
         "inode/directory" = [ "nemo.desktop" ];
+        "image/png" = [ "gthumb.desktop" ];
+        "image/jpeg" = [ "gthumb.desktop" ];
+        "image/jpg" = [ "gthumb.desktop" ];
       };
     };
     portal = {
