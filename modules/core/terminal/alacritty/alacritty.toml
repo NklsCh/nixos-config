@@ -1,5 +1,6 @@
 [font]
-size = 11
+normal = { family = "GeistMono Nerd Font", style = "Regular" }
+size = 10
 
 [window]
 opacity = 0.7
