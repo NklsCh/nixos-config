@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     gitkraken

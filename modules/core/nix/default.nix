@@ -1,7 +1,6 @@
 {
   pkgs,
   username,
-  inputs,
   ...
 }:
 {
@@ -20,7 +19,7 @@
 
   nix = {
     package = pkgs.nixVersions.nix_2_21;
-    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+    nixPath = [ "nixpkgs=/run/current-system/nixpkgs/" ];
     settings.experimental-features = [
       "nix-command"
       "flakes"
