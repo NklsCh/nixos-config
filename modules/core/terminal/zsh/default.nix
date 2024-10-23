@@ -5,6 +5,7 @@ let
     vi = "nvim";
     vim = "nvim";
     ff = "fastfetch";
+    la = "ls -la";
   };
 in
 
