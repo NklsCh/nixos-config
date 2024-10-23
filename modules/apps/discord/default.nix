@@ -1,4 +1,9 @@
-{ home-manager, username, pkgs, ... }:
+{
+  home-manager,
+  username,
+  pkgs,
+  ...
+}:
 {
 
   home-manager.users.${username} = {

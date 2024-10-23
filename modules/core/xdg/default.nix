@@ -1,4 +1,9 @@
-{ pkgs, home-manager, username, ... }:
+{
+  pkgs,
+  home-manager,
+  username,
+  ...
+}:
 {
   xdg = {
     mime = {

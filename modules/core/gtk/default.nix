@@ -1,4 +1,9 @@
-{ pkgs, username, home-manager, ... }:
+{
+  pkgs,
+  username,
+  home-manager,
+  ...
+}:
 {
   home-manager.users.${username} = _: {
     gtk.enable = true;

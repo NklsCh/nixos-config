@@ -3,7 +3,7 @@ let
     vi = "nvim";
     vim = "nvim";
   };
-in 
+in
 
 {
   programs.bash = {

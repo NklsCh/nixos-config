@@ -1,6 +1,11 @@
-{ pkgs, username, ... }:
 {
-  imports = [ 
+  pkgs,
+  username,
+  inputs,
+  ...
+}:
+{
+  imports = [
     ./nh
     ./security
     ./services
@@ -15,7 +20,7 @@
 
   nix = {
     package = pkgs.nixVersions.nix_2_21;
-    nixPath = [ "nixpkgs=/run/current-system/nixpkgs/" ];
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     settings.experimental-features = [
       "nix-command"
       "flakes"
