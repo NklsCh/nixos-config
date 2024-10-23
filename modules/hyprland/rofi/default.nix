@@ -3,137 +3,106 @@
   home-manager.users.${username} = _: {
     home.file = {
       ".config/rofi/config.rasi".text = ''
-        /*Dracula theme based on the Purple official rofi theme*/
-        configuration {
-          show-icons:      true;
-          display-drun:    "";
-          disable-history: false;
-        }
-
         * {
-          font: "Jetbrains Mono 12";
-          foreground: #f8f8f2;
-          background-color: #2c2e48;
-          active-background: #111111;
-          urgent-background: #ff5555;
-          urgent-foreground: #2c2e48;
-          selected-background: @active-background;
-          selected-urgent-background: @urgent-background;
-          selected-active-background: @active-background;
-          separatorcolor: @active-background;
-          bordercolor: @active-background;
+          font: "GeistMonoNerdFont 13";
+          g-spacing: 10px;
+          g-margin: 0;
+          b-color: #000000FF;
+          fg-color: #FFFFFFFF;
+          fgp-color: #888888FF;
+          b-radius: 8px;
+          g-padding: 8px;
+          hl-color: #FFFFFFFF;
+          hlt-color: #000000FF;
+          alt-color: #111111FF;
+          wbg-color: #000000CC;
+          w-border: 2px solid;
+          w-border-color: #FFFFFFFF;
+          w-padding: 12px;
         }
 
-        #window {
-          background-color: @background-color;
-          border:           3;
-          border-radius:    6;
-          border-color:     @bordercolor;
-          padding:          15;
+        configuration {
+            modi: "drun";
+            show-icons: true;
+            display-drun: "";
         }
-        #mainbox {
-          border:  0;
-          padding: 0;
+
+        listview {
+            columns: 1;
+            lines: 7;
+            fixed-height: true;
+            fixed-columns: true;
+            cycle: false;
+            scrollbar: false;
+            border: 0px solid;
         }
-        #message {
-          border:       0px;
-          border-color: @separatorcolor;
-          padding:      1px;
+
+        window {
+            transparency: "real";
+            width: 600px;
+            border-radius: @b-radius;
+            background-color: @wbg-color;
+            border: @w-border;
+            border-color: @w-border-color;
+            padding: @w-padding;
         }
-        #textbox {
-            text-color: @foreground;
+
+        prompt {
+            text-color: @fg-color;
         }
-        #listview {
-            fixed-height: 0;
-            border:       0px;
-            border-color: @bordercolor;
-            spacing:      2px ;
-            scrollbar:    false;
-            padding:      2px 0px 0px ;
+
+        inputbar {
+            children: ["prompt", "entry"];
+            spacing: @g-spacing;
         }
-        #element {
-            border:  0;
-            padding: 3px ;
+
+        entry {
+            placeholder: "Search Apps";
+            text-color: @fg-color;
+            placeholder-color: @fgp-color;
         }
-        #element.normal.normal {
-            background-color: @background-color;
-            text-color:       @foreground;
+
+        mainbox {
+            spacing: @g-spacing;
+            margin: @g-margin;
+            padding: @g-padding;
+            children: ["inputbar", "listview", "message"];
         }
-        #element.normal.urgent {
-            background-color: @urgent-background;
-            text-color:       @urgent-foreground;
+
+        element {
+            spacing: @g-spacing;
+            margin: @g-margin;
+            padding: @g-padding;
+            border: 0px solid;
+            border-radius: @b-radius;
+            border-color: @b-color;
+            background-color: transparent;
+            text-color: @fg-color;
         }
-        #element.normal.active {
-            background-color: @active-background;
-            text-color:       @foreground;
+
+        element normal.normal {
+          background-color: transparent;
+          text-color: @fg-color;
         }
-        #element.selected.normal {
-            background-color: @selected-background;
-            text-color:       @foreground;
+
+        element alternate.normal {
+          background-color: @alt-color;
+          text-color: @fg-color;
         }
-        #element.selected.urgent {
-            background-color: @selected-urgent-background;
-            text-color:       @foreground;
+
+        element selected.active {
+          background-color: @hl-color;
+          text-color: @hlt-color;
         }
-        #element.selected.active {
-            background-color: @selected-active-background;
-            text-color:       @foreground;
+
+        element selected.normal {
+          background-color: @hl-color;
+          text-color: @hlt-color;
         }
-        #element.alternate.normal {
-            background-color: @background-color;
-            text-color:       @foreground;
-        }
-        #element.alternate.urgent {
-            background-color: @urgent-background;
-            text-color:       @foreground;
-        }
-        #element.alternate.active {
-            background-color: @active-background;
-            text-color:       @foreground;
-        }
-        #scrollbar {
-            width:        2px ;
-            border:       0;
-            handle-width: 8px ;
-            padding:      0;
-        }
-        #sidebar {
-            border:       2px dash 0px 0px ;
-            border-color: @separatorcolor;
-        }
-        #button.selected {
-            background-color: @selected-background;
-            text-color:       @foreground;
-        }
-        #inputbar {
-            spacing:    0;
-            text-color: @foreground;
-            padding:    1px ;
-        }
-        #case-indicator {
-            spacing:    0;
-            text-color: @foreground;
-        }
-        #entry {
-            spacing:    0;
-            text-color: @foreground;
-        }
-        #prompt {
-            spacing:    0;
-            text-color: @foreground;
-        }
-        #inputbar {
-            children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-        }
-        #textbox-prompt-colon {
-            expand:     false;
-            str:        ">";
-            margin:     0px 0.3em 0em 0em ;
-            text-color: @foreground;
-        }
-        element-text, element-icon {
-            background-color: inherit;
-            text-color: inherit;
+
+        message {
+            background-color: red;
+            border: 0px solid;
         }
       '';
     };
