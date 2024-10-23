@@ -3,44 +3,43 @@
   home-manager.users.${username} = _: {
     home.file = {
       ".config/rofi/config.rasi".text = ''
-              /*Dracula theme based on the Purple official rofi theme*/
-          
-            configuration {
-              show-icons:      true;
-              display-drun:    "";
-              disable-history: false;
-            }
+        /*Dracula theme based on the Purple official rofi theme*/
+        configuration {
+          show-icons:      true;
+          display-drun:    "";
+          disable-history: false;
+        }
 
-            * {
-              font: "Jetbrains Mono 12";
-              foreground: #f8f8f2;
-              background-color: #2c2e48;
-              active-background: #111111;
-              urgent-background: #ff5555;
-              urgent-foreground: #2c2e48;
-              selected-background: @active-background;
-              selected-urgent-background: @urgent-background;
-              selected-active-background: @active-background;
-              separatorcolor: @active-background;
-              bordercolor: @active-background;
-            }
+        * {
+          font: "Jetbrains Mono 12";
+          foreground: #f8f8f2;
+          background-color: #2c2e48;
+          active-background: #111111;
+          urgent-background: #ff5555;
+          urgent-foreground: #2c2e48;
+          selected-background: @active-background;
+          selected-urgent-background: @urgent-background;
+          selected-active-background: @active-background;
+          separatorcolor: @active-background;
+          bordercolor: @active-background;
+        }
 
-            #window {
-              background-color: @background-color;
-              border:           3;
-              border-radius:    6;
-              border-color:     @bordercolor;
-              padding:          15;
-            }
-            #mainbox {
-              border:  0;
-              padding: 0;
-            }
-            #message {
-              border:       0px;
-              border-color: @separatorcolor;
-              padding:      1px;
-            }
+        #window {
+          background-color: @background-color;
+          border:           3;
+          border-radius:    6;
+          border-color:     @bordercolor;
+          padding:          15;
+        }
+        #mainbox {
+          border:  0;
+          padding: 0;
+        }
+        #message {
+          border:       0px;
+          border-color: @separatorcolor;
+          padding:      1px;
+        }
         #textbox {
             text-color: @foreground;
         }

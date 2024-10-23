@@ -1,6 +1,4 @@
 {
-  hyprland,
-  hyprlock,
   pkgs,
   ...
 }:

@@ -29,17 +29,7 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
-    let
-      supportedSystem = [ "x86_64-linux" ];
-      forAllSystems = nixpkgs.lib.genAttrs supportedSystem;
-      nixpkgsFor = forAllSystems (
-        system:
-        import nixpkgs {
-          inherit system;
-        }
-      );
-    in
+    { nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
         Laptop =

@@ -1,4 +1,4 @@
-{ home-manager, username, ... }:
+{ username, ... }:
 {
   # ---- Hyprland ---- #
   home-manager.users.${username} = _: {

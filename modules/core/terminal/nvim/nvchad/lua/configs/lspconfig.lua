@@ -22,3 +22,23 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+
+require("lspconfig").nixd.setup({
+  cmd = { "nixd" },
+  settings = {
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> { }",
+      },
+      formatting = {
+        command = { "nixfmt" },
+      },
+      options = {
+        nixos = {
+          expr = '(builtins.getFlake "/etc/nixos").nixosConfigurations.Desktop.options',
+          expr = '(builtins.getFlake "/etc/nixos").nixosConfigurations.Laptop.options',
+        },
+      },
+    },
+  },
+})
