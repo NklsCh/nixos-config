@@ -1,6 +1,6 @@
 { username, pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     pass
     gnupg
     pinentry-curses

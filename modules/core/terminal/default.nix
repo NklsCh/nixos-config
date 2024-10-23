@@ -18,5 +18,6 @@
     unzip
     acpi
     nixfmt-rfc-style
+    nixd
   ];
 }

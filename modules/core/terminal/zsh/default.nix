@@ -6,7 +6,7 @@ let
     vim = "nvim";
     ff = "fastfetch";
   };
-in 
+in
 
 {
   environment.shells = with pkgs; [ zsh ];
@@ -34,7 +34,13 @@ in
       zplug = {
         enable = true;
         plugins = [
-          { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+          {
+            name = "romkatv/powerlevel10k";
+            tags = [
+              "as:theme"
+              "depth:1"
+            ];
+          }
         ];
       };
       initExtraFirst = ''

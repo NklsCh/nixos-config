@@ -1,4 +1,9 @@
-{ hyprland, hyprlock, pkgs, ... }:
+{
+  hyprland,
+  hyprlock,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ./config

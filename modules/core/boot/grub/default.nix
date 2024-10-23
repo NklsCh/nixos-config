@@ -4,7 +4,7 @@ let
     "Laptop" = [ (import ./laptop.nix { inherit pkgs; }) ];
     "Desktop" = [ (import ./desktop.nix { inherit pkgs; }) ];
   };
-in 
+in
 {
   imports = dotfiles.${hostName} or [ ];
 }
