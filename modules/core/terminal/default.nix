@@ -17,5 +17,6 @@
     gh
     unzip
     acpi
+    nixfmt-rfc-style
   ];
 }
