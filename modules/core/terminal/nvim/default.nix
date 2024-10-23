@@ -12,7 +12,9 @@
 
   home-manager.users.${username} = _: {
     home.file = {
-      ".config/nvim".source = ./nvchad;
+      ".config/nvim/lua".source = ./nvchad/lua;
+      ".config/nvim/init.lua".source = ./nvchad/init.lua;
+      ".config/nvim/.stylua.toml".source = ./nvchad/.stylua.toml;
     };
   };
 }
