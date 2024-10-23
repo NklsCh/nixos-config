@@ -24,7 +24,7 @@ return {
   },
 
   {
-    'vyfor/cord.nvim',
+    'nklsch/cord.nvim',
     build = './build || .\\build',
     event = 'VeryLazy',
     opts = {}, -- calls require('cord').setup()
