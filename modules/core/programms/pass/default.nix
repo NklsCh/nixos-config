@@ -6,7 +6,6 @@
     pinentry-curses
     passExtensions.pass-otp
     qtpass
-    vivaldi
   ];
 
   environment.variables = {

@@ -6,7 +6,6 @@
 {
   imports = [
     ./nh
-    ./security
     ./services
   ];
 
