@@ -1,11 +1,18 @@
 { username, pkgs, ... }:
+let
+  passwordStoreRepo = pkgs.fetchFromGitHub {
+    owner = "NklsCh";
+    repo = "passwd";
+    rev = "main"; # Use a specific commit hash here
+    sha256 = "sha256-I2UvrvgUr3Kzg9Fj8ACXQwSXeqJZbWDp0PLfSK8MXrg="; # Replace with the correct hash
+  };
+in
 {
   environment.systemPackages = with pkgs; [
-    pass
+    (pass.withExtensions (exts: [ exts.pass-otp ]))
     gnupg
     pinentry-curses
     pinentry-gnome3
-    passExtensions.pass-otp
     qtpass
   ];
 
@@ -19,6 +26,10 @@
         pinentry-program /run/current-system/sw/bin/pinentry-gnome3
         allow-loopback-pinentry
       '';
+      ".password-store" = {
+        source = "${passwordStoreRepo}";
+        recursive = true;
+      };
     };
   };
 
