@@ -5,7 +5,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     initialPassword = "temp123";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "openrazer" ];
   };
   users.defaultUserShell = pkgs.zsh;
 }

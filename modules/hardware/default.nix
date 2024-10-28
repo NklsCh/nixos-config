@@ -4,5 +4,6 @@
     ./audio
     ./bluetooth
     ./network
+    ./peripherals
   ];
 }
