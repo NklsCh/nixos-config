@@ -3,7 +3,7 @@
     ./boot/grub
     ./gtk
     ./nix
-    ./programms
+    ./programs
     ./qt
     ./terminal
     ./xdg
