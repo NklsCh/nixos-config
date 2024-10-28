@@ -4,6 +4,7 @@
     pass
     gnupg
     pinentry-curses
+    pinentry-gnome3
     passExtensions.pass-otp
     qtpass
   ];
@@ -15,7 +16,7 @@
   home-manager.users.${username} = _: {
     home.file = {
       ".gnupg/gpg-agent.conf".text = ''
-        pinentry-program /run/current-system/sw/bin/pinentry-tty
+        pinentry-program /run/current-system/sw/bin/pinentry-gnome3
         allow-loopback-pinentry
       '';
     };

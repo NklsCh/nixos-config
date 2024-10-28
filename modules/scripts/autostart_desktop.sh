@@ -2,7 +2,7 @@
 gnome-keyring-deamon --start --components=secrets &
 
 swww-deamon &
-sleep 0.5 &&
+sleep 1 &&
 swww img ~/.config/backgrounds/mountains.jpg &
 
 nm-applet --indicator &
