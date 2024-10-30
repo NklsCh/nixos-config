@@ -3,7 +3,6 @@
   imports = [
     ./alacritty
     ./bash
-    ./fonts
     ./nvim
     ./p10k
     ./zsh
