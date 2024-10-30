@@ -9,6 +9,13 @@
         ];
       })
       geist-font
+      noto-fonts-emoji
     ];
+
+    fontconfig = {
+      defaultFonts = {
+        emoji = [ "Noto Color Emoji" ];
+      };
+    };
   };
 }

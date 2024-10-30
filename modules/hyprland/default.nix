@@ -23,7 +23,6 @@
       pavucontrol
       playerctl
       pywal
-      rofi-wayland
       slurp
       swww
       wl-clipboard
