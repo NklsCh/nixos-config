@@ -25,9 +25,5 @@
       enable = true;
       theme = "breeze";
     };
-    kernelParams = [
-      "psmouse.synaptics_intertouch=0"
-      "quiet"
-    ];
   };
 }
