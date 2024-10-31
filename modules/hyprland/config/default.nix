@@ -1,33 +1,32 @@
 { username, hyprlandConfig, ... }:
+let
+  monitorSetup = {
+    desktop = ''
+      # ---- Desktop-specific Monitor Setup ---- #
+      monitor = DP-1, 1920x1080@180, 0x0, 1
+      monitor = HDMI-A-2, 1920x1080, 1920x0, 1, transform, 1
+
+      workspace = 1, monitor:DP-1, default:true
+      workspace = 2, monitor:DP-1
+      workspace = 3, monitor:DP-1
+      workspace = 4, monitor:HDMI-A-2, default:true
+      workspace = 5, monitor:HDMI-A-2
+      workspace = 6, monitor:HDMI-A-2
+    '';
+    laptop = ''
+      # ---- Laptop-specific Monitor Setup ---- #
+      monitor = eDP-1, 1920x1080, 0x0, 1
+      monitor = , preferred, auto, 1
+    '';
+  };
+in
 {
   # ---- Hyprland ---- #
   home-manager.users.${username} = _: {
     home.file = {
       ".config/hypr/hyprland.conf".text = ''
         # ---- Common Configuration ---- #
-        ${
-          if hyprlandConfig == "desktop" then
-            ''
-              # ---- Desktop-specific Monitor Setup ---- #
-              monitor = DP-1, 1920x1080@180, 0x0, 1
-              monitor = HDMI-A-2, 1920x1080, 1920x0, 1, transform, 1
-
-              workspace = 1, monitor:DP-1, default:true
-              workspace = 2, monitor:DP-1
-              workspace = 3, monitor:DP-1
-              workspace = 4, monitor:HDMI-A-2, default:true
-              workspace = 5, monitor:HDMI-A-2
-              workspace = 6, monitor:HDMI-A-2
-            ''
-          else if hyprlandConfig == "laptop" then
-            ''
-              # ---- Laptop-specific Monitor Setup ---- #
-              monitor = eDP-1, 1920x1080, 0x0, 1
-              monitor = , preferred, auto, 1
-            ''
-          else
-            ''''
-        }
+        ${monitorSetup.${hyprlandConfig} or ''''}
 
         # ---- Environment Variables ---- #
         env = XDG_CURRENT_DESKTOP,Hyprland
@@ -122,11 +121,11 @@
 
 
         # Applications
-        bind = $mainMod, T, exec, alacritty 
-        bind = $mainMod, C, killactive, 
-        bind = $mainMod, M, exit, 
+        bind = $mainMod, T, exec, alacritty
+        bind = $mainMod, C, killactive,
+        bind = $mainMod, M, exit,
         bind = $mainMod, E, exec, nemo
-        bind = $mainMod, V, togglefloating, 
+        bind = $mainMod, V, togglefloating,
         bind = $mainMod, R, exec, wofi --show drun
         bind = $mainMod, P, pseudo, # dwindle
         bind = $mainMod, Q, togglesplit, # dwindle
