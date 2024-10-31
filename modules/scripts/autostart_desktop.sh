@@ -23,3 +23,5 @@ hyprctl dispatch movetoworkspace 4 $(hyprctl clients | grep vesktop | awk '{prin
 steam &
 sleep 7
 hyprctl dispatch movetoworkspace 3 $(hyprctl clients | grep steam | awk '{print $2}')
+
+cameractrls -c brightness=10,contrast=41,saturation=80,hue=0
