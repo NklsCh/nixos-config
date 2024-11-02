@@ -1,6 +1,7 @@
 {
   imports = [
     ./obs
+    ./webcam
     ./zoom
   ];
 }

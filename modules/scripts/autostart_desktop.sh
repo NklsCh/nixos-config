@@ -3,7 +3,7 @@ gnome-keyring-deamon --start --components=secrets &
 
 swww-deamon &
 sleep 1 &&
-swww img ~/.config/backgrounds/mountains.jpg &
+swww img ~/.config/backgrounds/dark_wallpaper.jpg &
 
 nm-applet --indicator &
 # waybar &
