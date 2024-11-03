@@ -8,6 +8,7 @@
     ./electron
     ./greetd
     ./hyprlock
+    ./hyprpaper
     ./rofi
   ];
 
@@ -17,6 +18,7 @@
       grim
       gthumb
       hyprpanel
+      hyprpaper
       libnotify
       nemo-with-extensions
       networkmanagerapplet
@@ -24,7 +26,6 @@
       playerctl
       pywal
       slurp
-      swww
       wl-clipboard
       xwaylandvideobridge
     ];
