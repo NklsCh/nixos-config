@@ -14,6 +14,9 @@
     hyprlock = {
       url = "github:hyprwm/hyprlock";
     };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+    };
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
