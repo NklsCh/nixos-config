@@ -60,8 +60,8 @@
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
               ./.
-              ./modules/hardware/nvidia
-              ./modules/core/nix/services/xserver
+              ./modules/hardware/nvidia.nix
+              ./modules/core/nix/services/xserver.nix
               ./modules/desktop
             ];
           };

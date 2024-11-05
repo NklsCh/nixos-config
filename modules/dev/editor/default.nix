@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./jetbrains
-    ./vscode
-    ./zed
-  ];
-}

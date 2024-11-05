@@ -1,8 +1,8 @@
 {
   imports = [
-    ./btop
-    ./fastfetch
-    ./rclone
-    ./vlc
+    ./btop.nix
+    ./fastfetch.nix
+    ./rclone.nix
+    ./vlc.nix
   ];
 }

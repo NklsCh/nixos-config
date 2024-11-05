@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
-    ./rtkit
+    ./pam.nix
+    ./rtkit.nix
   ];
 }

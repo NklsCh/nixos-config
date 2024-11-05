@@ -1,7 +1,7 @@
 {
   imports = [
-    ./gnupg
-    ./pass
-    ./ssh
+    ./gnupg.nix
+    ./pass.nix
+    ./ssh.nix
   ];
 }

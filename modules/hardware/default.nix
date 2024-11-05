@@ -1,9 +1,9 @@
 { ... }:
 {
   imports = [
-    ./audio
-    ./bluetooth
-    ./network
-    ./peripherals
+    ./audio.nix
+    ./bluetooth.nix
+    ./network.nix
+    ./peripherals.nix
   ];
 }
