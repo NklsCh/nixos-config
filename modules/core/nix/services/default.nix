@@ -10,6 +10,5 @@
     ./power-profiles-daemon.nix
     ./ssh.nix
     ./upower.nix
-    ./xserver.nix
   ];
 }
