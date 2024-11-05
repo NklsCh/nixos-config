@@ -1,10 +1,10 @@
 {
   imports = [
-    ./browsing
-    ./discord
-    ./entertainment
-    ./libreoffice
-    ./messanger
-    ./productivity
+    ./browsing.nix
+    ./discord.nix
+    ./entertainment.nix
+    ./libreoffice.nix
+    ./messanger.nix
+    ./productivity.nix
   ];
 }

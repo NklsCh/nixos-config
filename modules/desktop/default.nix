@@ -1,7 +1,7 @@
 {
   imports = [
-    ./obs
-    ./webcam
-    ./zoom
+    ./obs.nix
+    ./webcam.nix
+    ./zoom.nix
   ];
 }

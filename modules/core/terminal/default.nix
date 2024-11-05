@@ -1,11 +1,11 @@
 { pkgs, username, ... }:
 {
   imports = [
-    ./alacritty
-    ./bash
-    ./nvim
-    ./p10k
-    ./zsh
+    ./alacritty.nix
+    ./bash.nix
+    ./nvim.nix
+    ./p10k.nix
+    ./zsh.nix
   ];
 
   home-manager.users.${username} = {
