@@ -9,6 +9,5 @@
     ./power-profiles-daemon
     ./udisks2
     ./upower
-    ./xserver
   ];
 }

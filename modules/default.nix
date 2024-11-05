@@ -3,6 +3,7 @@
     ./apps
     ./core
     ./dev
+    ./games
     ./hardware
     ./hyprland
     ./scripts
