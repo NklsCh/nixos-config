@@ -61,9 +61,10 @@
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
               ./.
+              ./modules/app/profiles/desktop.nix
+              ./modules/app/profiles/gaming.nix
               ./modules/hardware/profiles/nvidia.nix
               ./modules/hardware/profiles/webcam.nix
-              ./modules/app/profiles/gaming.nix
             ];
           };
       };
