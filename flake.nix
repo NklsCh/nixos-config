@@ -37,6 +37,8 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Laptop";
+              gpu = false;
+              gpuBrand = "";
               inherit system;
             } // inputs;
             modules = [
@@ -54,7 +56,8 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Desktop";
-              gpu = "nvidia";
+              gpu = true;
+              gpuBrand = "nvidia";
               inherit system;
             } // inputs;
             modules = [

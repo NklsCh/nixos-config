@@ -1,5 +1,5 @@
 { home-manager, gpu, ... }:
-if gpu == "nvidia" then
+if gpu then
   {
     imports = [
       home-manager.nixosModules.home-manager
@@ -7,7 +7,7 @@ if gpu == "nvidia" then
       ../hosts
       ../modules
       ../modules/app/profiles/gaming.nix
-      ../modules/hardware/profiles/${gpu}.nix
+      ../modules/hardware/profiles/gpu.nix
       ../scripts
       ../users
     ];
