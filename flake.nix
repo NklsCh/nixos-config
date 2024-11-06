@@ -35,7 +35,7 @@
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              efi = false;
+              dev = true;
               gpu = false;
               gpuBrand = "";
               hostName = "Laptop";
@@ -55,7 +55,7 @@
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              efi = true;
+              dev = false;
               gpu = true;
               gpuBrand = "nvidia";
               hostName = "Desktop";
