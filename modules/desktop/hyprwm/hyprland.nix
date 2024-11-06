@@ -1,7 +1,7 @@
-{ username, hyprlandConfig, ... }:
+{ username, hostName, ... }:
 let
   monitorSetup = {
-    desktop = ''
+    Desktop = ''
       # ---- Desktop-specific Monitor Setup ---- #
       monitor = DP-1, 1920x1080@180, 0x0, 1
       monitor = HDMI-A-2, 1920x1080, 1920x0, 1, transform, 1
@@ -13,7 +13,7 @@ let
       workspace = 5, monitor:HDMI-A-2
       workspace = 6, monitor:HDMI-A-2
     '';
-    laptop = ''
+    Laptop = ''
       # ---- Laptop-specific Monitor Setup ---- #
       monitor = eDP-1, 1920x1080, 0x0, 1
       monitor = , preferred, auto, 1
@@ -26,7 +26,7 @@ in
     home.file = {
       ".config/hypr/hyprland.conf".text = ''
         # ---- Common Configuration ---- #
-        ${monitorSetup.${hyprlandConfig} or ''''}
+        ${monitorSetup.${hostName} or ''''}
 
         # ---- Environment Variables ---- #
         env = XDG_CURRENT_DESKTOP,Hyprland

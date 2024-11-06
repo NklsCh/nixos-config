@@ -1,13 +1,26 @@
-{ home-manager, ... }:
-{
-  imports = [
-    home-manager.nixosModules.home-manager
-    ../assets
-    ../hosts
-    ../modules
-    ../modules/app/profiles/gaming.nix
-    ../modules/hardware/profiles/nvidia.nix
-    ../scripts
-    ../users
-  ];
-}
+{ home-manager, gpu, ... }:
+if gpu == "nvidia" then
+  {
+    imports = [
+      home-manager.nixosModules.home-manager
+      ../assets
+      ../hosts
+      ../modules
+      ../modules/app/profiles/gaming.nix
+      ../modules/hardware/profiles/${gpu}.nix
+      ../scripts
+      ../users
+    ];
+  }
+else
+  {
+    imports = [
+      home-manager.nixosModules.home-manager
+      ../assets
+      ../hosts
+      ../modules
+      ../modules/app/profiles/gaming.nix
+      ../scripts
+      ../users
+    ];
+  }

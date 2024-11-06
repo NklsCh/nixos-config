@@ -38,7 +38,6 @@ _Disclaimer: This image is from [erictossell](https://github.com/erictossell), a
 
 - Minimal: Basic system without DE
 - Desktop: Full desktop environment with Hyprland (NVIDIA Drivers)
-- Desktop-No-GPU: Full desktop environment without GPU drivers
 - Development: Desktop with development tools
 - Gaming: Desktop with gaming tools (NVIDIA Drivers)
 
