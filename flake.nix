@@ -37,7 +37,6 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Laptop";
-              hyprlandConfig = "laptop";
               inherit system;
             } // inputs;
             modules = [
@@ -55,7 +54,7 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Desktop";
-              hyprlandConfig = "desktop";
+              gpu = "nvidia";
               inherit system;
             } // inputs;
             modules = [
