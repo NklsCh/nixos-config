@@ -1,9 +1,6 @@
 { config, gpuBrand, ... }:
 if gpuBrand == "nvidia" then
   {
-    imports = [
-      ../../core/services/xserver.nix
-    ];
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.graphics = {
