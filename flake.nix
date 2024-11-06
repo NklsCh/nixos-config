@@ -43,7 +43,7 @@
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop
+              ./profiles/desktop.nix
               ./profiles/developer.nix
               ./profiles/gaming.nix
             ];
