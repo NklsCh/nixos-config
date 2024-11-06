@@ -28,47 +28,55 @@
   outputs =
     { nixpkgs, ... }@inputs:
     {
-      nixosConfigurations = {
-        Laptop =
-          let
-            system = "x86_64-linux";
-          in
-          nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              dev = true;
+      nixosConfigurations =
+        let
+          system = "x86_64-linux";
+
+          # Module sets
+          commonModules = [
+            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+            ./profiles/desktop.nix
+            ./profiles/developer.nix
+            ./profiles/gaming.nix
+          ];
+
+          # Define common configuration
+          mkHost =
+            hostConfig:
+            nixpkgs.lib.nixosSystem {
+              specialArgs = {
+                username = "choinowski";
+                inherit system;
+                inherit (hostConfig)
+                  gpu
+                  gpuBrand
+                  hostName
+                  isDevDrive
+                  ;
+              } // inputs;
+
+              modules = hostConfig.modules;
+            };
+
+          # Define hosts configurations
+          hosts = {
+            Laptop = {
               gpu = false;
               gpuBrand = "";
               hostName = "Laptop";
-              username = "choinowski";
-              inherit system;
-            } // inputs;
-            modules = [
-              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop.nix
-              ./profiles/developer.nix
-              ./profiles/gaming.nix
-            ];
-          };
-        Desktop =
-          let
-            system = "x86_64-linux";
-          in
-          nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              dev = false;
+              isDevDrive = true;
+              modules = commonModules ++ [ ];
+            };
+
+            Desktop = {
               gpu = true;
               gpuBrand = "nvidia";
               hostName = "Desktop";
-              username = "choinowski";
-              inherit system;
-            } // inputs;
-            modules = [
-              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop.nix
-              ./profiles/developer.nix
-              ./profiles/gaming.nix
-            ];
+              isDevDrive = false;
+              modules = commonModules ++ [ ];
+            };
           };
-      };
+        in
+        builtins.mapAttrs (name: config: mkHost config) hosts;
     };
 }

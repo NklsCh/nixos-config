@@ -1,10 +1,10 @@
-{ pkgs, dev, ... }:
+{ pkgs, isDevDrive, ... }:
 {
   boot = {
     loader = {
       grub = {
         enable = true;
-        device = if dev then "/dev/sda" else "nodev";
+        device = if isDevDrive then "/dev/sda" else "nodev";
         efiSupport = true;
         useOSProber = true;
         gfxmodeBios = "1920x1080";
