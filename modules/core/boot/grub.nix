@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, efi, ... }:
 {
   boot = {
     loader = {
       grub = {
         enable = true;
-        device = "nodev";
+        device = if efi then "nodev" else "/dev/sda";
         efiSupport = true;
         useOSProber = true;
         gfxmodeBios = "1920x1080";
