@@ -9,7 +9,7 @@
 
   home-manager.users.${username} = _: {
     home.file = {
-      ".config/rofi/config.rasi".source = ../config/config.rasi;
+      ".config/rofi/config.rasi".source = ../../config/config.rasi;
     };
   };
 }

@@ -1,7 +1,8 @@
 {
   imports = [
+    ./discord.nix
     ./obs.nix
-    ./webcam.nix
+    ./vlc.nix
     ./zoom.nix
   ];
 }

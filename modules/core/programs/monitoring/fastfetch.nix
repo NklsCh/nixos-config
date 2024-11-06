@@ -4,7 +4,7 @@
 
   home-manager.users.${username} = _: {
     home.file = {
-      ".config/fastfetch/config.jsonc".source = ../../config/config.jsonc;
+      ".config/fastfetch/config.jsonc".source = ../../../config/config.jsonc;
     };
   };
 }
