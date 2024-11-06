@@ -2,9 +2,9 @@
   imports = [
     ./app
     ./core
+    ./desktop
     ./hardware
-    ./home
-    ./scripts
     ./security
+    ./shell
   ];
 }

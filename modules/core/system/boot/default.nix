@@ -1,6 +1,0 @@
-{
-  imports = [
-    ./grub
-    ./kernel
-  ];
-}

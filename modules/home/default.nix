@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./desktop
-    ./dev
-    ./media
-  ];
-}

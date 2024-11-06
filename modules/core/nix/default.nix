@@ -1,12 +1,8 @@
-{
-  pkgs,
-  username,
-  ...
-}:
+{ pkgs, username, ... }:
 {
   imports = [
-    ./common
-    ./nh
+    ./gc.nix
+    ./options.nix
   ];
 
   system = {
@@ -23,10 +19,6 @@
       "nix-command"
       "flakes"
     ];
-    extraOptions = ''
-      extra-substituters = https://denenv.cachnix.org;
-      extra-trusted-public-keys = devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=;
-    '';
   };
 
   home-manager.users.${username} = {
@@ -38,8 +30,6 @@
       };
     };
   };
-
-  home-manager.backupFileExtension = "backup";
 
   nixpkgs.config.allowUnfree = true;
 

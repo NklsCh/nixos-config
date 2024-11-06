@@ -1,10 +1,8 @@
 {
   imports = [
-    ./desktop
+    ./boot
+    ./nix
     ./programs
-    ./security
     ./services
-    ./shell
-    ./system
   ];
 }

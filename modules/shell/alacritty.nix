@@ -7,7 +7,7 @@
 
   home-manager.users.${username} = {
     home.file = {
-      ".config/alacritty/alacritty.toml".source = ../../config/alacritty.toml;
+      ".config/alacritty/alacritty.toml".source = ../config/alacritty.toml;
     };
   };
 }

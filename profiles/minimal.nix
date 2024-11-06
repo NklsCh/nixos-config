@@ -2,9 +2,8 @@
 {
   imports = [
     home-manager.nixosModules.home-manager
-    ./assets
-    ./hosts
-    ./modules
-    ./users
+    ../hosts
+    ../modules/shell
+    ../users
   ];
 }
