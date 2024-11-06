@@ -2,6 +2,6 @@
 {
   imports = [
     ./${hostName}
-    ./internationalisation
+    ./common
   ];
 }

@@ -42,8 +42,9 @@
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./.
-              ./modules/app/profiles/gaming.nix
+              ./profiles/desktop-no-gpu.nix
+              ./profiles/developer.nix
+              ./profiles/gaming.nix
             ];
           };
         Desktop =
@@ -59,11 +60,9 @@
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./.
-              ./modules/app/profiles/desktop.nix
-              ./modules/app/profiles/gaming.nix
-              ./modules/hardware/profiles/nvidia.nix
-              ./modules/hardware/profiles/webcam.nix
+              ./profiles/desktop.nix
+              ./profiles/developer.nix
+              ./profiles/gaming.nix
             ];
           };
       };

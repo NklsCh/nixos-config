@@ -1,7 +1,6 @@
-{ ... }:
 {
   imports = [
     ./pam.nix
-    ./rtkit.nix
+    ./ssh.nix
   ];
 }
