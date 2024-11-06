@@ -35,15 +35,15 @@
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              username = "choinowski";
-              hostName = "Laptop";
               gpu = false;
               gpuBrand = "";
+              hostName = "Laptop";
+              username = "choinowski";
               inherit system;
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop-no-gpu.nix
+              ./profiles/desktop
               ./profiles/developer.nix
               ./profiles/gaming.nix
             ];
@@ -54,10 +54,10 @@
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              username = "choinowski";
-              hostName = "Desktop";
               gpu = true;
               gpuBrand = "nvidia";
+              hostName = "Desktop";
+              username = "choinowski";
               inherit system;
             } // inputs;
             modules = [
