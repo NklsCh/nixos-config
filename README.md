@@ -51,6 +51,6 @@ _Disclaimer: This image is from [erictossell](https://github.com/erictossell), a
 
 ## Maintenance
 
-- Update system: `sudo nixos-rebuild switch --flake .#<hostname>`
-- Clean old generations: `sudo nix-collect-garbage -d`
+- Update system: `sudo nixos-rebuild switch --flake .#<hostname>` or `nh os switch`
+- Clean old generations: `sudo nix-collect-garbage -d` or `nh clean all`
 - Update flake inputs: `nix flake update`
