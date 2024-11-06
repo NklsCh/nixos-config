@@ -1,12 +1,10 @@
 {
   imports = [
-    ./boot
-    ./gtk
-    ./fonts
-    ./nix
+    ./desktop
     ./programs
-    ./qt
-    ./terminal
-    ./xdg
+    ./security
+    ./services
+    ./shell
+    ./system
   ];
 }

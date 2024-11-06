@@ -1,5 +1,9 @@
 { config, ... }:
 {
+  imports = [
+    ../../core/services/xserver.nix
+  ];
+
   hardware.graphics = {
     enable = true;
   };

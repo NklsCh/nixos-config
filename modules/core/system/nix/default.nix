@@ -5,9 +5,8 @@
 }:
 {
   imports = [
+    ./common
     ./nh
-    ./security
-    ./services
   ];
 
   system = {
