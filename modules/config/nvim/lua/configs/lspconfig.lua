@@ -35,8 +35,7 @@ require("lspconfig").nixd.setup({
       },
       options = {
         nixos = {
-          expr = '(builtins.getFlake "/etc/nixos").nixosConfigurations.Desktop.options',
-          expr = '(builtins.getFlake "/etc/nixos").nixosConfigurations.Laptop.options',
+          expr = 'builtins.mapAttrs (name: value: value.options) (builtins.getFlake "/etc/nixos").nixosConfigurations',
         },
       },
     },
