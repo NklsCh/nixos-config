@@ -4,7 +4,7 @@ let
     Desktop = ''
       # ---- Desktop-specific Monitor Setup ---- #
       monitor = DP-1, 1920x1080@180, 0x0, 1
-      monitor = HDMI-A-2, 1920x1080, 1920x0, 1, transform, 1
+      monitor = HDMI-A-2, 1920x1080, 1920x0, 1
 
       workspace = 1, monitor:DP-1, default:true
       workspace = 2, monitor:DP-1
