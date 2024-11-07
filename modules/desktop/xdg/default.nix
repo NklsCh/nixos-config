@@ -41,6 +41,16 @@
         XDG_PICTURES_DIR="$HOME/Pictures"
         XDG_VIDEOS_DIR="$HOME/Videos"
       '';
+
+      #--- Dirs to Create ---#
+      "Desktop/create".text = "";
+      "Downloads/create".text = "";
+      "Templates/create".text = "";
+      "Public/create".text = "";
+      "Documents/create".text = "";
+      "Music/create".text = "";
+      "Pictures/create".text = "";
+      "Videos/create".text = "";
     };
   };
 }
