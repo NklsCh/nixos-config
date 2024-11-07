@@ -7,5 +7,6 @@
     ./hyprwm
     ./rofi
     ./styling
+    ./xdg
   ];
 }

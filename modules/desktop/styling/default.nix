@@ -3,6 +3,5 @@
     ./fonts
     ./gtk
     ./qt
-    ./xdg
   ];
 }
