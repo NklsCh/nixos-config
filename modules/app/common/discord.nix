@@ -11,7 +11,7 @@
         [Desktop Entry]
         Name=Discord
         Comment=Discord Client
-        Exec=vesktop
+        Exec=vesktop --disable-features=WebRtcAllowInputVolumeAdjustment
         Icon=discord
         Terminal=false
         Type=Application
