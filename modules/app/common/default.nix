@@ -1,13 +1,11 @@
 {
   imports = [
     ./browsing.nix
+    ./communication.nix
     ./discord.nix
     ./entertainment.nix
     ./libreoffice.nix
-    ./messanger.nix
-    ./obs.nix
+    ./media.nix
     ./productivity.nix
-    ./vlc.nix
-    ./zoom.nix
   ];
 }
