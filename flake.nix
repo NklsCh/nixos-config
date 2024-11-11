@@ -23,60 +23,57 @@
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
     };
+    # Gaming
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+    };
   };
 
   outputs =
     { nixpkgs, ... }@inputs:
     {
-      nixosConfigurations =
-        let
-          system = "x86_64-linux";
-
-          # Module sets
-          commonModules = [
-            { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-            ./profiles/desktop.nix
-            ./profiles/developer.nix
-            ./profiles/gaming.nix
-          ];
-
-          # Define common configuration
-          mkHost =
-            hostConfig:
-            nixpkgs.lib.nixosSystem {
-              specialArgs = {
-                username = "choinowski";
-                inherit system;
-                inherit (hostConfig)
-                  gpu
-                  gpuBrand
-                  hostName
-                  isDevDrive
-                  ;
-              } // inputs;
-
-              modules = hostConfig.modules;
-            };
-
-          # Define hosts configurations
-          hosts = {
-            Laptop = {
+      nixosConfigurations = {
+        Laptop =
+          let
+            system = "x86_64-linux";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              username = "choinowski";
+              hostName = "Laptop";
               gpu = false;
               gpuBrand = "";
-              hostName = "Laptop";
               isDevDrive = false;
-              modules = commonModules ++ [ ];
-            };
-
-            Desktop = {
+              inherit system;
+            } // inputs;
+            modules = [
+              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+              ./profiles/desktop.nix
+              ./profiles/developer.nix
+              ./profiles/gaming.nix
+            ];
+          };
+        Desktop =
+          let
+            system = "x86_64-linux";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              username = "choinowski";
+              hostName = "Desktop";
               gpu = true;
               gpuBrand = "nvidia";
-              hostName = "Desktop";
               isDevDrive = false;
-              modules = commonModules ++ [ ];
-            };
+              inherit system;
+            } // inputs;
+            modules = [
+              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+              ./profiles/desktop.nix
+              ./profiles/developer.nix
+              ./profiles/gaming.nix
+              ./modules/app/profiles/star-citizen.nix
+            ];
           };
-        in
-        builtins.mapAttrs (name: config: mkHost config) hosts;
+      };
     };
 }
