@@ -64,7 +64,7 @@
               gpu = false;
               gpuBrand = "";
               hostName = "Laptop";
-              isDevDrive = true;
+              isDevDrive = false;
               modules = commonModules ++ [ ];
             };
 

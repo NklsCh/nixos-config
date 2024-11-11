@@ -9,7 +9,11 @@
   ];
 
   home-manager.users.${username} = {
-    programs.git.enable = true;
+    programs.git = {
+      enable = true;
+      userName = "Niklas Choinowski";
+      userEmail = "niklas.choinowski@gmail.com@";
+    };
   };
   environment.systemPackages = with pkgs; [
     zoxide

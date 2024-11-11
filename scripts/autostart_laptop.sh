@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-gnome-keyring-deamon --start --components=secrets &
 
-hyprpanel &
+# Start background services
+gnome-keyring-daemon --start --components=secrets &
+hyprpaper &
 nm-applet --indicator &
 ags &
 hyprpanel &
 dunst &
+
+# Start applications
+localsend &
