@@ -24,9 +24,7 @@
       url = "github:Jas-SinghFSU/HyprPanel";
     };
     # Gaming
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-    };
+    nix-citizen.url = "github:LovingMelody/nix-citizen";
   };
 
   outputs =

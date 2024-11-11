@@ -1,21 +1,14 @@
 {
   pkgs,
-  nix-gaming,
+  nix-citizen,
   username,
   ...
 }:
 {
   home-manager.users.${username} = {
-    home.packages = [
-      (nix-gaming.packages.${pkgs.hostPlatform.system}.star-citizen.override {
-        tricks = [
-          "arial"
-          "vcrun2019"
-          "win10"
-          "sound=alsa"
-        ];
+    home.packages = with pkgs; [
+      (nix-citizen.packages.${system}.star-citizen.override {
         gameScopeEnable = false;
-        # useUmu = true;
         location = "/media/512-GB-SSD/Games/StarCitizen";
       })
     ];
