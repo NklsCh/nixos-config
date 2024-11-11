@@ -1,24 +1,6 @@
 { username, hostName, ... }:
 let
-  monitorSetup = {
-    Desktop = ''
-      # ---- Desktop-specific Monitor Setup ---- #
-      monitor = DP-1, 1920x1080@180, 0x0, 1
-      monitor = HDMI-A-2, 1920x1080, 1920x0, 1
-
-      workspace = 1, monitor:DP-1, default:true
-      workspace = 2, monitor:DP-1
-      workspace = 3, monitor:DP-1
-      workspace = 4, monitor:HDMI-A-2, default:true
-      workspace = 5, monitor:HDMI-A-2
-      workspace = 6, monitor:HDMI-A-2
-    '';
-    Laptop = ''
-      # ---- Laptop-specific Monitor Setup ---- #
-      monitor = eDP-1, 1920x1080, 0x0, 1
-      monitor = , preferred, auto, 1
-    '';
-  };
+  vars = import ./hyprVariables.nix;
 in
 {
   # ---- Hyprland ---- #
@@ -26,7 +8,7 @@ in
     home.file = {
       ".config/hypr/hyprland.conf".text = ''
         # ---- Common Configuration ---- #
-        ${monitorSetup.${hostName} or ''''}
+        ${vars.monitorSetup.${hostName} or ''''}
 
         # ---- Environment Variables ---- #
         env = XDG_CURRENT_DESKTOP,Hyprland
@@ -210,7 +192,8 @@ in
         windowrulev2 = workspace 4 silent, title:^(Spotify Premium)$
         windowrulev2 = tile, title:^(Spotify Premium)$
 
-        exec-once=bash ~/.scripts/autostart_desktop.sh
+        # Autostart
+        ${vars.autostart.${hostName} or ''''}
       '';
     };
   };
