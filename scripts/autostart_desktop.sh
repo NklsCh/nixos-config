@@ -10,6 +10,7 @@ dunst &
 
 # Start applications
 signal-desktop --start-in-tray &
+whatsapp-for-linux &
 localsend &
 vesktop &
 steam &
