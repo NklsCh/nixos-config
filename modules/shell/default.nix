@@ -12,7 +12,7 @@
     programs.git = {
       enable = true;
       userName = "Niklas Choinowski";
-      userEmail = "niklas.choinowski@gmail.com@";
+      userEmail = "niklas.choinowski@gmail.com";
     };
   };
   environment.systemPackages = with pkgs; [
