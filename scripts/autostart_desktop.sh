@@ -21,5 +21,5 @@ spotify &
 # Wait for Steam to fully start
 sleep 5
 for window in $(hyprctl clients | grep -i "steam" | awk '{print $2}'); do
-    hyprctl dispatch movetoworkspace 3,$window
+    hyprctl dispatch movetoworkspace 7,$window
 done
