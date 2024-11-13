@@ -5,9 +5,9 @@
     zed-editor
     vscode
     #--- JetBrains ---#
-    jetbrains.phpstorm
-    jetbrains.webstorm
-    jetbrains.idea-ultimate
+    # jetbrains.phpstorm
+    # jetbrains.webstorm
+    # jetbrains.idea-ultimate
     #--- Tools ---#
     nodejs_latest
     gitkraken
