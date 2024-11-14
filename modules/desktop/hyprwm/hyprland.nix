@@ -98,10 +98,9 @@ in
         }
 
         # ---- Keybinds ---- #
-
         $mainMod = SUPER
 
-
+        # ---- Application Keybinds ---- #
         # Applications
         bind = $mainMod, T, exec, alacritty
         bind = $mainMod, C, killactive,
@@ -115,19 +114,21 @@ in
         bind = $mainMod, S, exec, rofi -show drun -showicons
         bind = $mainMod SHIFT, E, exec, rofi -modi emoji -show emoji
 
-        # Move focus with mainMod + vim binds
+        # ---- Window Control Keybinds---- #
         bind = $mainMod, h, movefocus, l
         bind = $mainMod, l, movefocus, r
         bind = $mainMod, k, movefocus, u
         bind = $mainMod, j, movefocus, d
-
-        # Move Window
         bind = $mainMod SHIFT, h, movewindow, l
         bind = $mainMod SHIFT, l, movewindow, r
         bind = $mainMod SHIFT, k, movewindow, u
         bind = $mainMod SHIFT, j, movewindow, d
+        bind = $mainMod CTRL, h, resizeactive, -50 0    # Shrink to left
+        bind = $mainMod CTRL, l, resizeactive, 50 0     # Grow to right
+        bind = $mainMod CTRL, k, resizeactive, 0 -50    # Shrink upward
+        bind = $mainMod CTRL, j, resizeactive, 0 50     # Grow downward
 
-        # Switch workspaces with mainMod + [0-9]
+        # ---- Workspace Keybinds---- #
         bind = $mainMod, 1, workspace, 1
         bind = $mainMod, 2, workspace, 2
         bind = $mainMod, 3, workspace, 3
@@ -138,8 +139,6 @@ in
         bind = $mainMod, 8, workspace, 8
         bind = $mainMod, 9, workspace, 9
         bind = $mainMod, 0, workspace, 10
-
-        # Move active window to a workspace with mainMod + SHIFT + [0-9]
         bind = $mainMod SHIFT, 1, movetoworkspace, 1
         bind = $mainMod SHIFT, 2, movetoworkspace, 2
         bind = $mainMod SHIFT, 3, movetoworkspace, 3
