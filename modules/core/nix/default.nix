@@ -2,7 +2,7 @@
 {
   imports = [
     ./gc.nix
-    ./options.nix
+    ./settings.nix
   ];
 
   system = {
@@ -15,15 +15,6 @@
   nix = {
     package = pkgs.nixVersions.nix_2_21;
     nixPath = [ "nixpkgs=/run/current-system/nixpkgs/" ];
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    settings = {
-      trusted-users = [ "root" "choinowski" ];  # Add your username here
-      extra-substituters = [ "https://devenv.cachix.org" ];
-      extra-trusted-public-keys = [ "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw=" ];
-    };
   };
 
   home-manager.users.${username} = {
