@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     wine
     lutris
-    heroic
+    heroic-unwrapped
     prismlauncher
   ];
 
