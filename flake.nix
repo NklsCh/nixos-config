@@ -25,6 +25,10 @@
     };
     # Gaming
     nix-citizen.url = "github:LovingMelody/nix-citizen";
+    zen-browser = {
+      url = "github:fufexan/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
