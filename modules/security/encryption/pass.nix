@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     (pass.withExtensions (exts: [ exts.pass-otp ]))
     qtpass
+    browserpass
   ];
 
   environment.variables = {
@@ -10,4 +11,8 @@
   };
 
   programs.browserpass.enable = true;
+
+  environment.etc."mozilla/native-messaging-hosts/com.github.browserpass.native.json" = {
+    source = "${pkgs.browserpass}/lib/mozilla/native-messaging-hosts/com.github.browserpass.native.json";
+  };
 }
