@@ -1,6 +1,7 @@
 {
   pkgs,
   username,
+  zen-browser,
   ...
 }:
 {
@@ -10,4 +11,7 @@
       package = pkgs.brave;
     };
   };
+  environment.systemPackages = [
+    zen-browser.packages.${pkgs.system}.default
+  ];
 }
