@@ -2,12 +2,8 @@
 {
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {
-        fonts = [
-          # "JetBrainsMono"
-          "GeistMono"
-        ];
-      })
+      # nerd-fonts.jetbrains-mono
+      nerd-fonts.geist-mono
       geist-font
       noto-fonts-emoji
     ];
