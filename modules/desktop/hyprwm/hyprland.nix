@@ -172,7 +172,6 @@ in
         bind = , XF86MonBrightnessUp, exec, brightnessctl s +5%
         bind = , XF86MonBrightnessDown, exec, brightnessctl s 5%-
 
-        # ---- Window Rules ---- #
         # Pavucontrol
         windowrulev2 = float, class:^(pavucontrol)$
         windowrulev2 = maxsize 300 300, class:^(pavucontrol)$
@@ -185,14 +184,10 @@ in
         windowrulev2 = maxsize 1 1, class:^(xwaylandvideobridge)$
         windowrulev2 = noblur, class:^(xwaylandvideobridge)$
 
-        # General layout rule for workspace 4
-        workspace    = 8,split:v
-        windowrulev2 = workspace 8 silent, class:^(vesktop)$
-        windowrulev2 = tile, class:^(vesktop)$
-        windowrulev2 = workspace 8 silent, title:^(Spotify Premium)$
-        windowrulev2 = tile, title:^(Spotify Premium)$
+        # ---- Window Rules ---- #
+        ${vars.WindowRules.${hostName} or ''''}
 
-        # Autostart
+        # ---- Autostart ---- #
         ${vars.autostart.${hostName} or ''''}
       '';
     };

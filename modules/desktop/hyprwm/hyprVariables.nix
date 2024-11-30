@@ -32,4 +32,18 @@
       exec-once=bash ~/.scripts/autostart_laptop.sh
     '';
   };
+  WindowRules = {
+    Desktop = ''
+      # General layout rule for workspace 8
+      workspace    = 8,split:v
+      windowrulev2 = workspace 8 silent, class:^(vesktop)$
+      windowrulev2 = tile, class:^(vesktop)$
+      windowrulev2 = workspace 8 silent, title:^(Spotify Premium)$
+      windowrulev2 = tile, title:^(Spotify Premium)$
+
+      # General layout rule for workspace 7
+      windowrulev2 = workspace 7 silent, class:^(steam)$
+    '';
+    Laptop = '''';
+  };
 }
