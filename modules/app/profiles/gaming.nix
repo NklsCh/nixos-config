@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    wine
-    lutris
     heroic-unwrapped
+    lutris
     prismlauncher
+    wine
   ];
 
   programs = {
