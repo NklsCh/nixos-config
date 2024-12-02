@@ -17,5 +17,5 @@
   };
 
   programs.mtr.enable = true;
-  services.mtr-exporter.enable = true;
+  # services.mtr-exporter.enable = true;
 }
