@@ -15,4 +15,7 @@
   users.users.${username} = {
     extraGroups = [ "networkmanager" ];
   };
+
+  programs.mtr.enable = true;
+  services.mtr-exporter.enable = true;
 }
