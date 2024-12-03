@@ -16,6 +16,5 @@
     extraGroups = [ "networkmanager" ];
   };
 
-  programs.mtr.enable = true;
-  # services.mtr-exporter.enable = true;
+  programs.traceroute.enable = true;
 }
