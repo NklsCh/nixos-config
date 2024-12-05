@@ -12,7 +12,11 @@ in
 {
   environment.systemPackages = with pkgs; [
     v4l-utils
+    ffmpeg
+    mpv
   ];
+
+  security.polkit.enable = true;
 
   systemd.user.services.webcam-conf = {
     description = "Overwrite webcam default settings";
@@ -21,7 +25,7 @@ in
       Type = "oneshot";
       ExecStart = "${webcam-conf}/bin/my-configure-webcam";
       RemainAfterExit = true;
-      StandardOutput="journal";
+      StandardOutput = "journal";
     };
   };
 }
