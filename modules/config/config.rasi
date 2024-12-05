@@ -9,12 +9,16 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser";
+	modi:                       "drun,calc,filebrowser,emoji";
     show-icons:                 true;
     display-drun:               " Apps";
-    display-run:                " Run";
+    display-calc:               " Calc";
+    calc {
+        no-show-match: true;
+        no-sort: true;
+    }
     display-filebrowser:        " Files";
-    display-window:             " Windows";
+    display-emoji:              "󰞅 Emoji";
 	  drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }
