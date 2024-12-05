@@ -2,8 +2,11 @@
 {
 
   environment.systemPackages = [
-    (pkgs.rofi-wayland.override (old: {
-      plugins = (if (old ? plugins) then old.plugins else [ ]) ++ [ pkgs.rofi-emoji-wayland ];
+    (pkgs.rofi.override (old: {
+      plugins = (if (old ? plugins) then old.plugins else [ ]) ++ [
+        pkgs.rofi-emoji
+        pkgs.rofi-calc
+      ];
     }))
   ];
 
