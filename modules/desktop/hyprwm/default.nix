@@ -25,6 +25,7 @@
       slurp
       wl-clipboard
       xwaylandvideobridge
+      zenity
     ];
   };
 
