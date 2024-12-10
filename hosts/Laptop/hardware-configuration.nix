@@ -23,7 +23,7 @@
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821ce ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/53264168-9518-4984-9a65-897c728e5ce6";
