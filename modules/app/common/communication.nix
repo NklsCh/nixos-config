@@ -3,9 +3,9 @@
   environment.systemPackages = with pkgs; [
     element-desktop
     localsend
+    protonmail-desktop
     session-desktop
     signal-desktop
-    tutanota-desktop
     whatsapp-for-linux
     zoom-us
   ];
