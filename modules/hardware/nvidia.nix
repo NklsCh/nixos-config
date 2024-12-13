@@ -1,6 +1,11 @@
-{ config, gpuBrand, ... }:
-if gpuBrand == "nvidia" then
-  {
+{ config, lib, ... }:
+
+with lib;
+let
+  cfg = config.system;
+in
+{
+  config = mkIf (cfg.gpu.enable && cfg.gpu.brand == "nvidia") {
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.graphics = {
@@ -16,14 +21,5 @@ if gpuBrand == "nvidia" then
       nvidiaSettings = true;
       package = config.boot.kernelPackages.nvidiaPackages.production;
     };
-  }
-else
-  {
-    boot.initrd.kernelModules = [ "amdgpu" ];
-    services.xserver.videoDrivers = [ "amdgpu" ];
-
-    hardware.graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-  }
+  };
+}

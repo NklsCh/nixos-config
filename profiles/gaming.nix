@@ -1,26 +1,36 @@
-{ home-manager, gpu, ... }:
-if gpu then
-  {
-    imports = [
-      home-manager.nixosModules.home-manager
-      ../assets
-      ../hosts
-      ../modules
-      ../modules/app/profiles/gaming.nix
-      ../modules/hardware/profiles/gpu.nix
-      ../scripts
-      ../users
+{
+  config,
+  lib,
+  pkgs,
+  username,
+  nix-citizen,
+  ...
+}:
+
+with lib;
+let
+  cfg = config.system;
+in
+{
+  config = mkIf cfg.profiles.gaming {
+    environment.systemPackages = with pkgs; [
+      heroic-unwrapped
+      lutris
+      prismlauncher
+      wine
     ];
-  }
-else
-  {
-    imports = [
-      home-manager.nixosModules.home-manager
-      ../assets
-      ../hosts
-      ../modules
-      ../modules/app/profiles/gaming.nix
-      ../scripts
-      ../users
-    ];
-  }
+
+    programs = {
+      steam.enable = true;
+    };
+
+    home-manager.users.${username} = {
+      home.packages = with pkgs; [
+        (nix-citizen.packages.${system}.star-citizen.override {
+          gameScopeEnable = false;
+          location = "/media/512-GB-SSD/Games/StarCitizen";
+        })
+      ];
+    };
+  };
+}

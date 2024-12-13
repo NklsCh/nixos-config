@@ -1,4 +1,7 @@
 { pkgs, username, ... }:
+let
+  protonMailDesktop = import ../../config/dotdesktop/proton-mail.nix { inherit pkgs; };
+in
 {
   environment.systemPackages = with pkgs; [
     element-desktop
@@ -6,18 +9,14 @@
     protonmail-desktop
     session-desktop
     signal-desktop
+    teams-for-linux
     whatsapp-for-linux
     zoom-us
   ];
   home-manager.users.${username} = {
-    home.file.".local/share/applications/proton-mail.desktop".text = ''
-      [Desktop Entry]
-      Name=Proton Mail
-      Exec=proton-mail --ozone-platform=x11
-      Terminal=false
-      Type=Application
-      Icon=${pkgs.protonmail-desktop}/share/pixmaps/proton-mail.png
-      Categories=Network;Email;
-    '';
+    home.file = {
+      ".local/share/applications/proton-mail.desktop".text = protonMailDesktop.entry;
+      ".config/teams-for-linux/config.json".source = ../../config/t4l.json;
+    };
   };
 }

@@ -3,20 +3,13 @@
   pkgs,
   ...
 }:
+let
+  discordDesktop = import ../../config/dotdesktop/discord.nix { inherit pkgs; };
+in
 {
-
   home-manager.users.${username} = {
     home.file = {
-      ".local/share/applications/Discord.desktop".text = ''
-        [Desktop Entry]
-        Name=Discord
-        Comment=Discord Client
-        Exec=vesktop --disable-features=WebRtcAllowInputVolumeAdjustment
-        Icon=discord
-        Terminal=false
-        Type=Application
-        Categories=Network;InstantMessaging;
-      '';
+      ".local/share/applications/Discord.desktop".text = discordDesktop.entry;
     };
   };
 

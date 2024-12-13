@@ -23,7 +23,10 @@
   };
 
   outputs =
-    { nixpkgs, ... }@inputs:
+    {
+      nixpkgs,
+      ...
+    }@inputs:
     {
       nixosConfigurations = {
         Laptop =
@@ -34,16 +37,27 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Laptop";
-              gpu = false;
-              gpuBrand = "";
-              isDevDrive = false;
+              systemType = "desktop";
               inherit system;
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop.nix
-              ./profiles/developer.nix
-              ./profiles/gaming.nix
+              ./profiles/options.nix
+              {
+                system = {
+                  gpu = {
+                    enable = true;
+                  };
+                  boot = {
+                    isDevDrive = false;
+                  };
+                  profiles = {
+                    developer = true;
+                    gaming = false;
+                  };
+                };
+              }
+              ./.
             ];
           };
         Desktop =
@@ -54,17 +68,28 @@
             specialArgs = {
               username = "choinowski";
               hostName = "Desktop";
-              gpu = true;
-              gpuBrand = "nvidia";
-              isDevDrive = false;
+              systemType = "desktop";
               inherit system;
             } // inputs;
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              ./profiles/desktop.nix
-              ./profiles/developer.nix
-              ./profiles/gaming.nix
-              ./modules/app/profiles/star-citizen.nix
+              ./profiles/options.nix
+              {
+                system = {
+                  gpu = {
+                    enable = true;
+                    brand = "nvidia";
+                  };
+                  boot = {
+                    isDevDrive = false;
+                  };
+                  profiles = {
+                    developer = true;
+                    gaming = true;
+                  };
+                };
+              }
+              ./.
             ];
           };
       };
