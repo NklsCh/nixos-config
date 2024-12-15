@@ -1,6 +1,7 @@
 {
   imports = [
+    ./age.nix
     ./gnupg.nix
-    ./pass.nix
+    ./passwords.nix
   ];
 }
