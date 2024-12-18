@@ -17,12 +17,12 @@
     "xhci_pci"
     "ahci"
     "nvme"
-    "usb_storage"
     "usbhid"
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/816e8474-fa50-4cfb-b507-d3d79a4feef5";
@@ -35,24 +35,6 @@
     options = [
       "fmask=0077"
       "dmask=0077"
-    ];
-  };
-
-  fileSystems."/media/2-TB-HDD" = {
-    device = "/dev/disk/by-uuid/f6ceba8d-1e33-4cf3-985a-eb05074f721c";
-    fsType = "ext4";
-    options = [
-      "exec"
-      "x-gvfs-show"
-    ];
-  };
-
-  fileSystems."/media//512-GB-SSD" = {
-    device = "/dev/disk/by-uuid/ae015b22-1795-4bda-8f60-8a06cbf39d5a";
-    fsType = "ext4";
-    options = [
-      "exec"
-      "x-gvfs-show"
     ];
   };
 
