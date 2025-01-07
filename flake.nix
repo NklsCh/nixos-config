@@ -52,7 +52,7 @@
               {
                 system = {
                   gpu = {
-                    enable = true;
+                    enable = false;
                   };
                   boot = {
                     isDevDrive = false;
