@@ -5,6 +5,6 @@
 }:
 {
   environment.systemPackages = [
-    zen-browser.packages."${pkgs.system}".zen
+    zen-browser.packages."${pkgs.system}".default
   ];
 }
