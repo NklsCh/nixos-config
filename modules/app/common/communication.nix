@@ -6,10 +6,10 @@ in
   environment.systemPackages = with pkgs; [
     element-desktop
     localsend
-    protonmail-desktop
     session-desktop
     signal-desktop
     teams-for-linux
+    tutanota-desktop
     whatsapp-for-linux
     zoom-us
   ];
