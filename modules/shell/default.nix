@@ -20,11 +20,11 @@
     };
   };
   environment.systemPackages = with pkgs; [
-    zoxide
-    gh
-    unzip
     acpi
-    nixfmt-rfc-style
+    gh
     nixd
+    nixfmt-rfc-style
+    unzip
+    zoxide
   ];
 }
