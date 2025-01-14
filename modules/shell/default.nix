@@ -12,9 +12,9 @@
     programs.git = {
       enable = true;
       userName = "Niklas Choinowski";
-      userEmail = "niklas.choinowski@gmail.com";
+      userEmail = "v3rm1n@tutamail.com";
       signing = {
-        key = "D41980C036A712C";
+        key = "0BD7EAA9BBF1EDA0";
         signByDefault = true;
       };
     };
