@@ -14,7 +14,7 @@
       userName = "Niklas Choinowski";
       userEmail = "niklas.choinowski@gmail.com";
       signing = {
-        key = "D41980C036A712CF";
+        key = "0BD7EAA9BBF1EDA0";
         signByDefault = true;
       };
     };
