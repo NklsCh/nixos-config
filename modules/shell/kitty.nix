@@ -1,13 +1,12 @@
 { pkgs, username, ... }:
 {
   environment.systemPackages = with pkgs; [
-    alacritty
-    clang
+    kitty
   ];
 
   home-manager.users.${username} = {
     home.file = {
-      ".config/alacritty/alacritty.toml".source = ../config/alacritty.toml;
+      ".config/kitty/kitty.conf".source = ../config/kitty.conf;
     };
   };
 }

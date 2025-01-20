@@ -3,6 +3,7 @@
   imports = [
     ./alacritty.nix
     ./bash.nix
+    ./kitty.nix
     ./nvim.nix
     ./p10k.nix
     ./zsh.nix
@@ -21,6 +22,7 @@
   };
   environment.systemPackages = with pkgs; [
     acpi
+    clang
     gh
     nixd
     nixfmt-rfc-style
