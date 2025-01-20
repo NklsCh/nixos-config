@@ -12,7 +12,7 @@ dunst &
 signal-desktop --start-in-tray &
 whatsapp-for-linux &
 localsend &
-vesktop &
+discord &
 steam &
 
 sleep 7

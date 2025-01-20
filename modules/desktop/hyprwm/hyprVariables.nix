@@ -36,8 +36,8 @@
     Desktop = ''
       # General layout rule for workspace 8
       workspace    = 8,split:v
-      windowrulev2 = workspace 8 silent, class:^(vesktop)$
-      windowrulev2 = tile, class:^(vesktop)$
+      windowrulev2 = workspace 8 silent, class:^(discord)$
+      windowrulev2 = tile, class:^(discord)$
       windowrulev2 = workspace 8 silent, title:^(Spotify Premium)$
       windowrulev2 = tile, title:^(Spotify Premium)$
 
