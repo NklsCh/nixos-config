@@ -1,7 +1,6 @@
 { pkgs, username, ... }:
 {
   imports = [
-    ./alacritty.nix
     ./bash.nix
     ./kitty.nix
     ./nvim.nix
