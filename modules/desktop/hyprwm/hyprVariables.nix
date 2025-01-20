@@ -22,16 +22,6 @@
       monitor = , preferred, auto, 1
     '';
   };
-  autostart = {
-    Desktop = ''
-      # ---- Desktop-specific Monitor Setup ---- #
-      exec-once=bash ~/.scripts/autostart_desktop.sh
-    '';
-    Laptop = ''
-      # ---- Laptop-specific Monitor Setup ---- #
-      exec-once=bash ~/.scripts/autostart_laptop.sh
-    '';
-  };
   WindowRules = {
     Desktop = ''
       # General layout rule for workspace 8

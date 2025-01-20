@@ -7,6 +7,3 @@ nm-applet --indicator &
 ags &
 hyprpanel &
 dunst &
-
-# Start applications
-localsend &

@@ -177,18 +177,11 @@ in
         windowrulev2 = maxsize 300 300, class:^(pavucontrol)$
         windowrulev2 = move onscreen 86% 4%, class:^(pavucontrol)$
 
-        # XWayland Videobridge for Screensharing in Discord
-        windowrulev2 = opacity 0.0 override, class:^(xwaylandvideobridge)$
-        windowrulev2 = noanim, class:^(xwaylandvideobridge)$
-        windowrulev2 = noinitialfocus, class:^(xwaylandvideobridge)$
-        windowrulev2 = maxsize 1 1, class:^(xwaylandvideobridge)$
-        windowrulev2 = noblur, class:^(xwaylandvideobridge)$
-
         # ---- Window Rules ---- #
         ${vars.WindowRules.${hostName} or ''''}
 
         # ---- Autostart ---- #
-        ${vars.autostart.${hostName} or ''''}
+        exec-once=bash ~/.scripts/autostart.sh 
       '';
     };
   };
