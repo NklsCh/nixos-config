@@ -1,11 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-
-with lib;
+{ config, pkgs, ... }:
 let
   cfg = config.system;
 in
@@ -35,5 +28,6 @@ in
         efi.canTouchEfiVariables = true;
       };
     };
+    boot.tmp.cleanOnBoot = true;
   };
 }
