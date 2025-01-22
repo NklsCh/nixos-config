@@ -9,7 +9,6 @@
     # jetbrains.webstorm
     # jetbrains.idea-ultimate
     #--- Tools ---#
-    nodejs_latest
     gitkraken
     devenv
   ];

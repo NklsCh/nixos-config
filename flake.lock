@@ -156,11 +156,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737075266,
-        "narHash": "sha256-u1gk5I1an975FOAMMdS6oBKnSIsZza5ZKhaeBZAskVo=",
+        "lastModified": 1737480538,
+        "narHash": "sha256-rk/cmrvq3In0TegW9qaAxw+5YpJhRWt2p74/6JStrw0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "12851ae7467bad8ef422b20806ab4d6d81e12d29",
+        "rev": "4481a16d1ac5bff4a77c608cefe08c9b9efe840d",
         "type": "github"
       },
       "original": {
@@ -177,11 +177,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737011541,
-        "narHash": "sha256-YAT1VozLQ29V56EvEzJQswBOCLZDqn/gTU05mf+UFts=",
+        "lastModified": 1737350675,
+        "narHash": "sha256-Zy2PidkAOYDvnFgZO+QFDYywQAPtA/xi7SuZLVd+ZyM=",
         "owner": "Jas-SinghFSU",
         "repo": "HyprPanel",
-        "rev": "88609f7e4c244326face34cb992a79053f2c7810",
+        "rev": "562eb64e12047cb3a4ef5db2e9df19f9a726ae7c",
         "type": "github"
       },
       "original": {
@@ -199,14 +199,15 @@
           "nixpkgs"
         ],
         "systems": "systems_2",
-        "treefmt-nix": "treefmt-nix"
+        "treefmt-nix": "treefmt-nix",
+        "umu": "umu"
       },
       "locked": {
-        "lastModified": 1737087773,
-        "narHash": "sha256-JcnwG2cQgiX3fLGwNF+ZYamyIeI0BZVUrXWpBpTplXI=",
+        "lastModified": 1737424179,
+        "narHash": "sha256-2ARj7iWil0AZ8m3PIxnMtAzIxdQRfSeXlt7644DO6Cs=",
         "owner": "LovingMelody",
         "repo": "nix-citizen",
-        "rev": "38baed91bb45b2bb6a8241cc91ad197048dae2b0",
+        "rev": "f257cb09fffcddc790bc6f37838a20918ddcc0e1",
         "type": "github"
       },
       "original": {
@@ -222,14 +223,17 @@
           "nix-citizen",
           "nixpkgs"
         ],
-        "umu": "umu"
+        "umu": [
+          "nix-citizen",
+          "umu"
+        ]
       },
       "locked": {
-        "lastModified": 1736818546,
-        "narHash": "sha256-rehuAIJzjQ5/vBar7xvPzHzqrxcHHDBHqqhsDZHu55M=",
+        "lastModified": 1737337163,
+        "narHash": "sha256-Z9hc25iV+jhH0AlvsrG65KqLEd726/HVvalSiqNQLqA=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "1a9c52cd7517137c9cc74d4b73dfd63678e17c5f",
+        "rev": "e5559b3a91433c21eb64792b78134582b3bd77f2",
         "type": "github"
       },
       "original": {
@@ -246,11 +250,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1731952509,
-        "narHash": "sha256-p4gB3Rhw8R6Ak4eMl8pqjCPOLCZRqaehZxdZ/mbFClM=",
+        "lastModified": 1737420293,
+        "narHash": "sha256-F1G5ifvqTpJq7fdkT34e/Jy9VCyzd5XfJ9TO8fHhJWE=",
         "owner": "nix-community",
         "repo": "nix-github-actions",
-        "rev": "7b5f051df789b6b20d259924d349a9ba3319b226",
+        "rev": "f4158fa080ef4503c8f4c820967d946c2af31ec9",
         "type": "github"
       },
       "original": {
@@ -261,16 +265,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1736883708,
-        "narHash": "sha256-uQ+NQ0/xYU0N1CnXsa2zghgNaOPxWpMJXSUJJ9W7140=",
-        "owner": "nixos",
+        "lastModified": 1737421359,
+        "narHash": "sha256-9BOjprNDwt95olCWD/uH602V2g0YrZP2gOI62JXi0Uo=",
+        "owner": "LovingMelody",
         "repo": "nixpkgs",
-        "rev": "eb62e6aa39ea67e0b8018ba8ea077efe65807dc8",
+        "rev": "f091d48175fad21ce71faacfd3aecb57d8814990",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
+        "owner": "LovingMelody",
+        "ref": "umu-launcher",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -287,13 +291,29 @@
         "url": "https://github.com/NixOS/nixpkgs/archive/e9b51731911566bbf7e4895475a87fe06961de0b.tar.gz"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1737469691,
+        "narHash": "sha256-nmKOgAU48S41dTPIXAq0AHZSehWUn6ZPrUKijHAMmIk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9e4d5190a9482a1fb9d18adf0bdb83c6e506eaab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
         "home-manager": "home-manager_2",
         "hyprpanel": "hyprpanel",
         "nix-citizen": "nix-citizen",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "zen-browser": "zen-browser"
       }
     },
@@ -335,11 +355,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737054102,
-        "narHash": "sha256-saLiCRQ5RtdTnznT/fja7GxcYRAzeY3k8S+IF/2s/2A=",
+        "lastModified": 1737103437,
+        "narHash": "sha256-uPNWcYbhY2fjY3HOfRCR5jsfzdzemhfxLSxwjXYXqNc=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "97871d416166803134ba64597a1006f3f670fbde",
+        "rev": "d1ed3b385f8130e392870cfb1dbfaff8a63a1899",
         "type": "github"
       },
       "original": {
@@ -350,28 +370,24 @@
     },
     "umu": {
       "inputs": {
-        "nixpkgs": [
-          "nix-citizen",
-          "nix-gaming",
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "dir": "packaging/nix",
-        "lastModified": 1736534482,
-        "narHash": "sha256-aHDxVKA4GgohIPCDUX9zMF4UnLQR7U6Dj9mOmhZYSoc=",
-        "ref": "refs/heads/main",
-        "rev": "e9cb4d764013d4c8c3d1166f59581da8f56a3d83",
-        "revCount": 896,
+        "lastModified": 1737421856,
+        "narHash": "sha256-0TF5j5kC67K5WEiIatoxamrRwcJ6ice0g1V6pkQOwWU=",
+        "ref": "refs/heads/update-nix",
+        "rev": "62343d9d3029c0288c98167fbd7a7869cce7b6b5",
+        "revCount": 907,
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
+        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
       },
       "original": {
         "dir": "packaging/nix",
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
+        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
       }
     },
     "zen-browser": {
@@ -381,11 +397,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737000317,
-        "narHash": "sha256-wcDS44vy7pBruOsR5vVQ/1aaPfp/X9sDGOpZ31reTko=",
+        "lastModified": 1737518740,
+        "narHash": "sha256-agerlOc13KYVHbG6TohUHrorTDJqMKyFrBtwDuRTHf0=",
         "owner": "youwen5",
         "repo": "zen-browser-flake",
-        "rev": "6b3a74dedc4af7f088ad4817d509c2ce4c897477",
+        "rev": "a7e8e66aa5076ab71c37046a18f01f4f60d55a2c",
         "type": "github"
       },
       "original": {
