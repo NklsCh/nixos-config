@@ -1,6 +1,7 @@
 { pkgs, username, ... }:
 {
   imports = [
+    ./autoupgrade.nix
     ./gc.nix
     ./settings.nix
   ];
@@ -34,4 +35,6 @@
     enable = true;
     nix-direnv.enable = true;
   };
+
+  programs.nh.enable = true;
 }

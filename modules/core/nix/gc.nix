@@ -1,9 +1,9 @@
 { ... }:
 {
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/etc/nixos";
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 10d";
   };
+  nix.settings.auto-optimise-store = true;
 }
