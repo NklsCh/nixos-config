@@ -21,6 +21,8 @@ in
         env = QT_QPA_PLATFORM,wayland
         env = QT_QPA_PLATFORMTHEME,qt5ct
 
+        ecosystem:no_update_news = true
+
         input {
           kb_layout = us
           kb_variant =
