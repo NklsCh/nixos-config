@@ -2,8 +2,6 @@
   config,
   lib,
   pkgs,
-  username,
-  nix-citizen,
   ...
 }:
 
@@ -24,13 +22,15 @@ in
       steam.enable = true;
     };
 
-    home-manager.users.${username} = {
-      home.packages = with pkgs; [
-        (nix-citizen.packages.${system}.star-citizen.override {
-          gameScopeEnable = false;
-          location = "/media/512-GB-SSD/Games/StarCitizen";
-        })
-      ];
-    };
+    /*
+      home-manager.users.${username} = {
+        home.packages = with pkgs; [
+          (nix-citizen.packages.${system}.star-citizen.override {
+            gameScopeEnable = false;
+            location = "/media/512-GB-SSD/Games/StarCitizen";
+          })
+        ];
+      };
+    */
   };
 }
