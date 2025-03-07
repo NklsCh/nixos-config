@@ -48,22 +48,21 @@
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
               agenix.nixosModules.default
-              ./profiles/options.nix
-              {
-                system = {
-                  gpu = {
-                    enable = false;
-                  };
-                  boot = {
-                    isDevDrive = false;
-                  };
-                  profiles = {
-                    developer = true;
-                    gaming = false;
-                  };
-                };
-              }
               ./.
+              (
+                { ... }:
+                {
+                  system = {
+                    gpu.enable = true;
+                    gpu.brand = "nvidia";
+                    boot.isDevDrive = false;
+                  };
+                  devTools.enable = true; # Enable the feature
+                  devTools.optionalPackages = [ ];
+                  gaming.enable = true; # Enable the feature
+                  gaming.optionalPackages = [ ];
+                }
+              )
             ];
           };
         Desktop =
@@ -80,23 +79,21 @@
             modules = [
               { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
               agenix.nixosModules.default
-              ./profiles/options.nix
-              {
-                system = {
-                  gpu = {
-                    enable = true;
-                    brand = "nvidia";
-                  };
-                  boot = {
-                    isDevDrive = false;
-                  };
-                  profiles = {
-                    developer = true;
-                    gaming = true;
-                  };
-                };
-              }
               ./.
+              (
+                { ... }:
+                {
+                  system = {
+                    gpu.enable = true;
+                    gpu.brand = "nvidia";
+                    boot.isDevDrive = false;
+                  };
+                  devTools.enable = true; # Enable the feature
+                  devTools.optionalPackages = [ ];
+                  gaming.enable = true; # Enable the feature
+                  gaming.optionalPackages = [ ];
+                }
+              )
             ];
           };
       };

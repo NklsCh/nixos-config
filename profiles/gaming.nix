@@ -1,36 +1,40 @@
 {
-  config,
   lib,
+  config,
   pkgs,
   ...
 }:
 
 with lib;
+
 let
-  cfg = config.system;
+  cfg = config.gaming;
+  defaultPackages = with pkgs; [
+    heroic-unwrapped
+    lutris
+    prismlauncher
+    wine
+  ];
+
 in
 {
-  config = mkIf cfg.profiles.gaming {
-    environment.systemPackages = with pkgs; [
-      heroic-unwrapped
-      lutris
-      prismlauncher
-      wine
-    ];
+  options.gaming = {
+    enable = mkEnableOption "Gaming profile with various gaming tools";
 
-    programs = {
-      steam.enable = true;
+    optionalPackages = mkOption {
+      type = types.listOf types.package;
+      default = [ ];
+      example = [
+        pkgs.discord
+        pkgs.vscode
+      ];
+      description = "List of additional optional packages for gaming";
     };
+  };
 
-    /*
-      home-manager.users.${username} = {
-        home.packages = with pkgs; [
-          (nix-citizen.packages.${system}.star-citizen.override {
-            gameScopeEnable = false;
-            location = "/media/512-GB-SSD/Games/StarCitizen";
-          })
-        ];
-      };
-    */
+  config = mkIf cfg.enable {
+    environment.systemPackages = defaultPackages ++ cfg.optionalPackages;
+
+    programs.steam.enable = true;
   };
 }

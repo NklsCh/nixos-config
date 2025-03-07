@@ -1,23 +1,39 @@
 {
-  config,
   lib,
+  config,
   pkgs,
   ...
 }:
 
 with lib;
+
 let
-  cfg = config.system;
+  cfg = config.devTools;
+  defaultPackages = [
+    #--- Editors ---#
+    pkgs.vscode
+    #--- Tools ---#
+    pkgs.nodejs_latest
+    pkgs.gitkraken
+    pkgs.devenv
+  ]; # Your predefined packages
 in
 {
-  config = mkIf cfg.profiles.developer {
-    environment.systemPackages = with pkgs; [
-      #--- Editors ---#
-      vscode
-      #--- Tools ---#
-      nodejs_latest
-      gitkraken
-      devenv
-    ];
+  options.devTools = {
+    enable = mkEnableOption "Enable developer tools";
+
+    optionalPackages = mkOption {
+      type = types.listOf types.package;
+      default = [ ];
+      example = [
+        pkgs.nodejs_latest
+        pkgs.gitkraken
+      ];
+      description = "List of optional packages to install alongside the default ones.";
+    };
+  };
+
+  config = mkIf cfg.enable {
+    environment.systemPackages = defaultPackages ++ cfg.optionalPackages;
   };
 }
