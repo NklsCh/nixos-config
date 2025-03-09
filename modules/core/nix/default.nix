@@ -27,9 +27,8 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   systemd.tpm2.enable = false;
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -38,5 +37,12 @@
   programs.nh = {
     enable = true;
     flake = "/etc/nixos";
+  };
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-32.3.3"
+    ];
   };
 }
