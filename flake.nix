@@ -81,7 +81,7 @@
               agenix.nixosModules.default
               ./.
               (
-                { ... }:
+                { pkgs, ... }:
                 {
                   system = {
                     gpu.enable = true;
@@ -89,7 +89,7 @@
                     boot.isDevDrive = false;
                   };
                   devTools.enable = true; # Enable the feature
-                  devTools.optionalPackages = [ ];
+                  devTools.optionalPackages = [ pkgs.zed-editor ];
                   gaming.enable = true; # Enable the feature
                   gaming.optionalPackages = [ ];
                 }
