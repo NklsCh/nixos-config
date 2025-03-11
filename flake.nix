@@ -57,9 +57,9 @@
                     gpu.brand = "nvidia";
                     boot.isDevDrive = false;
                   };
-                  devTools.enable = true; # Enable the feature
+                  devTools.enable = true;
                   devTools.optionalPackages = [ ];
-                  gaming.enable = true; # Enable the feature
+                  gaming.enable = true;
                   gaming.optionalPackages = [ ];
                 }
               )
@@ -88,9 +88,9 @@
                     gpu.brand = "nvidia";
                     boot.isDevDrive = false;
                   };
-                  devTools.enable = true; # Enable the feature
+                  devTools.enable = true;
                   devTools.optionalPackages = [ pkgs.zed-editor ];
-                  gaming.enable = true; # Enable the feature
+                  gaming.enable = true;
                   gaming.optionalPackages = [ ];
                 }
               )
