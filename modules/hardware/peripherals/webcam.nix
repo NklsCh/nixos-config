@@ -13,7 +13,6 @@ in
   environment.systemPackages = with pkgs; [
     v4l-utils
     ffmpeg
-    mpv
   ];
 
   security.polkit.enable = true;
