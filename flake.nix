@@ -58,9 +58,7 @@
                     boot.isDevDrive = false;
                   };
                   devTools.enable = true;
-                  devTools.optionalPackages = [ ];
                   gaming.enable = true;
-                  gaming.optionalPackages = [ ];
                 }
               )
             ];
@@ -91,7 +89,7 @@
                   devTools.enable = true;
                   devTools.optionalPackages = [ pkgs.zed-editor ];
                   gaming.enable = true;
-                  gaming.optionalPackages = [ ];
+                  media.enable = true;
                 }
               )
             ];
