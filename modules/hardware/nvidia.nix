@@ -8,6 +8,12 @@ in
   config = mkIf (cfg.gpu.enable && cfg.gpu.brand == "nvidia") {
     services.xserver.videoDrivers = [ "nvidia" ];
 
+    boot.kernelModules = [ "nvidia-uvm" ];
+
+    nixpkgs.config = {
+      cudaSupport = true;
+    };
+
     hardware.graphics = {
       enable = true;
       enable32Bit = true;
