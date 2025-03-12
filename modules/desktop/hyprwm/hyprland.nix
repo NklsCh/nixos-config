@@ -116,7 +116,7 @@ in
         bind = $mainMod ALT_L, L, exec, hyprlock
         bind = $mainMod, S, exec, rofi -show drun -showicons
         bind = $mainMod SHIFT, E, exec, rofi -modi emoji -show emoji
-        bind = $mainMod, R, exec, vivaldi
+        bind = $mainMod, R, exec, firefox
 
         # ---- Window Control Keybinds---- #
         bind = $mainMod, h, movefocus, l
