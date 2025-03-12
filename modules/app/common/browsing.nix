@@ -1,11 +1,11 @@
 {
   pkgs,
-  zen-browser,
+  #zen-browser,
   ...
 }:
 {
   environment.systemPackages = [
-    #zen-browser.packages."${pkgs.system}".default
-    pkgs.vivaldi
+    #zen-browser.packages."${pkgs.system}".default\
+    pkgs.firefox
   ];
 }
