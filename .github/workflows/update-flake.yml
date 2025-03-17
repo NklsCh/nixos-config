@@ -22,7 +22,10 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@v1
 
       - name: Update flake.lock
-        run: nix flake update
+        run: |
+          nix flake update
+          sleep 10
+          git status
 
       - name: Commit and Push Changes
         run: |
