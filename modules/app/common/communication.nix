@@ -6,8 +6,8 @@ in
   environment.systemPackages = with pkgs; [
     element-desktop
     localsend
-    session-desktop
     signal-desktop
+    simplex-chat-desktop
     teams-for-linux
     tutanota-desktop
     whatsapp-for-linux
