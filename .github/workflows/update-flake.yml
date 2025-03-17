@@ -1,0 +1,34 @@
+name: Auto Update Flake
+
+on:
+  schedule:
+    - cron: '0 0 */2 * *' # Runs every 2 days at midnight UTC
+  workflow_dispatch: # Allows manual triggering if needed
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v1
+
+      - name: Update flake.lock
+        run: nix flake update
+
+      - name: Commit and Push Changes
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add flake.lock
+            git commit -m "Updated Flake"
+            git push
+          else
+            echo "No changes to commit."
+          fi
