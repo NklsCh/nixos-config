@@ -13,9 +13,10 @@ let
     #--- Editors ---#
     pkgs.vscode
     #--- Tools ---#
-    pkgs.nodejs_latest
-    pkgs.gitkraken
     pkgs.devenv
+    pkgs.gitkraken
+    pkgs.nodejs_latest
+    pkgs.nodePackages.prettier
   ]; # Your predefined packages
 in
 {
