@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
+      url = "github:Jas-SinghFSU/HyprPanel/pull/849/head"; # My pr waiting to be merged
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-citizen = {
