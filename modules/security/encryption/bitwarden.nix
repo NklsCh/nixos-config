@@ -2,9 +2,9 @@
 {
   environment = {
     systemPackages = with pkgs; [
-    bitwarden
-    bitwarden-cli
-    bitwarden-menu
+      bitwarden
+      bitwarden-cli
+      bitwarden-menu
     ];
   };
 }
