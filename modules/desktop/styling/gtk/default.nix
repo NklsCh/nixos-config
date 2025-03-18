@@ -6,8 +6,8 @@
 {
   home-manager.users.${username} = _: {
     home.pointerCursor = {
-      package = pkgs.adwaita-icon-theme; # pkgs.bibata-cursors;
-      name = "Adwaita"; # "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors; # pkgs.adwaita-icon-theme;
+      name = "Bibata-Modern-Ice"; # "Adwaita";
     };
     gtk = {
       enable = true;
@@ -20,8 +20,8 @@
         name = "kora";
       };
       cursorTheme = {
-        package = pkgs.adwaita-icon-theme; # pkgs.bibata-cursors;
-        name = "Adwaita"; # "Bibata-Modern-Ice";
+        package = pkgs.bibata-cursors; # pkgs.adwaita-icon-theme;
+        name = "Bibata-Modern-Ice"; # "Adwaita";
       };
     };
   };
