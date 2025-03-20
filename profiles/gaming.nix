@@ -36,5 +36,7 @@ in
     environment.systemPackages = defaultPackages ++ cfg.optionalPackages;
 
     programs.steam.enable = true;
+
+    hardware.steam-hardware.enable = true;
   };
 }
