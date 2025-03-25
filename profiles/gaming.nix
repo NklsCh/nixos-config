@@ -35,7 +35,10 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = defaultPackages ++ cfg.optionalPackages;
 
-    programs.steam.enable = true;
+    programs = {
+      steam.enable = true;
+      gamemode.enable = true;
+    };
 
     hardware.steam-hardware.enable = true;
   };
