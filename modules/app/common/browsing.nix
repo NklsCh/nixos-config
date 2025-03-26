@@ -1,85 +1,104 @@
-{ config, pkgs, ... }:
-
-let
-  lock-false = {
-    Value = false;
-    Status = "locked";
-  };
-  lock-true = {
-    Value = true;
-    Status = "locked";
-  };
-in
+{ ... }:
 {
   programs = {
     firefox = {
       enable = true;
+      # package = pkgs.librewolf;
       languagePacks = [
         "de"
         "en-US"
       ];
 
-      # ---- POLICIES ----
-      # Check about:policies#documentation for options.
+      # ─── About:config prefs ───────────────────────────────────────────────────────
+      preferencesStatus = "locked";
+      preferences = {
+        "browser.contentblocking.category" = "strict";
+        "browser.formfill.enable" = false;
+        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+        "browser.newtabpage.activity-stream.feeds.snippets" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includeBookmarks" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includeDownloads" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includeVisited" = false;
+        "browser.newtabpage.activity-stream.showSponsored" = false;
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "browser.newtabpage.activity-stream.system.showSponsored" = false;
+        "browser.topsites.contile.enabled" = false;
+        "extensions.pocket.enabled" = false;
+        # Broken due to "stability issues"
+        /*
+          "privacy.donottrackheader.enabled" = true;
+          "privacy.fingerprintingProtection" = true;
+          "privacy.resistFingerprinting" = true;
+          "privacy.trackingprotection.emailtracking.enabled" = true;
+          "privacy.trackingprotection.enabled" = true;
+          "privacy.trackingprotection.fingerprinting.enabled" = true;
+          "privacy.trackingprotection.socialtracking.enabled" = true;
+        */
+      };
+      # ─── Enterprise policies (non‑pref things) ────────────────────────────────────
       policies = {
-        DisableTelemetry = true;
-        DisableFirefoxStudies = true;
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
-        DisablePocket = true;
-        DisableFirefoxAccounts = false;
         DisableAccounts = false;
+        DisableFirefoxAccounts = false;
         DisableFirefoxScreenshots = true;
-        OverrideFirstRunPage = "";
-        OverridePostUpdatePage = "";
-        DontCheckDefaultBrowser = true;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableTelemetry = true;
         DisplayBookmarksToolbar = "never";
         DisplayMenuBar = "default-off";
+        DontCheckDefaultBrowser = true;
+        EnableTrackingProtection = {
+          Cryptomining = true;
+          Fingerprinting = true;
+          Locked = true;
+          Value = true;
+        };
+        OverrideFirstRunPage = "";
+        OverridePostUpdatePage = "";
         SearchBar = "unified";
 
-        # ---- EXTENSIONS ----
-        # Check about:support for extension/add-on ID strings.
-        # Valid strings for installation_mode are "allowed", "blocked",
-        # "force_installed" and "normal_installed".
+        # ─── Search engine config ─────────────────────────────────────────────────────
+        # Borken on ESR
+        /*
+          SearchEngines = {
+            Default = "Startpage";
+          };
+        */
+
+        # ─── Extensions ───────────────────────────────────────────────────────────────
         ExtensionSettings = {
           "*".installation_mode = "allowed";
-          # uBlock Origin:
-          "uBlock0@raymondhill.net" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/file/4412673/ublock_origin-1.62.0.xpi";
+          # Bitwarden:
+          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # DeArrow:
+          "deArrow@ajay.app" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/dearrow/latest.xpi";
             installation_mode = "force_installed";
           };
           # Privacy Badger:
           "jid1-MnnxcxisBPnSXQ@jetpack" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/file/4447530/privacy_badger17-2025.3.3.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
             installation_mode = "force_installed";
           };
-          # Bitwarden:
-          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/file/4440363/bitwarden_password_manager-2025.2.0.xpi";
+          # Return YouTube Dislike:
+          "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislikes/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # Startpage:
+          "{20fc2e06-e3e4-4b2b-812b-ab431220cada}" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/startpage-private-search/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # uBlock Origin:
+          "uBlock0@raymondhill.net" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
             installation_mode = "force_installed";
           };
         };
-
-        "browser.contentblocking.category" = {
-          Value = "strict";
-          Status = "locked";
-        };
-        "extensions.pocket.enabled" = lock-false;
-        "browser.topsites.contile.enabled" = lock-false;
-        "browser.formfill.enable" = lock-false;
-        "browser.newtabpage.activity-stream.feeds.section.topstories" = lock-false;
-        "browser.newtabpage.activity-stream.feeds.snippets" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includePocket" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeBookmarks" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeDownloads" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeVisited" = lock-false;
-        "browser.newtabpage.activity-stream.showSponsored" = lock-false;
-        "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
-        "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
       };
     };
   };
