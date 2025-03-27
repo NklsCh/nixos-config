@@ -88,7 +88,7 @@
                   };
                   devTools.enable = true;
                   devTools.optionalPackages = [
-                    # pkgs.zed-editor
+                    pkgs.zed-editor
                   ];
                   gaming.enable = true;
                   media.enable = true;
