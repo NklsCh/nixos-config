@@ -1,6 +1,6 @@
 {
   imports = [
-    ./browsing.nix
+    ./browsing
     ./communication.nix
     ./discord.nix
     ./entertainment.nix

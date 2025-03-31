@@ -58,7 +58,7 @@
         SearchBar = "unified";
 
         # ─── Search engine config ─────────────────────────────────────────────────────
-        # Borken on ESR
+        # Broken on ESR
         /*
           SearchEngines = {
             Default = "Startpage";
