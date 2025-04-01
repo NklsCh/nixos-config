@@ -1,7 +1,6 @@
 {
   imports = [
-    ./monitoring/btop.nix
-    ./monitoring/fastfetch.nix
+    ./monitoring
     ./utils/rclone.nix
   ];
 }
