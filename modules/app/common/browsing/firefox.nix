@@ -2,7 +2,7 @@
 {
   programs = {
     firefox = {
-      enable = true;
+      enable = false;
       # package = pkgs.librewolf;
       languagePacks = [
         "de"

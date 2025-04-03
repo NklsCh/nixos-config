@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    #brave
+    brave
   ];
 
   programs.chromium = {
-    enable = false;
+    enable = true;
     extraOpts = {
       "AutofillAddressEnabled" = false;
       "AutofillCreditCardEnabled" = false;
