@@ -1,6 +1,6 @@
 { pkgs, username, ... }:
 let
-  protonMailDesktop = import ../../config/dotdesktop/proton-mail.nix { inherit pkgs; };
+  #protonMailDesktop = import ../../config/dotdesktop/proton-mail.nix { inherit pkgs; };
 in
 {
   environment.systemPackages = with pkgs; [
@@ -15,7 +15,7 @@ in
   ];
   home-manager.users.${username} = {
     home.file = {
-      ".local/share/applications/proton-mail.desktop".text = protonMailDesktop.entry;
+      # ".local/share/applications/proton-mail.desktop".text = protonMailDesktop.entry;
       ".config/teams-for-linux/config.json".source = ../../config/t4l.json;
     };
   };
