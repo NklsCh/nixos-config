@@ -2,9 +2,10 @@
 {
   environment = {
     systemPackages = with pkgs; [
-      bitwarden
-      bitwarden-cli
+      #bitwarden
+      #bitwarden-cli
       #bitwarden-menu
+      proton-pass
     ];
   };
 }
