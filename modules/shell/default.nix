@@ -13,12 +13,10 @@
       enable = true;
       userName = "Niklas Choinowski";
       userEmail = "niklas.choinowski@gmail.com";
-      /*
-        signing = {
-          key = "0BD7EAA9BBF1EDA0";
-          signByDefault = true;
-        };
-      */
+      signing = {
+        key = "42A8C302343E6F9E";
+        signByDefault = true;
+      };
     };
   };
   environment.systemPackages = with pkgs; [
