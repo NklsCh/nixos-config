@@ -48,10 +48,14 @@ in
           }
         ];
       };
-      initExtraFirst = ''
+      # Depricated
+      /*
+        initExtraFirst = ''
+          source ~/.config/zsh/.p10k.zsh
+        '';
+      */
+      initContent = ''
         source ~/.config/zsh/.p10k.zsh
-      '';
-      initExtra = ''
         POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true
         eval "$(zoxide init --cmd cd zsh)"
       '';

@@ -69,7 +69,7 @@
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              username = "choinowski";
+              username = "v3rm1n";
               hostName = "Desktop";
               systemType = "desktop";
               inherit system;

@@ -12,11 +12,13 @@
     programs.git = {
       enable = true;
       userName = "Niklas Choinowski";
-      userEmail = "v3rm1n@tutamail.com";
-      signing = {
-        key = "0BD7EAA9BBF1EDA0";
-        signByDefault = true;
-      };
+      userEmail = "niklas.choinowski@gmail.com";
+      /*
+        signing = {
+          key = "0BD7EAA9BBF1EDA0";
+          signByDefault = true;
+        };
+      */
     };
   };
   environment.systemPackages = with pkgs; [

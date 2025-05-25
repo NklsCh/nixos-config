@@ -9,8 +9,6 @@ in
     signal-desktop
     simplex-chat-desktop
     teams-for-linux
-    tutanota-desktop
-    whatsapp-for-linux
     zoom-us
   ];
   home-manager.users.${username} = {

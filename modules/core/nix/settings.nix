@@ -8,6 +8,7 @@
     trusted-users = [
       "root"
       "choinowski"
+      "v3rm1n"
     ]; # Add your username here
     extra-substituters = [
       "https://devenv.cachix.org"
