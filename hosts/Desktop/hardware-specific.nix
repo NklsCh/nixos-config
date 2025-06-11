@@ -11,8 +11,8 @@
   #   fsType = "ext4";
   # };
 
-  fileSystems."/media/2-TB-HDD" = {
-    device = "/dev/disk/by-uuid/54aecc51-ae04-4c6f-ad5c-1b8791c47dae";
-    fsType = "ext4";
-  };
+  # fileSystems."/media/2-TB-HDD" = {
+  #   device = "/dev/disk/by-uuid/54aecc51-ae04-4c6f-ad5c-1b8791c47dae";
+  #   fsType = "ext4";
+  # };
 }
