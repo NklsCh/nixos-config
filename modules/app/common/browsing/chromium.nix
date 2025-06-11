@@ -24,9 +24,8 @@
       "lpcaedmchfhocbbapmcbpinfpgnhiddi" # Google Keep
       "oldceeleldhonbafppcapldpdifcinji" # LanguageTool
       "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # Privacy Badger
-      # "ghmbeldphafepmbegfdlkpapadhbakde" # Proton Pass
       "gebbhagfogifgggkldgodflihgfeippi" # Return YouTube Dislike
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+      "ponfpcnoihfmfllpaingbgckeeldkhle" # YouTube Enhancer
     ];
   };
 }
