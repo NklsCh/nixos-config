@@ -41,6 +41,4 @@
   programs.hyprlock = {
     enable = true;
   };
-
-  programs.dconf.enable = true;
 }
