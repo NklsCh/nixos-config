@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 {
   services.greetd = {
-    enable = true;
+    enable = false;
     restart = false;
     settings = {
       default_session = {
