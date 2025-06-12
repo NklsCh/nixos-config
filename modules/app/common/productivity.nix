@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  environment.systemPackages = with pkgs; [
-    gnome-calendar
-  ];
+  environment.systemPackages = [ ];
+
+  programs.thunderbird.enable = true;
 }
