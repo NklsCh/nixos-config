@@ -9,8 +9,8 @@
       enable = true;
       platformTheme.name = "adwaita";
       style = {
-        package = pkgs.dracula-theme;
-        name = "Dracula";
+        package = pkgs.catppuccin-qt5ct;
+        name = "frappe";
       };
     };
   };

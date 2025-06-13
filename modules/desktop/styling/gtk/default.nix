@@ -12,8 +12,8 @@
     gtk = {
       enable = true;
       theme = {
-        package = pkgs.dracula-theme;
-        name = "Dracula";
+        package = pkgs.catppuccin-gtk;
+        name = "catppuccin-frappe-blue-standard";
       };
       iconTheme = {
         package = pkgs.kora-icon-theme;
