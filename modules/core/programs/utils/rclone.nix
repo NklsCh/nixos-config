@@ -24,28 +24,30 @@
     wantedBy = [ "multi-user.target" ];
   };
 
-  systemd.services.rclone-icloud = {
-    description = "rclone: Mount iCloud Drive to ~/icloud";
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
+  /*
+    systemd.services.rclone-icloud = {
+      description = "rclone: Mount iCloud Drive to ~/icloud";
+      after = [ "network-online.target" ];
+      wants = [ "network-online.target" ];
 
-    serviceConfig = {
-      Type = "simple";
-      User = "${username}";
-      Group = "users";
-      # Ensure the directory exists before trying to mount
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/${username}/icloud";
-      # Use the full path for fusermount3
-      Environment = "PATH=/run/wrappers/bin:/bin:/usr/bin:${pkgs.coreutils}/bin:${pkgs.fuse}/bin";
-      ExecStart = "${pkgs.rclone}/bin/rclone mount icloud: /home/${username}/icloud --config /home/${username}/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log";
-      # Use the full path for fusermount3
-      ExecStop = "/run/wrappers/bin/fusermount3 -u /home/${username}/icloud";
+      serviceConfig = {
+        Type = "simple";
+        User = "${username}";
+        Group = "users";
+        # Ensure the directory exists before trying to mount
+        ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/${username}/icloud";
+        # Use the full path for fusermount3
+        Environment = "PATH=/run/wrappers/bin:/bin:/usr/bin:${pkgs.coreutils}/bin:${pkgs.fuse}/bin";
+        ExecStart = "${pkgs.rclone}/bin/rclone mount icloud: /home/${username}/icloud --config /home/${username}/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log";
+        # Use the full path for fusermount3
+        ExecStop = "/run/wrappers/bin/fusermount3 -u /home/${username}/icloud";
+      };
+
+      wantedBy = [ "multi-user.target" ];
     };
 
-    wantedBy = [ "multi-user.target" ];
-  };
-
-  environment.etc."fuse.conf".text = ''
-    user_allow_other
-  '';
+    environment.etc."fuse.conf".text = ''
+      user_allow_other
+    '';
+  */
 }

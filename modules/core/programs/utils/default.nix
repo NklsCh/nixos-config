@@ -1,6 +1,6 @@
 {
   imports = [
     ./appimage.nix
-    #./rclone.nix
+    ./rclone.nix
   ];
 }
