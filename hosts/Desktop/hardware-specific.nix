@@ -12,12 +12,7 @@
   # };
 
   fileSystems."/media/2-TB-SSD" = {
-    device = "/dev/disk/by-uuid/1a2fdf0b-5a1f-45bf-8edd-026747a025d7";
-    fsType = "btrfs";
-    options = [
-      "defaults"
-      "noatime"
-      "compress=zstd"
-    ];
+    device = "/dev/disk/by-uuid/68f628bc-5fa0-4ea3-95be-afc5f9529364";
+    fsType = "ext4";
   };
 }
