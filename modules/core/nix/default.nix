@@ -24,6 +24,9 @@
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
       };
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "kitty";
+      };
     };
   };
 

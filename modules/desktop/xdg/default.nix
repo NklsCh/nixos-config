@@ -7,14 +7,16 @@
   xdg = {
     mime = {
       defaultApplications = {
-        "inode/directory" = [ "nemo.desktop" ];
-        "image/png" = [ "gthumb.desktop" ];
+        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
         "image/jpeg" = [ "gthumb.desktop" ];
         "image/jpg" = [ "gthumb.desktop" ];
+        "image/png" = [ "gthumb.desktop" ];
+        "inode/directory" = [ "nemo.desktop" ];
       };
     };
     portal = {
       enable = true;
+      xdgOpenUsePortal = true;
       config = {
         common = {
           default = [
