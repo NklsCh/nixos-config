@@ -12,6 +12,9 @@
         "image/jpg" = [ "gthumb.desktop" ];
         "image/png" = [ "gthumb.desktop" ];
         "inode/directory" = [ "nemo.desktop" ];
+        "video/avi" = [ "vlc.desktop" ];
+        "video/mp4" = [ "vlc.desktop" ];
+        "video/x-matroska" = [ "vlc.desktop" ];
       };
     };
     portal = {
@@ -47,8 +50,6 @@
       #--- Dirs to Create ---#
       "Desktop/create".text = "";
       "Downloads/create".text = "";
-      "Templates/create".text = "";
-      "Public/create".text = "";
       "Documents/create".text = "";
       "Music/create".text = "";
       "Pictures/create".text = "";
