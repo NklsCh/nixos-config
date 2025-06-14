@@ -42,6 +42,8 @@
     flake = "/etc/nixos";
   };
 
+  programs.nix-ld.enable = true;
+
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
