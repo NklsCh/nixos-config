@@ -2,9 +2,7 @@
 {
   imports = [
     ./bash.nix
-    ./kitty.nix
-    ./nvim.nix
-    ./p10k.nix
+    ./p10k
     ./zsh.nix
   ];
 

@@ -8,7 +8,7 @@
 
   home-manager.users.${username} = _: {
     home.file = {
-      ".gnupg/gpg-agent.conf".source = ../../config/gpg-agent.conf;
+      ".gnupg/gpg-agent.conf".source = ./gpg-agent.conf;
     };
   };
 }
