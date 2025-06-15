@@ -1,8 +1,8 @@
 {
   disko.devices = {
     disk = {
-      nvme = {
-        device = "/dev/nvme1n1";
+      nvme0 = {
+        device = "/dev/nvme0n1";
         type = "disk";
         content = {
           type = "gpt";
@@ -53,6 +53,24 @@
                     ];
                   };
                 };
+              };
+            };
+          };
+        };
+      };
+      nvme1 = {
+        device = "/dev/nvme1n1";
+        type = "disk";
+        content = {
+          type = "gpt";
+          partitions = {
+            dataPartition = {
+              name = "2TB_SSD_Data";
+              size = "100%";
+              content = {
+                type = "filesystem";
+                format = "btrfs";
+                mountpoint = "/media/2-TB-SSD";
               };
             };
           };
