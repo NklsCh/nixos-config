@@ -7,7 +7,7 @@ let
       hash = "sha256-O99K9EXr34xalHW6CjRJV7pG5IVj+zukUnB4LzedAMI=";
     };
   */
-  image = ./../../../assets/wallpapers/dark_wallpaper.jpg;
+  image = ./../../../../assets/wallpapers/dark_wallpaper.jpg;
 in
 {
   services.displayManager = {

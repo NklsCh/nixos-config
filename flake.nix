@@ -38,6 +38,8 @@
               username = "choinowski";
               hostName = "Laptop";
               systemType = "desktop";
+              desktopEnvironment = "gnome";
+              displayManager = "greetd";
               inherit system;
             } // inputs;
             modules = [
@@ -67,6 +69,8 @@
               username = "v3rm1n";
               hostName = "Desktop";
               systemType = "desktop";
+              desktopEnvironment = "hyprland";
+              displayManager = "sddm";
               inherit system;
             } // inputs;
             modules = [

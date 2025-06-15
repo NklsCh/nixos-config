@@ -1,11 +1,13 @@
 {
+  desktopEnvironment,
+  displayManager,
   ...
 }:
 {
   imports = [
-    ./displayManager/sddm.nix
+    ./desktopEnvironments/${desktopEnvironment}
+    ./displayManagers/${displayManager}
     ./electron
-    ./hyprwm
     ./rofi
     ./styling
     ./xdg
