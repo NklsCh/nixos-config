@@ -10,6 +10,10 @@ with lib;
 let
   cfg = config.gaming;
   defaultPackages = with pkgs; [
+    (discord.override {
+      withOpenASAR = false;
+      withVencord = true;
+    })
     heroic-unwrapped
     lutris
     prismlauncher
@@ -26,7 +30,6 @@ in
       default = [ ];
       example = [
         pkgs.discord
-        pkgs.vscode
       ];
       description = "List of additional optional packages for gaming";
     };

@@ -8,7 +8,7 @@
 with lib;
 
 let
-  cfg = config.media;
+  cfg = config.contentcreation;
   defaultPackages = with pkgs; [
     (wrapOBS {
       plugins = with obs-studio-plugins; [
@@ -22,8 +22,8 @@ let
   ];
 in
 {
-  options.media = {
-    enable = mkEnableOption "Enable media tools";
+  options.contentcreation = {
+    enable = mkEnableOption "Enable content creation tools";
 
     optionalPackages = mkOption {
       type = types.listOf types.package;

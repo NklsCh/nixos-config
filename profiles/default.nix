@@ -1,9 +1,9 @@
 { ... }:
 {
   imports = [
+    ./contentcreation.nix
     ./developer.nix
     ./gaming.nix
-    ./media.nix
     ./options.nix
   ];
 }
