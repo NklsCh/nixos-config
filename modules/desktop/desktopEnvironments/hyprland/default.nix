@@ -6,6 +6,7 @@
   imports = [
     ./hyprland.nix
     ./hyprlock.nix
+    ./hyprpanel.nix
     ./hyprpaper.nix
   ];
 
@@ -14,7 +15,6 @@
       brightnessctl
       grim
       gthumb
-      hyprpanel
       hyprpaper
       libnotify
       nemo-with-extensions

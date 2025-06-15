@@ -96,7 +96,7 @@
                     pkgs.zed-editor
                   ];
                   gaming.enable = true;
-                  contentcreation.enable = true;
+                  contentcreation.enable = false;
                 }
               )
             ];
