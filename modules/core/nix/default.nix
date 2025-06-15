@@ -42,7 +42,12 @@
     flake = "/etc/nixos";
   };
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = (pkgs.steam-run.args.multiPkgs pkgs) ++ [
+      pkgs.stdenv.cc.cc.lib
+    ];
+  };
 
   nixpkgs.config = {
     allowUnfree = true;
