@@ -184,7 +184,7 @@ in
         ${vars.WindowRules.${hostName} or ''''}
 
         # ---- Autostart ---- #
-        exec-once=bash ~/.scripts/autostart.sh 
+        exec-once=
       '';
     };
   };
