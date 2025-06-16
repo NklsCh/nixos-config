@@ -1,6 +1,7 @@
 { pkgs, username, ... }:
 {
   imports = [
+    ./btrfs.nix
     ./gc.nix
     ./settings.nix
   ];
