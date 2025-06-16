@@ -5,6 +5,7 @@
 
     programs.hyprpanel = {
       enable = true;
+      hyprland.enable = true;
       overlay.enable = true;
       overwrite.enable = true;
       systemd.enable = true;
@@ -20,6 +21,7 @@
               middle = [ "media" ];
               right = [
                 "volume"
+                "kbinput"
                 "network"
                 "bluetooth"
                 "systray"
@@ -36,6 +38,7 @@
               middle = [ "media" ];
               right = [
                 "volume"
+                "kbinput"
                 "network"
                 "bluetooth"
                 "systray"

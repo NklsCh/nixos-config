@@ -5,5 +5,4 @@ gnome-keyring-daemon --start --components=ssh,secrets &
 hyprpaper &
 nm-applet --indicator &
 ags &
-hyprpanel &
 dunst &
