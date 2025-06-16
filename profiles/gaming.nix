@@ -17,7 +17,7 @@ let
     heroic-unwrapped
     lutris
     prismlauncher
-    wine
+    wineWowPackages.stable
   ];
 
 in
@@ -39,10 +39,18 @@ in
     environment.systemPackages = defaultPackages ++ cfg.optionalPackages;
 
     programs = {
-      steam.enable = true;
+      steam = {
+        enable = true;
+        protontricks.enable = true;
+      };
       gamemode.enable = true;
     };
 
     hardware.steam-hardware.enable = true;
+
+    services.udev.extraRules = ''
+      # Grant user access to Thrustmaster T.16000M joysticks for gaming
+      SUBSYSTEM=="hidraw", ATTRS{idVendor}=="044f", ATTRS{idProduct}=="b10a", TAG+="uaccess"
+    '';
   };
 }
