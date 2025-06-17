@@ -35,7 +35,10 @@
   };
 
   home-manager.users.${username} = _: {
-    targets.genericLinux.enable = true;
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
     /*
       home.file = {
         ".config/user-dirs.dirs".text = ''
