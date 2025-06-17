@@ -17,7 +17,8 @@ let
     pkgs.gitkraken
     pkgs.nodejs_latest
     pkgs.nodePackages.prettier
-  ]; # Your predefined packages
+    pkgs.nix-output-monitor
+  ];
 in
 {
   options.devTools = {
