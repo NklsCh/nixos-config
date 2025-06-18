@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  cfg = config.system;
+  cfg = config.specs;
 in
 {
   config = {

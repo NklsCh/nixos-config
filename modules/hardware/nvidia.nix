@@ -2,7 +2,7 @@
 
 with lib;
 let
-  cfg = config.system;
+  cfg = config.specs;
 in
 {
   config = mkIf (cfg.gpu.enable && cfg.gpu.brand == "nvidia") {
