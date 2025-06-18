@@ -10,7 +10,6 @@ inputs.nixpkgs.lib.nixosSystem {
   } // inputs;
   modules = [
     { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-    inputs.agenix.nixosModules.default
     ../.
     (
       { ... }:
