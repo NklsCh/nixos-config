@@ -26,81 +26,17 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      agenix,
-      disko,
-      ...
-    }@inputs:
+    { nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
-        Laptop =
-          let
-            system = "x86_64-linux";
-          in
-          nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              username = "choinowski";
-              hostName = "Laptop";
-              systemType = "desktop";
-              desktopEnvironment = "gnome";
-              displayManager = "greetd";
-              inherit system;
-            } // inputs;
-            modules = [
-              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              agenix.nixosModules.default
-              ./.
-              (
-                { ... }:
-                {
-                  system = {
-                    gpu.enable = true;
-                    gpu.brand = "nvidia";
-                    boot.isDevDrive = false;
-                  };
-                  devTools.enable = true;
-                  gaming.enable = true;
-                }
-              )
-            ];
-          };
-        Desktop =
-          let
-            system = "x86_64-linux";
-          in
-          nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              username = "v3rm1n";
-              hostName = "Desktop";
-              systemType = "desktop";
-              desktopEnvironment = "hyprland";
-              displayManager = "sddm";
-              inherit system;
-            } // inputs;
-            modules = [
-              { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-              agenix.nixosModules.default
-              disko.nixosModules.disko
-              ./.
-              (
-                { pkgs, ... }:
-                {
-                  system = {
-                    gpu.enable = true;
-                    gpu.brand = "nvidia";
-                    boot.isDevDrive = false;
-                  };
-                  devTools.enable = true;
-                  devTools.optionalPackages = [
-                    pkgs.zed-editor
-                  ];
-                  gaming.enable = true;
-                  contentcreation.enable = false;
-                }
-              )
-            ];
-          };
+        Laptop = import ./nixosConfigurations/Laptop.nix {
+          inherit inputs;
+          system = "x86_64-linux";
+        };
+        Desktop = import ./nixosConfigurations/Desktop.nix {
+          inherit inputs;
+          system = "x86_64-linux";
+        };
       };
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
