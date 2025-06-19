@@ -2,5 +2,6 @@
   imports = [
     ./authentication
     ./encryption
+    ./gnupg
   ];
 }

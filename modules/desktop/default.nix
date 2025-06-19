@@ -7,7 +7,6 @@
   imports = [
     ./desktopEnvironments/${desktopEnvironment}
     ./displayManagers/${displayManager}
-    ./electron
     ./rofi
     ./styling
     ./xdg
