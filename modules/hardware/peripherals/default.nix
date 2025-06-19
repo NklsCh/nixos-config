@@ -2,7 +2,7 @@
 {
   imports = [
     ./printing.nix
-    ./razer.nix
+    #./razer.nix
     ./webcam.nix
   ];
 }
