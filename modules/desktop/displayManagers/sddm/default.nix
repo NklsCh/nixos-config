@@ -1,12 +1,5 @@
 { pkgs, ... }:
 let
-  /*
-    imgLink = "https://raw.githubusercontent.com/nklsch/nixos-config/main/assets/wallpapers/dark_wallpaper.jpg";
-    image = pkgs.fetchurl {
-      url = imgLink;
-      hash = "sha256-O99K9EXr34xalHW6CjRJV7pG5IVj+zukUnB4LzedAMI=";
-    };
-  */
   image = ./../../../../assets/wallpapers/dark_wallpaper.jpg;
 in
 {

@@ -14,10 +14,10 @@
   ];
 
   boot.initrd.availableKernelModules = [
-    "xhci_pci"
     "ahci"
     "nvme"
     "usbhid"
+    "xhci_pci"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];

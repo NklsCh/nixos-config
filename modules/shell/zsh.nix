@@ -48,12 +48,6 @@ in
           }
         ];
       };
-      # Depricated
-      /*
-        initExtraFirst = ''
-          source ~/.config/zsh/.p10k.zsh
-        '';
-      */
       initContent = ''
         source ~/.config/zsh/.p10k.zsh
         POWERLEVEL9K_DISABLE_CONFIGURATION_WIZRAD=true

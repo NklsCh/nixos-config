@@ -2,9 +2,8 @@
 {
   fonts = {
     packages = with pkgs; [
-      # nerd-fonts.jetbrains-mono
-      nerd-fonts.geist-mono
       geist-font
+      nerd-fonts.geist-mono
       noto-fonts-emoji
     ];
 

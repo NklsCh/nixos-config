@@ -4,7 +4,6 @@
 {
   config,
   lib,
-  pkgs,
   modulesPath,
   ...
 }:
@@ -15,11 +14,11 @@
   ];
 
   boot.initrd.availableKernelModules = [
-    "xhci_pci"
     "ahci"
     "ehci_pci"
     "sd_mod"
     "sr_mod"
+    "xhci_pci"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
