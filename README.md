@@ -62,9 +62,8 @@ sudo nixos-rebuild switch --flake .#Desktop
 
 | Command                                        | Description                          |
 | ---------------------------------------------- | ------------------------------------ |
-| `sudo nixos-rebuild switch --flake .#devbox`   | Apply system changes                 |
-| `home-manager switch --flake .#c0d3h01@devbox` | Apply home configuration             |
-| `nixos-rebuild test --flake .#devbox`          | Test configuration without switching |
+| `sudo nixos-rebuild switch --flake .#Desktop`   | Apply system changes                 |
+| `nixos-rebuild test --flake .#Desktop`          | Test configuration without switching |
 | `nix flake update`                             | Update all flake inputs              |
 | `nix flake check`                              | Validate flake configuration         |
 
