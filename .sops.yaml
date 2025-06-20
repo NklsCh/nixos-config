@@ -1,0 +1,7 @@
+keys:
+  - &primary age1tw5c4gq3ak72xf7hh37xdfkczwmj8z6s0efwuzndwulh7ashzvpqdzxp3d
+creation_rules:
+  - path_regex: secrets/weatherAPI.yaml$
+    key_groups:
+      - age:
+          - *primary

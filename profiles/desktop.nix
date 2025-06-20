@@ -6,6 +6,7 @@
     ../modules
     ../profiles
     ../scripts
+    ../secrets
     ../users
   ];
 }
