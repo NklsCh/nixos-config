@@ -105,7 +105,7 @@ in
 
         # ---- Application Keybinds ---- #
         # Applications
-        bind = $mainMod, T, exec, kitty
+        bind = $mainMod, T, exec, wezterm
         bind = $mainMod, C, killactive,
         bind = $mainMod, M, exit,
         bind = $mainMod, E, exec, nemo

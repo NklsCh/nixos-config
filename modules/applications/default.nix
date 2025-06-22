@@ -2,7 +2,7 @@
   imports = [
     ./browsing
     ./electron
-    ./kitty
+    #./kitty
     ./neovim
     ./t4l
     ./communication.nix
@@ -11,5 +11,6 @@
     ./media.nix
     ./productivity.nix
     ./virtualization.nix
+    ./wezterm.nix
   ];
 }
