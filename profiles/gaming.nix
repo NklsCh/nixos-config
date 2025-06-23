@@ -14,6 +14,7 @@ let
       withOpenASAR = false;
       withVencord = true;
     })
+    ed-odyssey-materials-helper
     heroic-unwrapped
     lutris
     prismlauncher
