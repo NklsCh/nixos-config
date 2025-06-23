@@ -47,6 +47,15 @@ sudo swapon /mnt/swap/swapfile
 sudo nixos-install --flake .#Desktop
 ```
 
+#### One-liner for fresh installation
+
+```bash
+sudo nix run \
+  'github:nix-community/disko/latest#disko-install' -- \
+  --flake github:NklsCh/nixos-config#Desktop \
+  --disk <disk-name> <disk-device>
+```
+
 ### Existing System
 
 ```bash
@@ -60,12 +69,12 @@ sudo nixos-rebuild switch --flake .#Desktop
 
 ## System Management
 
-| Command                                        | Description                          |
-| ---------------------------------------------- | ------------------------------------ |
-| `sudo nixos-rebuild switch --flake .#Desktop`   | Apply system changes                 |
-| `nixos-rebuild test --flake .#Desktop`          | Test configuration without switching |
-| `nix flake update`                             | Update all flake inputs              |
-| `nix flake check`                              | Validate flake configuration         |
+| Command                                       | Description                          |
+| --------------------------------------------- | ------------------------------------ |
+| `sudo nixos-rebuild switch --flake .#Desktop` | Apply system changes                 |
+| `nixos-rebuild test --flake .#Desktop`        | Test configuration without switching |
+| `nix flake update`                            | Update all flake inputs              |
+| `nix flake check`                             | Validate flake configuration         |
 
 <div align="center">
 
