@@ -1,48 +1,78 @@
-{ pkgs, username, ... }:
-
+{
+  lib,
+  pkgs,
+  username,
+  ...
+}:
 {
   environment.systemPackages = with pkgs; [ rclone ];
 
-  systemd.services.rclone-gdrive = {
-    description = "rclone: Mount Google Drive to ~/Google Drive";
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
+  home-manager.users.${username} = {
+    systemd.user.services = {
+      gdrive =
+        let
+          mountdir = "/home/${username}/\"Google Drive\"";
+        in
+        {
+          Unit = {
+            Description = "Mount Google Drive Drive";
+            After = [ "network-online.target" ];
+          };
 
-    serviceConfig = {
-      Type = "simple";
-      User = "${username}";
-      Group = "users";
-      # Ensure the directory exists before trying to mount
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/${username}/\"Google Drive\"";
-      # Use the full path for fusermount3
-      Environment = "PATH=/run/wrappers/bin:/bin:/usr/bin:${pkgs.coreutils}/bin:${pkgs.fuse}/bin";
-      ExecStart = "${pkgs.rclone}/bin/rclone mount gdrive: /home/${username}/\"Google Drive\" --config /home/${username}/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log";
-      # Use the full path for fusermount3
-      ExecStop = "/run/wrappers/bin/fusermount3 -u /home/${username}/\"Google Drive\"";
+          Service = {
+            Type = "notify";
+            Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+            ExecStartPre = "${lib.getExe' pkgs.uutils-coreutils-noprefix "mkdir"} -p ${mountdir}";
+
+            ExecStart = ''
+              ${lib.getExe pkgs.rclone} mount gdrive: ${mountdir} \
+                  --config=/run/secrets/rclone_conf \
+                  --vfs-cache-mode writes \
+                  --vfs-cache-max-size 100M
+            '';
+
+            ExecStop = "${lib.getExe' pkgs.fuse "fusermount"} -u ${mountdir}";
+            Restart = "always";
+            RestartSec = 5;
+          };
+
+          Install.WantedBy = [ "default.target" ];
+        };
+      icloud =
+        let
+          mountdir = "/home/${username}/icloud";
+        in
+        {
+          Unit = {
+            Description = "Mount iCloud Drive";
+            After = [ "network-online.target" ];
+          };
+
+          Service = {
+            Type = "notify";
+            Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+            ExecStartPre = "${lib.getExe' pkgs.uutils-coreutils-noprefix "mkdir"} -p ${mountdir}";
+
+            ExecStart = ''
+              ${lib.getExe pkgs.rclone} mount icloud: ${mountdir} \
+                  --config=/run/secrets/rclone_conf \
+                  --dir-cache-time 48h \
+                  --vfs-cache-mode full \
+                  --vfs-cache-max-age 48h \
+                  --vfs-read-chunk-size 10M \
+                  --vfs-read-chunk-size-limit 512M \
+                  --no-modtime \
+                  --buffer-size 512M
+            '';
+
+            ExecStop = "${lib.getExe' pkgs.fuse "fusermount"} -u ${mountdir}";
+            Restart = "always";
+            RestartSec = 5;
+          };
+
+          Install.WantedBy = [ "default.target" ];
+        };
     };
-
-    wantedBy = [ "multi-user.target" ];
-  };
-
-  systemd.services.rclone-icloud = {
-    description = "rclone: Mount iCloud Drive to ~/icloud";
-    after = [ "network-online.target" ];
-    wants = [ "network-online.target" ];
-
-    serviceConfig = {
-      Type = "simple";
-      User = "${username}";
-      Group = "users";
-      # Ensure the directory exists before trying to mount
-      ExecStartPre = "${pkgs.coreutils}/bin/mkdir -p /home/${username}/icloud";
-      # Use the full path for fusermount3
-      Environment = "PATH=/run/wrappers/bin:/bin:/usr/bin:${pkgs.coreutils}/bin:${pkgs.fuse}/bin";
-      ExecStart = "${pkgs.rclone}/bin/rclone mount icloud: /home/${username}/icloud --config /home/${username}/.config/rclone/rclone.conf --vfs-cache-mode writes --vfs-cache-max-size 100M --log-level INFO --log-file /tmp/rclone-gdrive.log";
-      # Use the full path for fusermount3
-      ExecStop = "/run/wrappers/bin/fusermount3 -u /home/${username}/icloud";
-    };
-
-    wantedBy = [ "multi-user.target" ];
   };
   environment.etc."fuse.conf".text = ''
     user_allow_other

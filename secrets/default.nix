@@ -14,6 +14,10 @@
       "weatherAPI/key" = {
         sopsFile = ./weatherAPI.yaml;
       };
+      "rclone_conf" = {
+        owner = username;
+        sopsFile = ./rclone.yaml;
+      };
     };
   };
 }
