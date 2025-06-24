@@ -18,7 +18,7 @@ _Declarative NixOS configuration with Flakes & Home Manager_
 ## System Information
 
 - **OS**: NixOS (Unstable channel)
-- **Desktop**: Hyprland with SwayWM compatibility
+- **Desktop**: Hyprland with UWSM
 - **Filesystem**: Btrfs with automatic snapshots
 - **Package Manager**: Nix with Flakes
 - **Configuration**: Fully declarative and reproducible
