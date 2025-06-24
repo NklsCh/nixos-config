@@ -1,15 +1,15 @@
 {
+  agenix,
   disko,
   home-manager,
-  sops-nix,
   systemType,
   ...
 }:
 {
   imports = [
+    agenix.nixosModules.default
     disko.nixosModules.disko
     home-manager.nixosModules.home-manager
-    sops-nix.nixosModules.sops
     ./profiles/${systemType}.nix
     ./profiles
   ];

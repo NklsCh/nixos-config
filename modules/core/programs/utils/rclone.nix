@@ -26,7 +26,7 @@
 
             ExecStart = ''
               ${lib.getExe pkgs.rclone} mount gdrive: ${mountdir} \
-                  --config=/run/secrets/rclone_conf \
+                  --config=/run/agenix/rclone_conf \
                   --vfs-cache-mode writes \
                   --vfs-cache-max-size 100M
             '';
@@ -55,7 +55,7 @@
 
             ExecStart = ''
               ${lib.getExe pkgs.rclone} mount icloud: ${mountdir} \
-                  --config=/run/secrets/rclone_conf \
+                  --config=/run/agenix/rclone_conf \
                   --dir-cache-time 48h \
                   --vfs-cache-mode full \
                   --vfs-cache-max-age 48h \
