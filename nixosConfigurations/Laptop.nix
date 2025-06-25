@@ -1,11 +1,11 @@
 { inputs, system, ... }:
 inputs.nixpkgs.lib.nixosSystem {
   specialArgs = {
-    desktopEnvironment = "gnome";
+    desktopEnvironment = "hyprland";
     displayManager = "greetd";
     hostName = "Laptop";
     systemType = "desktop";
-    username = "choinowski";
+    username = "v3rm1n";
     inherit system;
   } // inputs;
   modules = [
@@ -13,13 +13,12 @@ inputs.nixpkgs.lib.nixosSystem {
     (
       { ... }:
       {
-        system = {
-          gpu.enable = true;
-          gpu.brand = "nvidia";
+        specs = {
+          gpu.enable = false;
           boot.isDevDrive = false;
         };
         devTools.enable = true;
-        gaming.enable = true;
+        gaming.enable = false;
       }
     )
   ];
