@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, wallpaper, ... }:
 let
-  image = ./../../../../assets/wallpapers/dark_wallpaper.jpg;
+  image = ./../../../../assets/wallpapers/${wallpaper};
 in
 {
   services.displayManager = {

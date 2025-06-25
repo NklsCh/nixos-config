@@ -6,6 +6,7 @@ inputs.nixpkgs.lib.nixosSystem {
     hostName = "Laptop";
     systemType = "desktop";
     username = "v3rm1n";
+    wallpaper = "dark-wallpaper.jpg";
     inherit system;
   } // inputs;
   modules = [

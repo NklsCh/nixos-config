@@ -1,6 +1,7 @@
 {
   config,
   username,
+  wallpaper,
   ...
 }:
 {
@@ -56,9 +57,10 @@
         theme.bar.outer_spacing = "0.4em";
         theme.bar.transparent = true;
         theme.font.size = "0.8rem";
-        theme.matugen = true;
+        theme.matugen = false;
         theme.matugen_settings.scheme_type = "fidelity";
-        wallpaper.image = "/home/${username}/.config/backgrounds/dark_wallpaper.jpg";
+        wallpaper.enable = false;
+        #wallpaper.image = "/home/${username}/.config/backgrounds/${wallpaper}";
       };
     };
   };
