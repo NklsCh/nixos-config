@@ -1,58 +1,47 @@
 {
   config,
-  hyprpanel,
   username,
   ...
 }:
 {
   home-manager.users.${username} = {
-    imports = [
-      hyprpanel.homeManagerModules.hyprpanel
-    ];
-
     programs.hyprpanel = {
       enable = true;
-      hyprland.enable = true;
-      overlay.enable = true;
-      overwrite.enable = true;
-      systemd.enable = true;
       settings = {
-        layout = {
-          "bar.layouts" = {
-            "0" = {
-              left = [
-                "dashboard"
-                "workspaces"
-                "windowtitle"
-              ];
-              middle = [ "media" ];
-              right = [
-                "volume"
-                "kbinput"
-                "network"
-                "bluetooth"
-                "systray"
-                "clock"
-                "notifications"
-              ];
-            };
-            "1" = {
-              left = [
-                "dashboard"
-                "workspaces"
-                "windowtitle"
-              ];
-              middle = [ "media" ];
-              right = [
-                "volume"
-                "kbinput"
-                "network"
-                "bluetooth"
-                "systray"
-                "clock"
-                "notifications"
-              ];
-            };
+        bar.layouts = {
+          "0" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            middle = [ "media" ];
+            right = [
+              "volume"
+              "kbinput"
+              "network"
+              "bluetooth"
+              "systray"
+              "clock"
+              "notifications"
+            ];
+          };
+          "1" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            middle = [ "media" ];
+            right = [
+              "volume"
+              "kbinput"
+              "network"
+              "bluetooth"
+              "systray"
+              "clock"
+              "notifications"
+            ];
           };
         };
         bar.clock.format = "%a %b %d %R";

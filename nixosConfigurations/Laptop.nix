@@ -9,7 +9,6 @@ inputs.nixpkgs.lib.nixosSystem {
     inherit system;
   } // inputs;
   modules = [
-    { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
     ../.
     (
       { ... }:
