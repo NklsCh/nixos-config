@@ -23,6 +23,7 @@
       "enamippconapkdmgfgjchkhakpfinmaj" # DeArrow
       "lpcaedmchfhocbbapmcbpinfpgnhiddi" # Google Keep
       "oldceeleldhonbafppcapldpdifcinji" # LanguageTool
+      "bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc" # Material Icons for GitHub
       "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # Privacy Badger
       "gebbhagfogifgggkldgodflihgfeippi" # Return YouTube Dislike
       "ponfpcnoihfmfllpaingbgckeeldkhle" # YouTube Enhancer
