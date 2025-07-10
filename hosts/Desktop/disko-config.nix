@@ -1,8 +1,8 @@
 {
   disko.devices = {
     disk = {
-      nvme0 = {
-        device = "/dev/disk/by-id/nvme-KINGSTON_SNV2S500G_50026B7686675FC3";
+      main = {
+        device = "/dev/disk/by-id/nvme-Samsung_SSD_990_EVO_Plus_2TB_S7U7NU0Y428877L";
         type = "disk";
         content = {
           type = "gpt";
@@ -53,24 +53,6 @@
                     ];
                   };
                 };
-              };
-            };
-          };
-        };
-      };
-      nvme1 = {
-        device = "/dev/disk/by-id/nvme-Samsung_SSD_990_EVO_Plus_2TB_S7U7NU0Y428877L";
-        type = "disk";
-        content = {
-          type = "gpt";
-          partitions = {
-            dataPartition = {
-              name = "2TB_SSD_Data";
-              size = "100%";
-              content = {
-                type = "filesystem";
-                format = "btrfs";
-                mountpoint = "/media/2-TB-SSD";
               };
             };
           };
