@@ -12,7 +12,6 @@
   age = {
     identityPaths = [
       "/home/${username}/.ssh/agenix_key"
-      "/etc/ssh/ssh_host_ed25519_key"
     ];
     secrets = {
       weatherAPI = {
