@@ -19,7 +19,10 @@
   };
   environment.systemPackages = with pkgs; [
     acpi
+    bat
+    bat-extras.batman
     clang
+    eza
     gh
     nixd
     nixfmt-rfc-style
