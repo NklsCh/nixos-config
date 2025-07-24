@@ -10,9 +10,9 @@
     programs.git = {
       enable = true;
       userName = "Niklas Choinowski";
-      userEmail = "niklas.choinowski@gmail.com";
+      userEmail = "niklas.choinowski@proton.me";
       signing = {
-        key = "42A8C302343E6F9E";
+        key = "DB96D1F1A8526D86";
         signByDefault = true;
       };
     };
