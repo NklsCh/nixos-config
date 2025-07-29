@@ -9,8 +9,10 @@ in
   home-manager.users.${username} = {
     programs.zsh = {
       enable = true;
+      autosuggestion.enable = true;
+      autosuggestion.strategy = [ "completion" ];
+      dotDir = "/home/${username}/.config/zsh";
       enableCompletion = false;
-      dotDir = ".config/zsh";
       syntaxHighlighting.enable = true;
       shellAliases = myAliases;
       plugins = [
