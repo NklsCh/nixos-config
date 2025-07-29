@@ -1,6 +1,6 @@
 { pkgs, username, ... }:
 {
-  environment.systemPackages = with pkgs; [
+  home-manager.users.${username}.home.packages = with pkgs; [
     qemu
     quickemu
   ];

@@ -1,15 +1,15 @@
 { pkgs, username, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    element-desktop
-    protonmail-desktop
-    signal-desktop
-    teamspeak6-client
-    whatsapp-for-linux
-    zoom-us
-  ];
-
   home-manager.users.${username} = {
+    home.packages = with pkgs; [
+      element-desktop
+      protonmail-desktop
+      signal-desktop
+      teamspeak6-client
+      whatsapp-for-linux
+      zoom-us
+    ];
+
     home.file = {
       ".local/share/applications/proton-mail.desktop".text = ''
         [Desktop Entry]

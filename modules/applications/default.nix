@@ -2,7 +2,6 @@
   imports = [
     ./browsing
     ./electron
-    #./kitty
     ./neovim
     ./t4l
     ./communication.nix
