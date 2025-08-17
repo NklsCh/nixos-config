@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repo has been archived. Use <https://codeberg.org/NklsCh/nixos-config> instead, as I ported it there.
+
 <div align="center">
 
 # v3rm1n's NixOS Dotfiles
